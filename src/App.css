@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+ width: 5px;
+ background-color: #E9F3E9;
+}
+
+body::-webkit-scrollbar-thumb {
+ height: 10px;
+ width: 5px;
+ background-color: #218225;
+ border-radius: 100px;
+}
+
+.circleDivLeft {
+  position: absolute;
+  top: 500px;
+  left: -100px;
+  overflow: hidden;
+  border-radius: 350.784px;
+  filter: blur(50px);
+}
+
+.circleLeft {
+  background: linear-gradient(14deg, #fff 25.71%, #218225 89.85%);
+  border-radius: 350.784px;
+  width: 350.784px;
+  height: 350.784px;
+  flex-shrink: 0;
+  filter: blur(138.47927856445312px);
+  position: relative;
+}
+
+.circleDivRight {
+  position: absolute;
+  top: 500px;
+  right: -100px;
+  overflow: hidden;
+  border-radius: 350.784px;
+  filter: blur(50px);
+}
+
+.circleRight {
+  background: linear-gradient(14deg, #fff 25.71%, #218225 89.85%);
+  width: 350.784px;
+  height: 350.784px;
+  flex-shrink: 0;
+  filter: blur(138.47927856445312px);
+  position: relative;
+}
+
+ul.flex li.active a.inline-flex {
+  background-color: darken(#218225, 10%);
+}
+
+@media (max-width: 765px) {
+  .circleDivLeft {
+    top: 400px;
+    left: -300px;
+  }
+
+  .circleDivRight {
+    top: 400px;
+    right: -300px;
+  }
+}
