@@ -1,7 +1,12 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Logo } from "../../Assets";
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function ProductHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,7 +37,7 @@ export default function ProductHeader() {
   return (
     <header
       className={`bg-${
-        hasScrolled ? "white" : "transparent"
+        hasScrolled ? "white" : "white"
       } fixed top-0 w-full z-50`}
     >
       <div class="px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8">
@@ -46,40 +51,92 @@ export default function ProductHeader() {
             <img src={Logo} alt="Logo" className="lg:w-auto lg:h-auto w-20" />
           </a>
           <ul class="flex items-center hidden space-x-8 lg:flex">
-            <li
-              className={location.pathname === "/fiidzapp" ? "active" : ""}
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={() => toggleDropdown(false)}
-            >
-              <a
-                aria-label="Products"
-                className="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor cursor-pointer"
-              >
-                Products
-              </a>
-              {isDropdownVisible && (
-                <ul className="dropdown-menu absolute space-y-2 bg-white shadow-lg rounded-lg">
-                  <li>
-                    <NavLink
-                      to={"/fiidzapp"}
-                      aria-label="FiidzApp"
-                      className="block px-4 py-2 text-blackShadeD hover:bg-gray-200"
-                    >
-                      FiidzApp
-                    </NavLink>
-                  </li>
-                </ul>
-              )}
-            </li>
+            <li>
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50 hover:text-primaryColor">
+                    Products
+                    <ChevronDownIcon
+                      className="-mr-3 h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </MenuButton>
+                </div>
 
-            <li className={location.pathname === "/resources" ? "active" : ""}>
-              <NavLink
-                to={"/resources"}
-                aria-label="Resources"
-                class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-              >
-                Resources
-              </NavLink>
+                <MenuItems
+                  transition
+                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[hover]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="py-1">
+                    <MenuItem>
+                      {({ focus }) => (
+                        <Link
+                          to={"/fiidzapp"}
+                          className={classNames(
+                            focus
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          FiidzApp
+                        </Link>
+                      )}
+                    </MenuItem>
+                  </div>
+                </MenuItems>
+              </Menu>
+            </li>
+            <li>
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50 hover:text-primaryColor">
+                    Resources
+                    <ChevronDownIcon
+                      className="-mr-3 h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </MenuButton>
+                </div>
+
+                <MenuItems
+                  transition
+                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[hover]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="py-1">
+                    <MenuItem>
+                      {({ focus }) => (
+                        <Link
+                          to={"/news"}
+                          className={classNames(
+                            focus
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          News
+                        </Link>
+                      )}
+                    </MenuItem>
+                    <MenuItem>
+                      {({ focus }) => (
+                        <Link
+                          to={"/helpandsupport"}
+                          className={classNames(
+                            focus
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Help and Support
+                        </Link>
+                      )}
+                    </MenuItem>
+                  </div>
+                </MenuItems>
+              </Menu>
             </li>
             <li className={location.pathname === "/pricing" ? "active" : ""}>
               <NavLink
@@ -110,8 +167,8 @@ export default function ProductHeader() {
             </li>
             <li className={location.pathname === "/about" ? "active" : ""}>
               <NavLink
-                to={"/about"}
-                aria-label="About us"
+                to={"https://fiidz.yiieldy.com/"}
+                aria-label="signin"
                 class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
               >
                 Sign In
@@ -119,7 +176,7 @@ export default function ProductHeader() {
             </li>
             <li>
               <Link
-                to={"/signup"}
+                to={"https://fiidz.yiieldy.com/Home/Account01"}
                 class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-whiteShade transition duration-200 shadow-md bg-primaryColor hover:bg-primaryColor focus:shadow-outline focus:outline-none rounded-full"
                 aria-label="Contact Us"
               >
@@ -186,58 +243,58 @@ export default function ProductHeader() {
                   <nav>
                     <ul class="space-y-4 px-2">
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to={"/products"}
                           aria-label="Products"
                           class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                         >
                           Products
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to={"/resources"}
                           aria-label="Resources"
                           class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                         >
                           Resources
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to={"/pricing"}
                           aria-label="Pricing"
                           class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                         >
                           Pricing
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          // to={"/service"}
                           aria-label="Service"
                           class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                         >
                           Service
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to={"/about"}
                           aria-label="About us"
                           class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                         >
                           About us
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <Link
+                          to={"/contact"}
                           aria-label="Contact Us"
                           class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                         >
                           Contact Us
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </nav>

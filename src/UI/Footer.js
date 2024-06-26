@@ -146,7 +146,7 @@ export default function Footer() {
                 href="/"
                 className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
               >
-                Policiy Policy
+                Privacy Policy
               </a>
               <a
                 href="/"

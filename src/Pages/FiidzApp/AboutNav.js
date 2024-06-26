@@ -1,21 +1,43 @@
 import React, { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { AppA, AppB, Logo } from "../Assets";
+import {
+  AbtHero,
+  AbtUnlock,
+  AppA,
+  AppB,
+  Logo,
+  Mission,
+  StepA,
+  StepB,
+  StepC,
+  Vision,
+} from "../../Assets";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import "../App.css";
-import Nav from './Nav';
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import "../../App.css";
 
-export default function Header() {
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+export default function AboutNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  // const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [dropdownStates, setDropdownStates] = useState({
+    dropdown1Visible: false,
+    dropdown2Visible: false,
+  });
 
-  // const toggleDropdown = () => {
-  //   setDropdownVisible(!isDropdownVisible);
-  // };
+  const toggleDropdown = (dropdownName, isVisible) => {
+    setDropdownStates((prevState) => ({
+      ...prevState,
+      [dropdownName]: isVisible,
+    }));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,12 +53,11 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
-    <div className="bg-white overflow-hidden">
-      {/* <header
+    <div>
+      <header
         className={`bg-${
-          hasScrolled ? "white" : "white"
+          hasScrolled ? "white" : "transparent"
         } fixed top-0 w-full z-50`}
       >
         <div class="px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8">
@@ -50,42 +71,92 @@ export default function Header() {
               <img src={Logo} alt="Logo" className="lg:w-auto lg:h-auto w-20" />
             </a>
             <ul class="flex items-center hidden space-x-8 lg:flex">
-              <li
-                className={location.pathname === "/fiidzapp" ? "active" : ""}
-                onMouseEnter={toggleDropdown}
-                onMouseLeave={() => toggleDropdown(false)}
-              >
-                <a
-                  aria-label="Products"
-                  className="font-normal tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor cursor-pointer"
-                >
-                  Products
-                </a>
-                {isDropdownVisible && (
-                  <ul className="dropdown-menu absolute space-y-2 bg-white shadow-lg rounded-lg">
-                    <li>
-                      <NavLink
-                        to={"/fiidzapp"}
-                        aria-label="FiidzApp"
-                        className="block px-4 py-2 text-blackShadeD hover:bg-gray-200 hover:rounded-lg"
-                      >
-                        FiidzApp
-                      </NavLink>
-                    </li>
-                  </ul>
-                )}
-              </li>
+              <li>
+                <Menu as="div" className="relative inline-block text-left">
+                  <div>
+                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 hover:text-primaryColor">
+                      Products
+                      <ChevronDownIcon
+                        className="-mr-3 h-5 w-5 text-gray-400"
+                        aria-hidden="true"
+                      />
+                    </MenuButton>
+                  </div>
 
-              <li
-                className={location.pathname === "/resources" ? "active" : ""}
-              >
-                <NavLink
-                  to={"/resources"}
-                  aria-label="Resources"
-                  class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                >
-                  Resources
-                </NavLink>
+                  <MenuItems
+                    transition
+                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[hover]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                  >
+                    <div className="py-1">
+                      <MenuItem>
+                        {({ focus }) => (
+                          <Link
+                            to={"/fiidzapp"}
+                            className={classNames(
+                              focus
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            FiidzApp
+                          </Link>
+                        )}
+                      </MenuItem>
+                    </div>
+                  </MenuItems>
+                </Menu>
+              </li>
+              <li>
+                <Menu as="div" className="relative inline-block text-left">
+                  <div>
+                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 hover:text-primaryColor">
+                      Resources
+                      <ChevronDownIcon
+                        className="-mr-3 h-5 w-5 text-gray-400"
+                        aria-hidden="true"
+                      />
+                    </MenuButton>
+                  </div>
+
+                  <MenuItems
+                    transition
+                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[hover]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                  >
+                    <div className="py-1">
+                      <MenuItem>
+                        {({ focus }) => (
+                          <Link
+                            to={"/news"}
+                            className={classNames(
+                              focus
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            News
+                          </Link>
+                        )}
+                      </MenuItem>
+                      <MenuItem>
+                        {({ focus }) => (
+                          <Link
+                            to={"/helpandsupport"}
+                            className={classNames(
+                              focus
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Help and Support
+                          </Link>
+                        )}
+                      </MenuItem>
+                    </div>
+                  </MenuItems>
+                </Menu>
               </li>
               <li className={location.pathname === "/pricing" ? "active" : ""}>
                 <NavLink
@@ -98,7 +169,7 @@ export default function Header() {
               </li>
               <li className={location.pathname === "/service" ? "active" : ""}>
                 <NavLink
-                  // to={"/service"}
+                  to={"/service"}
                   aria-label="Service"
                   class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                 >
@@ -148,7 +219,7 @@ export default function Header() {
               </button>
               {isMenuOpen && (
                 <div class="absolute top-0 left-0 w-full">
-                  <div class="bg-white h-[100vh]">
+                  <div class="bg-white h-[100vh] z-50">
                     <div class="flex items-center justify-between mb-4">
                       <div>
                         <a
@@ -183,58 +254,58 @@ export default function Header() {
                     <nav>
                       <ul class="space-y-4 px-2">
                         <li>
-                          <a
-                            href="/"
+                          <Link
+                            to={"/fiidzapp"}
                             aria-label="Products"
                             class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                           >
                             Products
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/"
+                          <Link
+                            to={"/resources"}
                             aria-label="Resources"
                             class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                           >
                             Resources
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/"
+                          <Link
+                            to={"/pricing"}
                             aria-label="Pricing"
                             class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                           >
                             Pricing
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/"
+                          <Link
+                            to={"/service"}
                             aria-label="Service"
                             class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                           >
                             Service
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/"
+                          <Link
+                            to={"/about"}
                             aria-label="About us"
                             class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                           >
                             About us
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/"
+                          <Link
+                            to={"/contact"}
                             aria-label="Contact Us"
                             class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                           >
                             Contact Us
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </nav>
@@ -244,55 +315,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </header> */}
-      {/* Header */}
-      <Nav />
-
-      <div className="relative px-6 pt-14 lg:px-8">
-        <div className="circleDivLeft">
-          <div className="circleLeft"></div>
-        </div>
-        <div className="mx-auto max-w-2xl py-10 sm:py-20 lg:py-20">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Yiieldy - Agriculture, AI, and Sustainability
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Yiieldy offers a complete agricultural services platform. Maximize
-              the features and flexibility of accelerate and boost productivity.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <img
-                src={AppA}
-                alt="yiieldy"
-                className="h-36 w-auto lg:h-96 lg:w-auto"
-              />
-              <img
-                src={AppB}
-                alt="yiieldy"
-                className="h-36 w-auto lg:h-96 lg:w-auto"
-              />
-            </div>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="bg-primaryColor w-96 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:bg-primaryColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
-              >
-                Learn More
-              </a>
-              <a
-                href="#"
-                className="rounded-full bg-primaryColorLight w-96 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:bg-primaryColorLight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="circleDivRight">
-          <div className="circleRight"></div>
-        </div>
-      </div>
+      </header>
     </div>
   );
 }

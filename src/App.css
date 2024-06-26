@@ -5,15 +5,15 @@
 }
 
 body::-webkit-scrollbar {
- width: 5px;
- background-color: #E9F3E9;
+  width: 5px;
+  background-color: #e9f3e9;
 }
 
 body::-webkit-scrollbar-thumb {
- height: 10px;
- width: 5px;
- background-color: #218225;
- border-radius: 100px;
+  height: 10px;
+  width: 5px;
+  background-color: #218225;
+  border-radius: 100px;
 }
 
 .circleDivLeft {
@@ -53,9 +53,49 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 
-ul.flex li.active a.inline-flex {
-  background-color: darken(#218225, 10%);
+/* ul.flex li.active a.inline-flex {
+  background-color: #218225;
+} */
+
+#helpinput {
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.2);
 }
+
+#aboutus {
+  background-image: url("./Assets/abtImg.png");
+  background-color: rgba(0, 0, 0, 1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: contain;
+  mix-blend-mode: color-burn;
+  width: auto;
+  height: auto;
+  padding: 10px 0;
+}
+
+#bgHelpSub {
+  width: auto;
+  height: auto;
+  border-radius: 1465px;
+  background: #bad8bb;
+  filter: blur(177.2935333251953px);
+}
+
+#bgHelpSubB {
+  width: auto;
+  height: auto;
+  /* border-radius: 1465px; */
+  background: var(--Foundation-Green-Light, #E9F3E9);
+  /* filter: blur(177.2935333251953px); */
+}
+
+#price-product {
+  overflow: hidden;
+}
+
+/* #bgHelp {
+  background: var(--Foundation-Green-Light, #e9f3e94b);
+} */
 
 @media (max-width: 765px) {
   .circleDivLeft {
@@ -66,5 +106,10 @@ ul.flex li.active a.inline-flex {
   .circleDivRight {
     top: 400px;
     right: -300px;
+  }
+
+  #helpbg {
+    top:  2300px;
+    max-height: 1200px;
   }
 }

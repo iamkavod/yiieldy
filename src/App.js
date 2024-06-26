@@ -1,6 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AboutUs, Career, Contact, FiidzApp, Home, Pricing, Resources, Signup } from './Pages';
+import { AboutUs, Career, Contact, FiidzApp, Home, News, PricingPage } from './Pages';
+import Service from "./Pages/Service";
+import HelpSupport from "./Pages/HelpSupport";
 
 function App() {
   return (
@@ -8,12 +10,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/fiidzapp" element={<FiidzApp />}/>
-        <Route path="/resources" element={<Resources />}/>
+        <Route path="/news" element={<News />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path="/career" element={<Career />}/>
         <Route path="/about" element={<AboutUs />}/>
-        <Route path="/pricing" element={<Pricing />}/>
-        <Route path="/signup" element={<Signup />}/>
+        <Route path="/pricing" element={<PricingPage />}/>
+        <Route path="/service" element={<Service />}/>
+        <Route path="/helpandsupport" element={<HelpSupport />} />
       </Routes>
     </BrowserRouter>
   );

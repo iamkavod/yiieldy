@@ -1,1 +1,1 @@
-export { default as PHeader } from './ProductHeader';
+export { default as ProductHeader } from './ProductHeader';
