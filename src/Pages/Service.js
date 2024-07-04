@@ -2,10 +2,11 @@ import React from "react";
 import { ConsultancyServices, DynamicWebminars, InteractiveWorkshop, OnsiteTrainingSessions } from "../Assets";
 import ProductHeader from '../Pages/FiidzApp/ProductHeader';
 import Footer from '../UI/Footer';
+import '../fonts.css';
 
 export default function Service() {
   return (
-    <main>
+    <main className="font-sp-pro">
       {/* Header */}
       <ProductHeader />
 

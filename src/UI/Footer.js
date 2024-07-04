@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { FooterBg, Instagram, Linkedin, LogoWhite } from "../Assets";
+import { Link } from "react-router-dom";
+import { Cookies } from "../Components";
+import '../fonts.css';
 
 export default function Footer() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handlePopup = (e) => {
+    e.preventDefault();
+    setShowPopup(true);
+  };
+
+  // const closePopup = () => {
+  //   setShowPopup(false);
+  // };
+
   return (
-    <footer>
+    <footer className="font-sp-pro">
       <div className="relative mt-16 bg-primaryColorDark">
         <img
           src={FooterBg}
@@ -19,83 +33,83 @@ export default function Footer() {
                 title="Company"
                 className="inline-flex items-center"
               >
-                <img src={LogoWhite} alt="Logo" className="w-20" />
+                <img src={LogoWhite} alt="Logo" className="w-40" />
               </a>
               <div className="mt-4 lg:max-w-sm flex gap-2 items-center">
-                <p className="text-sm text-primaryColorLight">Follow us on:</p>
-                <img src={Instagram} alt="Instagram" className="w-8" />
-                <img src={Linkedin} alt="Linkedin" className="w-8" />
+                <p className="text-2xl text-primaryColorLight">Follow us on:</p>
+                <img src={Instagram} alt="Instagram" className="w-10" />
+                <img src={Linkedin} alt="Linkedin" className="w-10" />
               </div>
             </div>
             <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3">
               <div>
-                <p className="font-semibold tracking-wide text-primaryColorLight">
+                <p className="font-bold text-3xl tracking-wide text-primaryColorLight">
                   Support
                 </p>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <a
-                      href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                    <Link
+                      to={"/faqs"}
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       FAQ'S
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                    <Link
+                      to={"/terms-of-service"}
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       Terms and condition
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                    <Link
+                      to={"/privacy-policy"}
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
-                      Privacy Policies
-                    </a>
+                      Privacy Policy
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold tracking-wide text-primaryColorLight">
+                <p className="font-bold text-3xl tracking-wide text-primaryColorLight">
                   Company
                 </p>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <a
-                      href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                    <Link
+                      to={"/about"}
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                    <Link
+                      to={"/service"}
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       Service
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                    <Link
+                      to={"/contact"}
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       Career
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div>
@@ -106,7 +120,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="telephone: +(234)9139218797"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       Chat Us: +(234)9139218797
                     </a>
@@ -114,7 +128,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="mailto: contactus@yiieldy.com"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
                       Email Us: contactus@yiieldy.com
                     </a>
@@ -122,9 +136,9 @@ export default function Footer() {
                   <li>
                     <a
                       href="/"
-                      className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                      className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
                     >
-                      Office: #10 Olasaru Street, Ajah, Lagos
+                      Office: #10 olasuru street, lekki Lagos
                     </a>
                   </li>
                 </ul>
@@ -132,25 +146,26 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-            <p className="text-sm text-primaryColorLight">
+            <p className="text-lg text-primaryColorLight">
               Copyright © Yiieldy 2024. All Rights Reserved
             </p>
             <div className="flex items-center mt-4 space-x-20 sm:mt-0">
-              <a
-                href="/"
-                className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+              <Link
+                to={"/terms-of-service"}
+                className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
               >
                 Terms of Service
-              </a>
-              <a
-                href="/"
-                className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+              </Link>
+              <Link
+                to={"/privacy-policy"}
+                className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
               >
                 Privacy Policy
-              </a>
+              </Link>
               <a
                 href="/"
-                className="transition-colors duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                className="transition-colors text-lg duration-300 text-primaryColorLight hover:text-teal-accent-400"
+                onClick={handlePopup}
               >
                 Cookies
               </a>
@@ -158,6 +173,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <Cookies show={showPopup} />
     </footer>
   );
 }

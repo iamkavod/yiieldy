@@ -4,20 +4,21 @@ import { FAQS, Pricing } from "../Components";
 import "../App.css";
 import { Footer } from "../UI";
 import { GetAppImg, YiieldyAiStaff } from "../Assets";
+import "../fonts.css";
 
 export default function PricingPage() {
   return (
-    <main>
+    <main className="font-sp-pro">
       {/* HEADER */}
       <ProductHeader />
 
       {/* Pricing */}
-      <div className="lg:py-20 py-32 relative" id="price-product">
+      <div className="lg:py-28 py-32 relative" id="price-product">
         <div className="circleDivLeft">
           <div className="circleLeft"></div>
         </div>
         <div className="mb-10 flex flex-col gap-3">
-          <h1 className="lg:text-[60px] text-[40px] font-semibold text-center">
+          <h1 className="lg:text-6xl text-4xl font-bold text-center">
             Fiidz App options
           </h1>
           <div className="lg:px-48 sm:px-0 md:px-10 flex justify-center">
@@ -96,13 +97,13 @@ export default function PricingPage() {
             <div className="flex lg:justify-start lg:m-0 m-auto items-center gap-5">
               <a
                 href="#"
-                className="text-sm font-semibold leading-6 text-white bg-primaryColor px-10 py-4 rounded-full lg:w-40"
+                className="text-sm font-bold leading-6 text-white bg-primaryColor px-10 py-4 rounded-full lg:w-40"
               >
                 Try for Free
               </a>
               <a
                 href="#"
-                className="text-sm font-semibold leading-6 bg-primaryColorLight border border-primaryColor text-primaryColor px-10 py-4 rounded-full lg:w-40"
+                className="text-sm font-bold leading-6 bg-primaryColorLight border border-primaryColor text-primaryColor px-10 py-4 rounded-full lg:w-40"
               >
                 Learn More
               </a>

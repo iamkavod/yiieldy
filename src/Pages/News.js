@@ -1,17 +1,18 @@
 import React from "react";
 import { Footer, Nav } from "../UI";
 import { NewsA, NewsB, YiieldyUsersSec } from "../Assets";
+import "../fonts.css";
 
 export default function News() {
   return (
-    <main className="bg-primaryColorLightB">
+    <main className="bg-primaryColorLightB font-sp-pro">
       {/* Header */}
       <Nav />
 
       {/* Our News */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:py-32 bg-primaryColorLight">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-black lg:text-[60px] md:mx-auto">
+          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
             Our News
           </h2>
           <p className="text-base text-gray-800 md:text-lg lg:text-[20px]">

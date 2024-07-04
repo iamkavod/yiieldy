@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AboutUs, Career, Contact, FiidzApp, Home, News, PricingPage } from './Pages';
+import { AboutUs, Career, Contact, Faqs, FiidzApp, Home, News, PricingPage, Privacy, Terms } from './Pages';
 import Service from "./Pages/Service";
 import HelpSupport from "./Pages/HelpSupport";
 
@@ -17,6 +17,9 @@ function App() {
         <Route path="/pricing" element={<PricingPage />}/>
         <Route path="/service" element={<Service />}/>
         <Route path="/helpandsupport" element={<HelpSupport />} />
+        <Route path="/terms-of-service" element={<Terms />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/faqs" element={<Faqs />} />
       </Routes>
     </BrowserRouter>
   );

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Field, Label, Switch } from "@headlessui/react";
 import Nav from "../UI/Nav";
+import "../fonts.css";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -11,14 +12,14 @@ function classNames(...classes) {
 export default function Contact() {
   const [agreed, setAgreed] = useState(false);
   return (
-    <main>
+    <main className="font-sp-pro">
       {/* Header */}
       <Nav />
 
       {/* Contact Us */}
       <div className="isolate bg-primaryColorLightB px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-primaryColor sm:text-4xl">
+          <h2 className="text-6xl font-bold tracking-tight text-primaryColor sm:text-4xl">
           Drop us a message for any query
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">

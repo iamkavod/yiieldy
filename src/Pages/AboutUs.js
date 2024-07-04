@@ -26,10 +26,11 @@ import "../App.css";
 import AboutNav from "./FiidzApp/AboutNav";
 import Stats from "../Components/Stats";
 import Footer from "../UI/Footer";
+import '../fonts.css';
 
 export default function AboutUs() {
   return (
-    <main>
+    <main className="font-sp-pro">
       {/* About Header */}
       <AboutNav />
 

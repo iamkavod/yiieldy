@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Checkbtn } from "../Assets";
 // import "../UI/Style.css";
+import '../fonts.css';
 
 export default function Pricing() {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
     <>
-      <div>
+      <div className="font-sp-pro">
         {/* Pricing toggle */}
         <div className="flex justify-center max-w-[20rem] m-auto mb-8 lg:mb-16">
           <div className="relative flex w-full p-1 border border-primaryColor rounded-full">

@@ -10,10 +10,11 @@ import {
   YiieldyLogoIcon,
 } from "../Assets";
 import Footer from "../UI/Footer";
+import '../fonts.css';
 
 export default function HelpSupport() {
   return (
-    <main>
+    <main className="font-sp-pro">
       {/* Header */}
       <Nav />
 
@@ -31,7 +32,7 @@ export default function HelpSupport() {
               interfaces of the Yiieldy-Fiidz app  
             </p>
           </div>
-          <form className="flex flex-col items-center w-full mb-4 md:flex-row lg:px-20">
+          {/* <form className="flex flex-col items-center w-full mb-4 md:flex-row lg:px-20">
             <input
               placeholder="How do i set up my Yiieldy App"
               required=""
@@ -39,15 +40,15 @@ export default function HelpSupport() {
               className="flex-grow w-full  h-16 px-4 mb-3 transition duration-200  border border-primaryColor rounded-[20px] shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline placeholder:text-primaryColorLightB"
               id="helpinput"
             />
-          </form>
-          <p className="max-w-auto mb-10 text-xs text-gray-600 sm:text-sm md:text-center">
+          </form> */}
+          {/* <p className="max-w-auto mb-10 text-xs text-gray-600 sm:text-sm md:text-center">
             Popular help topics: Camera & microphone test Getting Started Video
             Tutorials
-          </p>
+          </p> */}
         </div>
 
         {/* App info */}
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
           <div className="grid gap-5 lg:grid-cols-2 grid-cols-1 sm:max-w-sm sm:mx-auto lg:max-w-full">
             {/* Grid - 1 */}
             <div className="overflow-hidden transition-shadow duration-300  rounded">
@@ -64,7 +65,7 @@ export default function HelpSupport() {
                     aria-label="Article"
                     className="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                   >
-                    <p className="text-2xl font-bold leading-5">
+                    <p className="text-2xl font-bold leading-5 capitalize">
                       Fiidz App AI Staff
                     </p>
                   </a>
@@ -98,7 +99,7 @@ export default function HelpSupport() {
                     className="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                   >
                     <p className="text-2xl font-bold leading-5">
-                      GET STARTED WITH YIIELDY FIIDZ
+                      Get Started With Yiieldy Fiidz
                     </p>
                   </a>
                   <p className="mb-4 text-gray-700 w-[80%]">
@@ -195,7 +196,7 @@ export default function HelpSupport() {
               <div className="flex items-center justify-center w-full h-full transition-colors duration-300"></div>
               <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-10 mt-[50px] z-20">
                 <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
-                  <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-primaryColor lg:text-[60px] sm:leading-none text-center">
+                  <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-primaryColor lg:text-6xl sm:leading-none text-center">
                     Need more help?
                   </h2>
                   <p className="mb-5 text-base text-primaryColor lg:text-[20px] text-center">
@@ -210,7 +211,7 @@ export default function HelpSupport() {
                     </a>
                     <a
                       href="#"
-                      className="rounded-full  w-40 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:bg-primaryColorLight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight text-center "
+                      className="rounded-full  w-40 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:bg-primaryColor hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight text-center "
                     >
                       Contact Sales
                     </a>

@@ -148,7 +148,7 @@ export default function Header() {
                   </MenuItems>
                 </Menu>
               </li>
-              <li className={location.pathname === "/pricing" ? "active" : ""}>
+              {/* <li className={location.pathname === "/pricing" ? "active" : ""}>
                 <NavLink
                   to={"/pricing"}
                   aria-label="Pricing"
@@ -156,21 +156,21 @@ export default function Header() {
                 >
                   Pricing
                 </NavLink>
-              </li>
+              </li> */}
               <li className={location.pathname === "/service" ? "active" : ""}>
                 <NavLink
                   to={"/service"}
                   aria-label="Service"
-                  class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
+                  class="font-semibold tracking-wide text-blackShadeD transition-colors duration-200 text-sm font-semibold text-gray-900 hover:text-primaryColor"
                 >
-                  Service
+                  Services
                 </NavLink>
               </li>
               <li className={location.pathname === "/about" ? "active" : ""}>
                 <NavLink
                   to={"/about"}
                   aria-label="About us"
-                  class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
+                  class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 text-sm font-semibold text-gray-900 hover:text-primaryColor"
                 >
                   About us
                 </NavLink>
@@ -178,7 +178,7 @@ export default function Header() {
               <li>
                 <Link
                   to={"/contact"}
-                  class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-whiteShade transition duration-200 shadow-md bg-primaryColor hover:bg-primaryColor focus:shadow-outline focus:outline-none rounded-full"
+                  class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-whiteShade transition duration-200 shadow-md bg-primaryColor hover:opacity-[.9] focus:shadow-outline focus:outline-none rounded-full"
                   aria-label="Contact Us"
                 >
                   Contact Us
@@ -261,7 +261,7 @@ export default function Header() {
                             Resources
                           </Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link
                             to={"/pricing"}
                             aria-label="Pricing"
@@ -269,14 +269,14 @@ export default function Header() {
                           >
                             Pricing
                           </Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link
                             to={"/service"}
                             aria-label="Service"
                             class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                           >
-                            Service
+                            Services
                           </Link>
                         </li>
                         <li>

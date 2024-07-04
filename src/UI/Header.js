@@ -1,10 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { AppA, AppB, Logo } from "../Assets";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "../App.css";
 import Nav from './Nav';
+import '../fonts.css';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import '../style.css';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -253,16 +266,16 @@ export default function Header() {
           <div className="circleLeft"></div>
         </div>
         <div className="mx-auto max-w-2xl py-10 sm:py-20 lg:py-20">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <div className="text-center font-sp-pro">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 lg:text-6xl">
               Yiieldy - Agriculture, AI, and Sustainability
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 font-regular">
               Yiieldy offers a complete agricultural services platform. Maximize
               the features and flexibility of accelerate and boost productivity.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <img
+              {/* <img
                 src={AppA}
                 alt="yiieldy"
                 className="h-36 w-auto lg:h-96 lg:w-auto"
@@ -271,18 +284,48 @@ export default function Header() {
                 src={AppB}
                 alt="yiieldy"
                 className="h-36 w-auto lg:h-96 lg:w-auto"
-              />
+              /> */}
+              <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                  bulletActiveClass: "customActive",
+                }}
+                navigation={false}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img
+                    src={AppA}
+                    alt="yiieldy"
+                    className="h-36 w-auto lg:h-96 lg:w-auto"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={AppB}
+                    alt="yiieldy"
+                    className="h-36 w-auto lg:h-96 lg:w-auto"
+                  />
+                </SwiperSlide>
+              </Swiper>
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="bg-primaryColor w-96 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:bg-primaryColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
+                className="bg-primaryColor w-96 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
               >
                 Learn More
               </a>
               <a
                 href="#"
-                className="rounded-full bg-primaryColorLight w-96 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:bg-primaryColorLight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight"
+                className="rounded-full bg-primaryColorLight w-96 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight"
               >
                 Contact Us
               </a>

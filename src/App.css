@@ -93,6 +93,26 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
+
+/* Cookie */
+.cookie-banner-enter {
+  opacity: 0.01;
+ }
+ 
+ .cookie-banner-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+ }
+ 
+ .cookie-banner-exit {
+  opacity: 1;
+ }
+ 
+ .cookie-banner-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+ }
+
 /* #bgHelp {
   background: var(--Foundation-Green-Light, #e9f3e94b);
 } */

@@ -41,32 +41,32 @@ export default function Body() {
               </div>
             </a>
           </div>
-          <div className="flex flex-col justify-between items-start">
-            <h5 className="mb-4 lg:text-[58px] text-[25px] font-extrabold leading-none">
+          <div className="flex flex-col gap-10 items-start">
+            <h5 className="mb-1 lg:text-6xl text-[25px] font-bold leading-none">
               Fiidz App AI Staff provides AI assitance to poultry farmers.
             </h5>
-            <p className="mb-6 text-gray-900 text-[15px] lg:text-2xl">
+            <p className="mb-6 text-gray-900 text-[15px] lg:text-2xl font-regular">
               This video shows its capabilities and how essential it is to
               poultry farmers.
             </p>
-            <a
+            {/* <a
               href="#"
               className="text-sm font-semibold leading-6 text-white bg-primaryColor px-10 py-4 rounded-full"
             >
               Watch Now
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
 
       {/* Yiieldy Fiidz Users */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8  lg:py-20">
-        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor sm:text-4xl md:mx-auto">
+        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-7xl md:mb-12">
+          <h2 className="max-w-7xl mb-6 font-sans text-3xl font-bold text-primaryColor lg:text-6xl md:mx-auto">
             Hear From Yiieldy Fiidz Users
           </h2>
-          <p className="text-base text-primaryColor md:text-lg">
-            <span className="font-bold">
+          <p className="text-base text-primaryColor md:text-lg font-regular">
+            <span className="font-regular">
               See how we helped our users to grow,
             </span>{" "}
             improve feed efficiency, and enhance poultry performance.
@@ -105,10 +105,10 @@ export default function Body() {
             <img src={Left} alt="Left" />
           </a>
           <div className="flex flex-col gap-5">
-            <h3 className="text-sm text-primaryColor text-center">
+            <h3 className="text-2xl text-primaryColor text-center">
               Testimonials
             </h3>
-            <h1 className="text-3xl font-bold text-center">
+            <h1 className="text-4xl font-bold text-center">
               Our customers think we’re the best
             </h1>
           </div>
@@ -199,12 +199,12 @@ export default function Body() {
       <main>
         <div className="px-4 py-16 mx-auto max-w-xl md:max-w-7xl lg:max-w-[1443px] md:px-0 lg:px-0 lg:py-20 md:py-32">
           <div className="lg:flex md:flex grid grid-cols-1 justify-items-between items-center">
-            <div className="lg:py-6 lg:pr-16 w-[100%]">
+            <div className="lg:py-6 lg:pr-16 w-[70%]">
               <div className="flex flex-col gap-2 mb-5">
                 <h3 className="text-blackShadeB font-bold">Easy and Fast</h3>
-                <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold text-primaryColor">Quick Overview</h1>
+                <h1 className="lg:text-6xl md:text-4xl text-3xl font-bold text-primaryColor mb-8">Quick Overview</h1>
               </div>
-              <div className="flex items-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify">
+              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify mb-5">
                 <div className="flex flex-col items-center mr-4">
                   <div>
                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
@@ -212,14 +212,14 @@ export default function Body() {
                     </div>
                   </div>
                 </div>
-                <div className="pb-8">
+                <div className="">
                   <p className="text-gray-700">
                     Adjust your bird's feeding strategy based on insights from
                     any feed intake deviations.
                   </p>
                 </div>
               </div>
-              <div className="flex items-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify">
+              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify mb-5">
                 <div className="flex flex-col items-center mr-4">
                   <div>
                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
@@ -227,7 +227,7 @@ export default function Body() {
                     </div>
                   </div>
                 </div>
-                <div className="pb-8">
+                <div className="">
                   <p className="text-gray-700">
                     Monitoring your poultry's feed consumption and gain
                     real-time insight into the feed conversion ratio and the
@@ -235,7 +235,7 @@ export default function Body() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify">
+              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify mb-5">
                 <div className="flex flex-col items-center mr-4">
                   <div>
                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
@@ -243,7 +243,7 @@ export default function Body() {
                     </div>
                   </div>
                 </div>
-                <div className="pb-8">
+                <div className="">
                   <p className="text-gray-700">
                     Easily estimate the quantity of feed required and associated
                     costs to sustain your birds from the day they hatch until

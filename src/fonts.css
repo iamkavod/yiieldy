@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'SP Pro';
+    src: url('../public/sp-pro-fonts/SFPRODISPLAYBOLD.OTF');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SP pro';
+    src: url('../public/sp-pro-fonts/SFPRODISPLAYMEDIUM.OTF');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SP Pro';
+    src: url('../public/sp-pro-fonts/SFPRODISPLAYREGULAR.OTF');
+    font-weight: 300;
+    font-style: normal;
+}
