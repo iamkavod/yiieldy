@@ -249,7 +249,7 @@ export default function FiidzApp() {
       <main className="px-8">
         <div className="px-4 py-16 mx-auto max-w-xl md:max-w-7xl lg:max-w-[1443px] md:px-0 lg:px-0 lg:py-20 md:py-32">
           <div className="lg:flex md:flex grid grid-cols-1 justify-items-between items-center">
-            <div className="lg:py-6 lg:pr-16 w-[70%]">
+            <div className="lg:py-6 lg:pr-16 lg:w-[70%] w-full">
               <div className="flex flex-col gap-2 mb-5">
                 <h3 className="text-blackShadeB font-bold">Easy and Fast</h3>
                 <h1 className="lg:text-6xl md:text-4xl text-3xl font-bold text-primaryColor mb-8">Quick Overview</h1>
