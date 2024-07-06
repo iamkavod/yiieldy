@@ -20,9 +20,9 @@ export default function HelpSupport() {
 
       <section>
         {/* Help and Support Hero */}
-        <div className="flex flex-col items-center justify-center max-w-2xl px-4 pt-28 mx-auto lg:max-w-[1443px] md:max-w-2xl lg:pt-32 md:px-8">
-          <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-4xl md:mb-12">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 lg:text-[50px] md:mx-auto">
+        <div className="flex flex-col items-center justify-center max-w-7xl px-2 pt-28 mx-auto lg:max-w-[1443px] lg:pt-32 md:px-8">
+          <div className="max-w-[1443px] mb-10 md:mx-auto text-center md:mb-12">
+            <h2 className="max-w-[1443px] mb-6 text-4xl font-bold leading-none tracking-tight text-gray-900 lg:text-6xl md:mx-auto">
               Hi, how can we help you?
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
@@ -55,7 +55,7 @@ export default function HelpSupport() {
               <a href="/" aria-label="Article">
                 <img src={ChickenA} alt="chicken" />
               </a>
-              <div className="flex justify-between items-start">
+              <div className="flex gap-5 items-start">
                 <div className="py-5">
                   <img src={YiieldyLogoIcon} alt="yiieldy" />
                 </div>
@@ -88,7 +88,7 @@ export default function HelpSupport() {
               <a href="/" aria-label="Article">
                 <img src={ChickenB} alt="chicken" />
               </a>
-              <div className="flex justify-between items-start">
+              <div className="flex gap-5 items-start">
                 <div className="py-5">
                   <img src={YiieldyLogoIcon} alt="yiieldy" />
                 </div>
@@ -121,7 +121,7 @@ export default function HelpSupport() {
               <a href="/" aria-label="Article">
                 <img src={ChickenC} alt="chicken" />
               </a>
-              <div className="flex justify-between items-start">
+              <div className="flex gap-5 items-start">
                 <div className="py-5">
                   <img src={YiieldyLogoIcon} alt="yiieldy" />
                 </div>
@@ -154,7 +154,7 @@ export default function HelpSupport() {
               <a href="/" aria-label="Article">
                 <img src={FarmerImage} alt="chicken" />
               </a>
-              <div className="flex justify-between items-start">
+              <div className="flex gap-5 items-start">
                 <div className="py-5">
                   <img src={YiieldyLogoIcon} alt="yiieldy" />
                 </div>
@@ -194,9 +194,9 @@ export default function HelpSupport() {
           <div className="relative z-10">
             <div className="h-auto w-full transition-shadow duration-300">
               <div className="flex items-center justify-center w-full h-full transition-colors duration-300"></div>
-              <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-10 mt-[50px] z-20">
+              <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-10 mt-6xl z-20">
                 <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
-                  <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-primaryColor lg:text-6xl sm:leading-none text-center">
+                  <h2 className="mb-5 text-4xl font-bold text-primaryColor lg:text-6xl leading-none text-center">
                     Need more help?
                   </h2>
                   <p className="mb-5 text-base text-primaryColor lg:text-[20px] text-center">

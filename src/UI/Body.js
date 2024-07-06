@@ -19,13 +19,22 @@ export default function Body() {
       {/* Yiieldy Ai Staff Section */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8  lg:py-20">
         <div className="grid gap-10 lg:gap-32 lg:grid-cols-2">
+          <h5 className="mb-1 lg:text-6xl text-4xl lg:hidden block font-bold leading-none text-black">
+            Fiidz App AI Staff provides AI assitance to poultry farmers.
+          </h5>
           <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
-            <img
+            {/* <img
               className="object-cover w-full h-56 rounded shadow-lg md:h-80 lg:h-96"
               src={YiieldyAiStaff}
               alt="Yiieldy AI Staff"
-            />
-            <a
+            /> */}
+            <iframe
+              src="https://www.youtube.com/embed/uvyLjnt2lHs"
+              className="object-cover w-full h-56 rounded shadow-lg md:h-80 lg:h-96"
+              frameborder="0"
+              allowFullScreen
+            ></iframe>
+            {/* <a
               href="/"
               aria-label="Play Video"
               className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
@@ -39,10 +48,10 @@ export default function Body() {
                   <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z" />
                 </svg>
               </div>
-            </a>
+            </a> */}
           </div>
           <div className="flex flex-col gap-10 items-start">
-            <h5 className="mb-1 lg:text-6xl text-[25px] font-bold leading-none">
+            <h5 className="mb-1 lg:text-6xl text-4xl lg:block hidden font-bold leading-none">
               Fiidz App AI Staff provides AI assitance to poultry farmers.
             </h5>
             <p className="mb-6 text-gray-900 text-[15px] lg:text-2xl font-regular">
@@ -62,10 +71,10 @@ export default function Body() {
       {/* Yiieldy Fiidz Users */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8  lg:py-20">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-7xl md:mb-12">
-          <h2 className="max-w-7xl mb-6 font-sans text-3xl font-bold text-primaryColor lg:text-6xl md:mx-auto">
+          <h2 className="max-w-7xl mb-6 font-sans text-4xl font-bold text-black lg:text-6xl md:mx-auto">
             Hear From Yiieldy Fiidz Users
           </h2>
-          <p className="text-base text-primaryColor md:text-lg font-regular">
+          <p className="text-base text-black md:text-lg font-regular">
             <span className="font-regular">
               See how we helped our users to grow,
             </span>{" "}
@@ -74,26 +83,11 @@ export default function Body() {
         </div>
         <div className="mx-auto lg:max-w-full">
           <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
-            <img
-              className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-[800px]"
-              src={YiieldyUsersSec}
-              alt="Yiieldy"
-            />
-            <a
-              href="/"
-              aria-label="Play Video"
-              className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
-            >
-              <div className="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
-                <svg
-                  className="w-10 text-gray-900"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z" />
-                </svg>
-              </div>
-            </a>
+            <iframe
+              src="https://www.youtube.com/embed/C4TC1MVKnqo?si=VXqdrynorvCssIsQ"
+              className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-[600px]"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
@@ -108,7 +102,7 @@ export default function Body() {
             <h3 className="text-2xl text-primaryColor text-center">
               Testimonials
             </h3>
-            <h1 className="text-4xl font-bold text-center">
+            <h1 className="lg:text-6xl text-4xl font-bold text-center">
               Our customers think we’re the best
             </h1>
           </div>
@@ -202,7 +196,7 @@ export default function Body() {
             <div className="lg:py-6 lg:pr-16 lg:w-[70%] w-full">
               <div className="flex flex-col gap-2 mb-5">
                 <h3 className="text-blackShadeB font-bold">Easy and Fast</h3>
-                <h1 className="lg:text-6xl md:text-4xl text-3xl font-bold text-primaryColor mb-8">Quick Overview</h1>
+                <h1 className="lg:text-6xl text-4xl font-bold text-black mb-8">Quick Overview</h1>
               </div>
               <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify mb-5">
                 <div className="flex flex-col items-center mr-4">
@@ -254,7 +248,7 @@ export default function Body() {
             </div>
             <div className="">
               <img
-                className="inset-0 w-full md:h-auto lg:h-auto lg:w-[100%] md:w-[100%]"
+                className="inset-0 w-full md:h-auto lg:h-auto lg:w-[100%] md:w-[100%] lg:mt-0 mt-5"
                 src={YiieldyApp}
                 alt="YiieldyApp"
               />

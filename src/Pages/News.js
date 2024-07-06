@@ -10,9 +10,9 @@ export default function News() {
       <Nav />
 
       {/* Our News */}
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:py-32 bg-primaryColorLight">
+      <div className="px-4 py-16 lg:pt-32 pt-32 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:py-32 bg-primaryColorLight">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
+          <h2 className="max-w-lg mb-6 text-4xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
             Our News
           </h2>
           <p className="text-base text-gray-800 md:text-lg lg:text-[20px]">
@@ -44,7 +44,7 @@ export default function News() {
           </div>
         </div>
         <div className="flex flex-col justify-start mt-4">
-          <p className="font-bold text-[30px]">
+          <p className="font-bold text-2xl">
             Collaboration to Develop Coffee and Beverage Industry Expertise in
             Indonesia
           </p>
@@ -58,8 +58,8 @@ export default function News() {
 
       {/* News Section */}
       <div className="h-auto py-0 mb-0">
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="grid grid-cols-1 lg:flex max-w-screen-lg gap-8 sm:mx-auto">
+        <div className="px-2 py-16 mx-auto max-w-[1443px] md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="grid grid-cols-1 lg:flex max-w-screen-[1443px] gap-8 mx-auto">
             <div className="flex flex-col justify-center">
               <hr className="w-full my-6 border-gray-300" />
               <div className="flex">
@@ -69,7 +69,7 @@ export default function News() {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-semibold text-[34px]">
+                  <h6 className="mb-2 font-bold lg:text-4xl text-xl">
                     From Software to Agric: Mfon Uwa's Journey to <br />{" "}
                     Revolutionise Poultry Farming in Nigeria with Yiieldy
                   </h6>
@@ -88,7 +88,7 @@ export default function News() {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-semibold text-[34px]">
+                  <h6 className="mb-2 font-bold lg:text-4xl text-xl">
                     Nigerian Poultry Farmers Get a Boost: New App <br /> Fights
                     Challenges, Improves Profits
                   </h6>
@@ -104,7 +104,7 @@ export default function News() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="#"
-              className="bg-primaryColor w-96 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:bg-primaryColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-lg text-center"
+              className="bg-primaryColor w-full py-4 my-auto lg:w-96 lg:py-4 text-xs lg:text-sm font-bold text-white shadow-sm hover:bg-primaryColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-lg text-center"
             >
               Load More
             </a>

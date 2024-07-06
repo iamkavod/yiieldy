@@ -38,15 +38,14 @@ export default function AboutUs() {
       <div className="h-auto" id="aboutus">
         {/* About Hero */}
         <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 pt-[100px]">
-          <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
+          <div className="max-w-xl mx-auto lg:max-w-2xl">
             <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
-              <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-                  Welcome to our story!
+              <div className="max-w-[1443px] lg:mb-10 md:mx-auto sm:text-center md:mb-12">
+                <h2 className="max-w-[1443px] mb-6  text-4xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
+                  Uncover the Distinctive Yiieldy Advantage
                 </h2>
-                <p className="text-gray-700 lg:text-[25px]">
-                  Discover the heart behind our journey and values in the 'About
-                  Us' section below.
+                <p className="text-black lg:text-[25px]">
+                  At Yiieldy, we use AI to provide tailored digital agricultural solutions that drive farmers' businesses forward.
                 </p>
               </div>
             </div>
@@ -54,16 +53,16 @@ export default function AboutUs() {
         </div>
 
         {/* About Hero-B */}
-        <div className="px-2 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:pb-0">
+        <div className="px-4 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:pb-0">
           <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
             <div className="mb-2 lg:mb-0 lg:max-w-lg lg:pr-5">
               <div className="max-w-xl mb-6">
-                <h2 className="font-sans text-3xl font-bold tracking-tight text-primaryColor lg:text-[40px] sm:leading-none max-w-lg mb-6 lg:text-start text-center">
+                <h2 className=" text-3xl font-bold tracking-tight text-primaryColor lg:text-4xl sm:leading-none max-w-lg mb-6 text-start">
                   Yiieldy is a leading AgTech platform revolutionizing the
                   agricultural industry with AI products to ensure a sustainable
                   future
                 </h2>
-                <p className="text-gray-700 text-base md:text-lg">
+                <p className="text-black text-base md:text-lg">
                   We specialize in harnessing the power of Artificial
                   Intelligence (AI) to craft solutions that drive businesses
                   towards a brighter, more efficient future.
@@ -82,19 +81,19 @@ export default function AboutUs() {
       {/* About US Body */}
       <main className="-z-50">
         <div className="px-4 py-16 mx-auto max-w-xl md:max-w-7xl lg:max-w-[1443px] md:px-0 lg:px-8 lg:py-0 md:py-20">
-          <div className="lg:flex md:flex lg:gap-20 grid grid-cols-1 justify-items-between items-center">
+          <div className="lg:flex-row md:flex lg:gap-20 flex flex-col-reverse justify-between items-center">
             <div className="">
               <img
-                className="inset-0 w-full md:h-auto lg:h-auto lg:w-[100%] md:w-[100%]"
+                className="inset-0 w-full md:h-auto lg:h-auto lg:w-[90%] w-[100%]"
                 src={AbtUnlock}
                 alt="YiieldyApp"
               />
             </div>
-            <div className="lg:py-6">
+            <div className="lg:py-6 max-w-xl">
               <div className="flex flex-col gap-2 mb-5">
                 <h3 className="text-blackShadeB font-bold">Easy and Fast</h3>
-                <h1 className="lg:text-[50px] md:text-4xl text-3xl font-bold text-primaryColor mb-5">
-                  Unlock the power <br /> of AI with Yiieldy
+                <h1 className="lg:text-4xl text-3xl font-bold text-black mb-5">
+                  Unlock the power of AI with Yiieldy
                 </h1>
               </div>
               <div className="flex justify-start items-center lg:max-w-[1000px] md:pr-[1rem] text-justify mb-10">
@@ -106,11 +105,11 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div className="flex flex-col h-auto">
-                  <p className="text-primaryColor font-bold lg:text-[22px]">
+                  <p className="text-black font-bold lg:text-2xl">
                     Our Vision: Redefining Possibilities
                   </p>
-                  <p className="text-gray-700 lg:text-[22px]">
-                    To help our farmers achieve more by <br /> applying AI and
+                  <p className="text-black lg:text-xl">
+                    To help our farmers achieve more by applying AI and
                     innovative technologies.
                   </p>
                 </div>
@@ -124,11 +123,11 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div className="flex flex-col h-auto">
-                  <p className="text-primaryColor font-bold lg:text-[22px]">
+                  <p className="text-black font-bold lg:text-2xl">
                     Our Mission: Bridging AI and Reality
                   </p>
-                  <p className="text-gray-700 lg:text-[22px]">
-                    We aim to provide complete AI-powered <br /> solutions for
+                  <p className="text-black lg:text-xl">
+                    We aim to provide complete AI-powered solutions for
                     sustainable agriculture.
                   </p>
                 </div>
@@ -139,11 +138,11 @@ export default function AboutUs() {
       </main>
 
       {/* Achievment in Numbers */}
-      <div className="flex flex-col items-center justify-between w-full lg:flex-row px-2 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:pb-0">
+      <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row px-2 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:pb-0">
         <div className="flex items-center justify-center">
           <div>
             <img
-              className="object-cover w-auto h-auto"
+              className="object-cover w-auto h-auto lg:mb-0 mb-5 lg:mt-0 mt-10"
               src={AchievementInNumbers}
               alt="AI STaff"
             />
@@ -152,10 +151,13 @@ export default function AboutUs() {
 
         <div className="mb-2 lg:mb-0 lg:max-w-lg lg:pr-5 flex flex-col justify-between">
           <div className="max-w-xl mb-6">
-            <h2 className="font-sans text-3xl font-bold tracking-tight text-primaryColor sm:text-4xl sm:leading-none max-w-lg mb-6">
-              Achievement in <br /> Numbers
+            <h2 className="lg:text-4xl font-bold lg:block hidden tracking-tight text-black text-3xl sm:leading-none max-w-lg mb-6">
+              Achievement in  Numbers
             </h2>
-            <p className="text-gray-700 lg:text-[15px]">
+            <h2 className="text-3xl font-bold lg:hidden lg:text-start text-center tracking-tight text-primaryColor sm:text-4xl sm:leading-none max-w-lg mb-6">
+              Achievement in Numbers
+            </h2>
+            <p className="text-black lg:text-xl">
               Save time to create more time on other busy schedule. Save time to
               create more time on other busy schedule. Save time to create more
               time on other busy schedule. Save time to create more time on
@@ -169,9 +171,9 @@ export default function AboutUs() {
       </div>
 
       {/* Nomination */}
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8  lg:py-20">
+      {/* <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8  lg:py-20">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor sm:text-4xl md:mx-auto">
+          <h2 className="max-w-lg mb-6  text-3xl font-bold leading-none tracking-tight text-primaryColor sm:text-4xl md:mx-auto">
             We Got A Nomination
           </h2>
         </div>
@@ -185,11 +187,11 @@ export default function AboutUs() {
             <a
               href="/"
               aria-label="Play Video"
-              className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
+              className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-black bg-opacity-50 group hover:bg-opacity-25"
             >
               <div className="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
                 <svg
-                  className="w-10 text-gray-900"
+                  className="w-10 text-black"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -199,28 +201,28 @@ export default function AboutUs() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* SDGS */}
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24">
-        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-black lg:text-[40px] md:mx-auto">
+      <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-screen-[1443px] md:px-24 lg:px-8 lg:py-24">
+        <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
+          <h2 className="max-w-[1443px] mb-6 lg:text-6xl text-4xl font-bold leading-none tracking-tight text-black md:mx-auto">
             Yiieldy Alignment with Sustainable Development Goals (SDGs)
           </h2>
         </div>
-        <div className="grid lg:gap-3 gap-2 mb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:px-20">
-          <div className="p-8">
+        <div className="grid lg:gap-3 gap-2 mb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          <div className="lg:p-8 p-0 lg:mb-0 mb-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4">
               <img
                 src={SDGHunger}
                 alt="interractive workshop"
-                className="w-20 h-20"
+                className="w-auto h-auto"
               />
             </div>
-            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-[30px] twxt-[20px]">
+            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl">
               SDG 2: Zero Hunger:
             </h6>
-            <p className="lg:text-[15px] text-gray-900">
+            <p className="lg:text-[15px] text-black text-justify">
               Yiieldy unwavering focus on agriculture and AI technology is not
               just a strategic approach. It's a direct path to significantly
               enhance livestock feed efficiency and reduce costs for local
@@ -228,55 +230,55 @@ export default function AboutUs() {
               and promotes sustainable agriculture.
             </p>
           </div>
-          <div className="p-8">
+          <div className="lg:p-8 p-0 lg:mb-0 mb-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4">
               <img
                 src={SDGIndustry}
                 alt="interractive workshop"
-                className="w-20 h-20"
+                className="w-auto h-auto"
               />
             </div>
-            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-[30px] twxt-[20px]">
+            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl">
               SDG 9: Industry, Innovation, and Infrastructure:
             </h6>
-            <p className="lg:text-[15px] text-gray-900">
+            <p className="lg:text-[15px] text-black text-justify">
               Yiieldy unwavering focus on agriculture and AI technology is not
               just a strategic approach. It's a direct path to significantly
               enhance livestock feed efficiency and reduce costs for local
               farmers. This, in turn, ensures food security, improves nutrition,
-              and promotes sustainable agriculture.  
+              and promotes sustainable agriculture.
             </p>
           </div>
-          <div className="p-8">
+          <div className="lg:p-8 p-0 lg:mb-0 mb-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4">
               <img
                 src={SDGConsumption}
                 alt="interractive workshop"
-                className="w-20 h-20"
+                className="w-auto h-auto"
               />
             </div>
-            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-[30px] twxt-[20px]">
+            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl">
               SDG 12: Responsible Consumption and Production:
             </h6>
-            <p className="lg:text-[15px] text-gray-900">
+            <p className="lg:text-[15px] text-black text-justify">
               Our role in the agricultural industry is not just about helping
               farmers reduce production costs and improve feed efficiency. It's
               about championing more sustainable production practices and
               resource use, paving the way for a brighter future in agriculture.
             </p>
           </div>
-          <div className="p-8">
+          <div className="lg:p-8 p-0 lg:mb-0 mb-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4">
               <img
                 src={SDG13}
                 alt="interractive workshop"
-                className="w-20 h-20"
+                className="w-auto h-auto"
               />
             </div>
-            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-[30px] twxt-[20px] capitalize">
+            <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl capitalize">
               SDG 13:
             </h6>
-            <p className="lg:text-[15px] text-gray-900">
+            <p className="lg:text-[15px] text-black text-justify">
               Yiieldy is dedicated to enhancing livestock farming efficiency and
               reducing production costs, directly contributing to SDG13 by
               promoting sustainable agricultural practices that mitigate climate

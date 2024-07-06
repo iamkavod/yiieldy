@@ -147,7 +147,7 @@ export default function Pricing() {
               </ul>
               <a
                 className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-green px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-greenShade focus-visible:outline-none focus-visible:ring  bg-primaryColor focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
-                href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidzapp"
+                href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
               >
                 Try For Free
               </a>
@@ -256,7 +256,7 @@ export default function Pricing() {
               </ul>
               <a
                 className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-green px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-greenShade focus-visible:outline-none focus-visible:ring bg-primaryColor focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
-                href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidzapp"
+                href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
               >
                 Try For Free
               </a>
@@ -384,7 +384,7 @@ export default function Pricing() {
               </ul>
               <a
                 className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-green px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-greenShade focus-visible:outline-none focus-visible:ring bg-primaryColor focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
-                href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidzapp"
+                href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
               >
                 Try For Free
               </a>

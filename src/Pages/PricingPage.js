@@ -38,14 +38,14 @@ export default function PricingPage() {
       <FAQS />
 
       {/* Question */}
-      <div className="px-4 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 mb-20">
-        <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
+      <div className="px-4 mx-auto max-w-[1443px] md:px-24 lg:px-8 mb-20">
+        <div className="mx-auto max-w-[1443px]">
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+            <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+              <h2 className="max-w-[1443px] mb-6 font-bold leading-none tracking-tight text-black lg:text-6xl text-4xl font-bold text-center md:mx-auto text-center">
                 Still have a question?
               </h2>
-              <p className="text-base text-gray-700 md:text-lg text-center">
+              <p className="text-black md:text-lg text-center">
                 Reach out to us for an enquiry not captured.
               </p>
             </div>
@@ -73,11 +73,11 @@ export default function PricingPage() {
             <a
               href="/"
               aria-label="Play Video"
-              className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
+              className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-black bg-opacity-50 group hover:bg-opacity-25"
             >
               <div className="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
                 <svg
-                  className="w-10 text-gray-900"
+                  className="w-10 text-black"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -87,23 +87,23 @@ export default function PricingPage() {
             </a>
           </div>
           <div className="flex flex-col justify-center gap-5 items-start">
-            <h5 className="mb-4 lg:text-[58px] text-[25px] font-extrabold leading-none lg:text-start text-center w-full">
+            <h5 className="mb-4 lg:text-6xl text-4xl font-bold leading-none lg:text-start text-center w-full">
               Get Started With Fiidz App
             </h5>
-            <p className="mb-6 text-gray-900 text-[15px] lg:text-2xl lg:text-start text-center">
+            <p className="mb-6 text-black text-[15px] lg:text-2xl lg:text-start text-center">
               This video shows its capabilities and how essential <br /> it is to
               poultry farmers..
             </p>
             <div className="flex lg:justify-start lg:m-0 m-auto items-center gap-5">
               <a
-                href="#"
-                className="text-sm font-bold leading-6 text-white bg-primaryColor px-10 py-4 rounded-full lg:w-40"
+                href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
+                className="text-sm font-bold leading-6 text-white bg-primaryColor px-10 py-4 rounded-full lg:w-40 hover:opacity-[.9]"
               >
                 Try for Free
               </a>
               <a
                 href="#"
-                className="text-sm font-bold leading-6 bg-primaryColorLight border border-primaryColor text-primaryColor px-10 py-4 rounded-full lg:w-40"
+                className="text-sm font-bold leading-6 bg-primaryColorLight border border-primaryColor text-primaryColor px-10 py-4 rounded-full lg:w-40 hover:opacity-[.9]"
               >
                 Learn More
               </a>

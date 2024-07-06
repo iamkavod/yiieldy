@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { AppA, AppB, Logo } from "../Assets";
+import { AppA, AppB, Logo, WeatherAppCarousel, YiieldyAppCarousel } from "../Assets";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "../App.css";
 import Nav from './Nav';
@@ -46,7 +46,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="bg-white overflow-hidden font-sp-pro">
       {/* <header
         className={`bg-${
           hasScrolled ? "white" : "white"
@@ -261,20 +261,18 @@ export default function Header() {
       {/* Header */}
       <Nav />
 
-      <div className="relative px-6 pt-14 lg:px-8">
+      <div className="relative px-0 pt-14 lg:px-8">
         <div className="circleDivLeft">
           <div className="circleLeft"></div>
         </div>
-        <div className="mx-auto max-w-2xl py-10 sm:py-20 lg:py-20">
+        <div className="mx-auto max-w-[1443px] py-10 py-20 lg:py-20 lg:px-8 px-1">
           <div className="text-center font-sp-pro">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 lg:text-6xl">
-              Yiieldy - Agriculture, AI, and Sustainability
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 font-regular">
-              Yiieldy offers a complete agricultural services platform. Maximize
-              the features and flexibility of accelerate and boost productivity.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="max-w-2xl mx-auto">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 lg:text-6xl text-center">
+                Yiieldy - Agriculture, AI, and Sustainability
+              </h1>
+            </div>
+            <div className="mt-5 flex items-center justify-center gap-x-6">
               {/* <img
                 src={AppA}
                 alt="yiieldy"
@@ -289,46 +287,70 @@ export default function Header() {
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                  delay: 2500,
+                  delay: 10000,
                   disableOnInteraction: false,
                 }}
                 pagination={{
                   clickable: true,
                   bulletActiveClass: "customActive",
                 }}
-                navigation={false}
+                navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <img
-                    src={AppA}
-                    alt="yiieldy"
-                    className="h-36 w-auto lg:h-96 lg:w-auto"
-                  />
+                  <div className="flex flex-col gap-10 justify-center items-center lg:max-w-[1443px] max-w-full">
+                    <p className="text-lg leading-8 text-gray-600 font-regular">
+                      Yiieldy offers a complete agricultural services platform.
+                    </p>
+                    <div className="flex items-center justify-center gap-x-6">
+                      <a
+                        href="#"
+                        className="bg-primaryColor w-32 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
+                      >
+                        Learn More
+                      </a>
+                      <a
+                        href="#"
+                        className="rounded-full bg-primaryColorLight w-32 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight"
+                      >
+                        Contact Us
+                      </a>
+                    </div>
+                    <img
+                      src={YiieldyAppCarousel}
+                      alt="yiieldy"
+                      className="h-36 w-auto lg:h-96 lg:w-auto"
+                    />
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img
-                    src={AppB}
-                    alt="yiieldy"
-                    className="h-36 w-auto lg:h-96 lg:w-auto"
-                  />
+                  <div className="flex flex-col gap-10 justify-center items-center">
+                    <p className="text-lg leading-8 text-gray-600 font-regular">
+                      Yiieldy offers a complete agricultural services platform.
+                    </p>
+                    <div className="flex items-center justify-center gap-x-6">
+                      <a
+                        href="#"
+                        className="bg-primaryColor w-32 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
+                      >
+                        Learn More
+                      </a>
+                      <a
+                        href="#"
+                        className="rounded-full bg-primaryColorLight w-32 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight"
+                      >
+                        Contact Us
+                      </a>
+                    </div>
+                    <img
+                      src={WeatherAppCarousel}
+                      alt="yiieldy"
+                      className="h-36 w-auto lg:h-96 lg:w-auto"
+                    />
+                  </div>
                 </SwiperSlide>
               </Swiper>
-            </div>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="bg-primaryColor w-96 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
-              >
-                Learn More
-              </a>
-              <a
-                href="#"
-                className="rounded-full bg-primaryColorLight w-96 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight"
-              >
-                Contact Us
-              </a>
             </div>
           </div>
         </div>

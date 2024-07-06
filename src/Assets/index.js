@@ -58,3 +58,5 @@ export { default as FarmerImage } from './imageD.png';
 export { default as Eclipse } from './ellipse.png';
 export { default as Cookiez } from './cookies.svg';
 export { default as Cookie } from './cookie.svg';
+export { default as YiieldyAppCarousel } from './yiieldyApp.png';
+export { default as WeatherAppCarousel } from './weatherApp.png';

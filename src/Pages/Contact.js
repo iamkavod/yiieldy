@@ -4,6 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Field, Label, Switch } from "@headlessui/react";
 import Nav from "../UI/Nav";
 import "../fonts.css";
+import { Footer } from "../UI";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -12,24 +13,24 @@ function classNames(...classes) {
 export default function Contact() {
   const [agreed, setAgreed] = useState(false);
   return (
-    <main className="font-sp-pro">
+    <main className="font-sp-pro bg-primaryColorLightB">
       {/* Header */}
       <Nav />
 
       {/* Contact Us */}
-      <div className="isolate bg-primaryColorLightB px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-6xl font-bold tracking-tight text-primaryColor sm:text-4xl">
+      <div className="isolate px-6 py-24 py-32 lg:px-8">
+        <div className="mx-auto max-w-[1443px] text-center">
+          <h2 className="lg:text-6xl font-bold text-black text-4xl">
           Drop us a message for any query
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
+          <p className="mt-2 text-lg leading-8 text-black">
           Feel free to reach out with any questions or concerns by sending us a message. We're here to assist you!
           </p>
         </div>
         <form
           action="#"
           method="POST"
-          className="mx-auto mt-16 max-w-xl sm:mt-20 bg-white p-10 rounded-[20px]"
+          className="mx-auto mt-16 max-w-xl lg:mt-20 mt-5 bg-white p-10 rounded-[20px]"
         >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
             <div>
@@ -46,13 +47,14 @@ export default function Contact() {
                   id="first-name"
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  placeholder="Enter First Name"
                 />
               </div>
             </div>
             <div className="">
               <label
                 htmlFor="phone-number"
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-bold leading-6 text-gray-900"
               >
                 Phone number
               </label>
@@ -61,11 +63,12 @@ export default function Contact() {
                   <label htmlFor="country" className="sr-only">
                     Country
                   </label>
-                  <input
+                  {/* <input
                     value={"+234"}
                     readOnly
                     className="h-full w-10 rounded-md border-0 bg-transparent bg-none py-0 pl-2 text-gray-400 sm:text-sm outline-none"
-                  />
+                    placeholder="+234"
+                  /> */}
                   {/* <select
                     id="country"
                     name="country"
@@ -82,8 +85,8 @@ export default function Contact() {
                   name="phone-number"
                   id="phone-number"
                   autoComplete="tel"
-                  className="block w-full h-10 rounded-md border-0 pl-[42px] px-2 py-2 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
-                  // placeholder="+234"
+                  className="block w-full h-10 rounded-md border-0 px-2 py-2 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  placeholder="+234"
                 />
               </div>
             </div>
@@ -101,6 +104,7 @@ export default function Contact() {
                   id="email"
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  placeholder="Enter Your Email"
                 />
               </div>
             </div>
@@ -118,6 +122,7 @@ export default function Contact() {
                   id="subject"
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  placeholder="Enter Subject"
                 />
               </div>
             </div>
@@ -151,6 +156,9 @@ export default function Contact() {
           </div>
         </form>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }

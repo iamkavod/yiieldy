@@ -1,36 +1,52 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { CloseMinusBtn, OpenPlusBtn } from "../Assets";
-import { Footer, Nav } from '../UI'
+import { Footer, Nav } from '../UI';
 
-const Item = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border-b">
-      <button
-        type="button"
-        aria-label="Open item"
-        title="Open item"
-        className="flex items-center justify-between w-full p-4 focus:outline-none"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <p className="text-lg font-bold text-primaryColor text-start">{title}</p>
-        <img
-          src={isOpen ? CloseMinusBtn : OpenPlusBtn}
-          alt={isOpen ? "Collapse" : "Expand"}
-          className="w-5"
-        />
-      </button>
-      {isOpen && (
-        <div className="p-4 pt-0">
-          <p className="text-gray-700 bg-primaryColorLightB p-5">{children}</p>
-        </div>
-      )}
-    </div>
-  );
-};
+const Item = React.forwardRef(({ title, children, isOpen, onClick }, ref) => (
+  <div className="border-b" ref={ref}>
+    <button
+      type="button"
+      aria-label="Open item"
+      title="Open item"
+      className="flex items-center justify-between w-full p-4 focus:outline-none"
+      onClick={onClick}
+    >
+      <p className="text-lg font-bold text-primaryColor text-start">{title}</p>
+      <img
+        src={isOpen ? CloseMinusBtn : OpenPlusBtn}
+        alt={isOpen ? "Collapse" : "Expand"}
+        className="w-5"
+      />
+    </button>
+    {isOpen && (
+      <div className="p-4 pt-0">
+        <p className="text-gray-700 bg-primaryColorLightB p-5">{children}</p>
+      </div>
+    )}
+  </div>
+));
 
 export default function Faqs() {
+  const [openIndex, setOpenIndex] = useState(null);
+  const itemRefs = useRef([]);
+
+  const handleClick = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const handleClickOutside = (event) => {
+    if (itemRefs.current.every((ref) => ref && !ref.contains(event.target))) {
+      setOpenIndex(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <main>
       <Nav />
@@ -48,33 +64,43 @@ export default function Faqs() {
           </div>
         </div>
       </div>
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:py-20 ">
-        <div class="max-w-xl sm:mx-auto lg:max-w-[1443px] lg:px-40">
-          <div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
-            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-[50px] md:mx-auto text-center">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:py-20 ">
+        <div className="max-w-xl sm:mx-auto lg:max-w-[1443px] lg:px-40">
+          <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-[50px] md:mx-auto text-center">
               Answers to Frequently Asked Questions
             </h2>
-            <p class="text-[20px] text-gray-700">
+            <p className="text-[20px] text-gray-700">
               We’re here to teach, guide, and support.
             </p>
           </div>
-          <div class="space-y-4">
-            <Item title="What is Yiieldy, and how does it work?">
-              Yiieldy is a comprehensive AgTech platform with various products and apps that help farmers grow and manage their farm businesses
-            </Item>
-            <Item title="Could you please provide me with the pricing information for the Yiieldy app?"></Item>
-            <Item title="Experiencing problems paying?"></Item>
-            <Item title="How do I reset my password?"></Item>
-            <Item title="Can you please suggest other ways to demonstrate our data's safety?"></Item>
-            <Item title="Is it possible for my employees to enter data into the Yiieldy application?"></Item>
-            <Item title="How can I receive assistance with my account or obtain responses to my inquiries?"></Item>
-            <Item title="Do I have to create an account to use Yiieldy app features?"></Item>
-            <Item title="What payment methods do you accept?"></Item>
-            <Item title="What currencies can I use?"></Item>
-            <Item title="I'm having trouble logging into my account; what should I do?"></Item>
-            <Item title="Can you confirm if my data is secure?"></Item>
-            <Item title="How can I remove my personal information from your database?"></Item>
-            <Item title="Could you please clarify the size or type of farmers that Yiieldy supports?"></Item>
+          <div className="space-y-4">
+            {[
+              "What is Yiieldy, and how does it work?",
+              "Could you please provide me with the pricing information for the Yiieldy app?",
+              "Experiencing problems paying?",
+              "How do I reset my password?",
+              "Can you please suggest other ways to demonstrate our data's safety?",
+              "Is it possible for my employees to enter data into the Yiieldy application?",
+              "How can I receive assistance with my account or obtain responses to my inquiries?",
+              "Do I have to create an account to use Yiieldy app features?",
+              "What payment methods do you accept?",
+              "What currencies can I use?",
+              "I'm having trouble logging into my account; what should I do?",
+              "Can you confirm if my data is secure?",
+              "How can I remove my personal information from your database?",
+              "Could you please clarify the size or type of farmers that Yiieldy supports?",
+            ].map((title, index) => (
+              <Item
+                key={index}
+                title={title}
+                isOpen={openIndex === index}
+                onClick={() => handleClick(index)}
+                ref={(el) => (itemRefs.current[index] = el)}
+              >
+                {index === 0 && "Yiieldy is a comprehensive AgTech platform with various products and apps that help farmers grow and manage their farm businesses"}
+              </Item>
+            ))}
           </div>
         </div>
       </div>

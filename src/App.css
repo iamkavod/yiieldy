@@ -46,6 +46,7 @@ body::-webkit-scrollbar-thumb {
 
 .circleRight {
   background: linear-gradient(14deg, #fff 25.71%, #218225 89.85%);
+  border-radius: 350.784px;
   width: 350.784px;
   height: 350.784px;
   flex-shrink: 0;

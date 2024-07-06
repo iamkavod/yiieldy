@@ -50,7 +50,7 @@ export default function Header() {
           hasScrolled ? "white" : "white"
         } fixed top-0 w-full z-50`}
       >
-        <div class="px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8">
+        <div class="py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8">
           <div class="relative flex items-center justify-between">
             <a
               href="/"
@@ -157,7 +157,7 @@ export default function Header() {
                   Pricing
                 </NavLink>
               </li> */}
-              <li className={location.pathname === "/service" ? "active" : ""}>
+              {/* <li className={location.pathname === "/service" ? "active" : ""}>
                 <NavLink
                   to={"/service"}
                   aria-label="Service"
@@ -165,7 +165,7 @@ export default function Header() {
                 >
                   Services
                 </NavLink>
-              </li>
+              </li> */}
               <li className={location.pathname === "/about" ? "active" : ""}>
                 <NavLink
                   to={"/about"}
@@ -209,7 +209,7 @@ export default function Header() {
               </button>
               {isMenuOpen && (
                 <div class="absolute top-0 left-0 w-full">
-                  <div class="bg-white h-[100vh]">
+                  <div class="bg-white h-[100vh] px-2 w-full">
                     <div class="flex items-center justify-between mb-4">
                       <div>
                         <a
@@ -242,7 +242,7 @@ export default function Header() {
                       </div>
                     </div>
                     <nav>
-                      <ul class="space-y-4 px-2">
+                      <ul class="space-y-4 px-0">
                         <li>
                           <Link
                             to={"/fiidzapp"}
@@ -270,7 +270,7 @@ export default function Header() {
                             Pricing
                           </Link>
                         </li> */}
-                        <li>
+                        {/* <li>
                           <Link
                             to={"/service"}
                             aria-label="Service"
@@ -278,7 +278,7 @@ export default function Header() {
                           >
                             Services
                           </Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link
                             to={"/about"}

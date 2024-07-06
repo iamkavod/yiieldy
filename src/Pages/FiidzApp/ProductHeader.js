@@ -148,7 +148,7 @@ export default function ProductHeader() {
                 Pricing
               </NavLink>
             </li>
-            <li className={location.pathname === "/service" ? "active" : ""}>
+            {/* <li className={location.pathname === "/service" ? "active" : ""}>
               <NavLink
                 to={"/service"}
                 aria-label="Service"
@@ -156,7 +156,7 @@ export default function ProductHeader() {
               >
                 Service
               </NavLink>
-            </li>
+            </li> */}
             <li className={location.pathname === "/about" ? "active" : ""}>
               <NavLink
                 to={"/about"}
@@ -270,15 +270,15 @@ export default function ProductHeader() {
                           Pricing
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
-                          // to={"/service"}
+                          to={"/service"}
                           aria-label="Service"
                           class="tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
                         >
                           Service
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link
                           to={"/about"}

@@ -158,7 +158,7 @@ export default function AboutNav() {
                   </MenuItems>
                 </Menu>
               </li>
-              <li className={location.pathname === "/pricing" ? "active" : ""}>
+              {/* <li className={location.pathname === "/pricing" ? "active" : ""}>
                 <NavLink
                   to={"/pricing"}
                   aria-label="Pricing"
@@ -166,8 +166,8 @@ export default function AboutNav() {
                 >
                   Pricing
                 </NavLink>
-              </li>
-              <li className={location.pathname === "/service" ? "active" : ""}>
+              </li> */}
+              {/* <li className={location.pathname === "/service" ? "active" : ""}>
                 <NavLink
                   to={"/service"}
                   aria-label="Service"
@@ -175,7 +175,7 @@ export default function AboutNav() {
                 >
                   Service
                 </NavLink>
-              </li>
+              </li> */}
               <li className={location.pathname === "/about" ? "active" : ""}>
                 <NavLink
                   to={"/about"}
@@ -271,7 +271,7 @@ export default function AboutNav() {
                             Resources
                           </Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link
                             to={"/pricing"}
                             aria-label="Pricing"
@@ -279,8 +279,8 @@ export default function AboutNav() {
                           >
                             Pricing
                           </Link>
-                        </li>
-                        <li>
+                        </li> */}
+                        {/* <li>
                           <Link
                             to={"/service"}
                             aria-label="Service"
@@ -288,7 +288,7 @@ export default function AboutNav() {
                           >
                             Service
                           </Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link
                             to={"/about"}
