@@ -10,8 +10,8 @@ export default function News() {
       <Nav />
 
       {/* Our News */}
-      <div className="px-4 py-16 lg:pt-32 pt-32 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:py-32 bg-primaryColorLight">
-        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <div className="px-4 py-16 lg:pt-32 pt-32 mx-auto max-w-[1443px] md:px-24 lg:px-8 lg:py-32 bg-primaryColorLight">
+        <div className="max-w-[1443px] lg:px-8 mb-10 md:mx-auto text-center md:mb-12">
           <h2 className="max-w-lg mb-6 text-4xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
             Our News
           </h2>
@@ -69,10 +69,10 @@ export default function News() {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-bold lg:text-4xl text-xl">
+                  <a href="https://www.legit.ng/business-economy/technology/1596484-from-software-soil-mfon-uwas-journey-revolutionize-poultry-farming-nigeria-yiieldy/" className="mb-2 font-bold lg:text-4xl text-xl">
                     From Software to Agric: Mfon Uwa's Journey to <br />{" "}
                     Revolutionise Poultry Farming in Nigeria with Yiieldy
-                  </h6>
+                  </a>
                   <p className="text-[15px] text-gray-500 flex items-center gap-2">
                     <span>4 Min</span>
                     <span className="bg-gray-500 w-2 h-2 rounded-full"></span>
@@ -88,10 +88,10 @@ export default function News() {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-bold lg:text-4xl text-xl">
+                  <a href="https://poultrynews.africa/index.php/2024/06/10/nigerian-poultry-farmers-get-a-boost-new-app-fights-challenges-improves-profits/" className="mb-2 font-bold lg:text-4xl text-xl">
                     Nigerian Poultry Farmers Get a Boost: New App <br /> Fights
                     Challenges, Improves Profits
-                  </h6>
+                  </a>
                   <p className="text-[15px] text-gray-500 flex items-center gap-2">
                     <span>4 Min</span>
                     <span className="bg-gray-500 w-2 h-2 rounded-full"></span>

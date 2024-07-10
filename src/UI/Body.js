@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   Check,
   Left,
+  PlayVideo,
   Quote,
   Right,
   Star,
@@ -12,8 +13,41 @@ import {
   YiieldyApp,
   YiieldyUsersSec,
 } from "../Assets";
+import { Testimonial } from "../Components";
 
 export default function Body() {
+  const iframeRef = useRef(null);
+  const [buttonVisible, setButtonVisible] = useState(true);
+
+  const playVideo = () => {
+    setButtonVisible(false);
+    iframeRef.current.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+  };
+
+  const onPlayerStateChange = (event) => {
+    if (event.data === 2) { // 2 indicates the video is paused
+      setButtonVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    const onMessage = (event) => {
+      if (event.origin !== 'https://www.youtube.com') {
+        return;
+      }
+      const data = JSON.parse(event.data);
+      if (data.event === 'onStateChange') {
+        onPlayerStateChange(data);
+      }
+    };
+
+    window.addEventListener('message', onMessage);
+
+    return () => {
+      window.removeEventListener('message', onMessage);
+    };
+  }, []);
+
   return (
     <main className="p-6">
       {/* Yiieldy Ai Staff Section */}
@@ -22,33 +56,26 @@ export default function Body() {
           <h5 className="mb-1 lg:text-6xl text-4xl lg:hidden block font-bold leading-none text-black">
             Fiidz App AI Staff provides AI assitance to poultry farmers.
           </h5>
-          <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
-            {/* <img
-              className="object-cover w-full h-56 rounded shadow-lg md:h-80 lg:h-96"
-              src={YiieldyAiStaff}
-              alt="Yiieldy AI Staff"
-            /> */}
-            <iframe
-              src="https://www.youtube.com/embed/uvyLjnt2lHs"
-              className="object-cover w-full h-56 rounded shadow-lg md:h-80 lg:h-96"
-              frameborder="0"
-              allowFullScreen
-            ></iframe>
-            {/* <a
-              href="/"
-              aria-label="Play Video"
-              className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
-            >
-              <div className="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
-                <svg
-                  className="w-10 text-gray-900"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+          <div className="flex justify-center">
+            <div className="relative lg:w-[600px] w-full rounded-[20px] transition-shadow duration-300 hover:shadow-xl">
+              <iframe
+                ref={iframeRef}
+                src="https://www.youtube.com/embed/uvyLjnt2lHs?enablejsapi=1&rel=0"
+                className="object-center lg:w-[600px] w-full h-56 rounded-[20px] shadow-lg md:h-80 lg:h-96"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+              {buttonVisible && (
+                <button
+                  aria-label="Play Video"
+                  className="absolute inset-0 flex items-center justify-center lg:w-[600px] w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25 rounded-[20px]"
+                  onClick={playVideo}
                 >
-                  <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z" />
-                </svg>
-              </div>
-            </a> */}
+                </button>
+              )}
+            </div>
           </div>
           <div className="flex flex-col gap-10 items-start">
             <h5 className="mb-1 lg:text-6xl text-4xl lg:block hidden font-bold leading-none">
@@ -81,112 +108,32 @@ export default function Body() {
             improve feed efficiency, and enhance poultry performance.
           </p>
         </div>
-        <div className="mx-auto lg:max-w-full">
-          <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
+        <div className="flex justify-center">
+          <div className="relative w-full rounded-[20px] transition-shadow duration-300 hover:shadow-xl">
             <iframe
-              src="https://www.youtube.com/embed/C4TC1MVKnqo?si=VXqdrynorvCssIsQ"
-              className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-[600px]"
-              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+              ref={iframeRef}
+              src="https://www.youtube.com/embed/C4TC1MVKnqo?si=kEHw0Bx4yFFNL2Tx&rel=0"
+              className="object-center w-full h-56 rounded-[20px] shadow-lg md:h-80 lg:h-[600px]"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             ></iframe>
+            {buttonVisible && (
+              <button
+                aria-label="Play Video"
+                className="absolute inset-0 flex items-center justify-center w-full lg:h-[600px] transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25 rounded-[20px]"
+                onClick={playVideo}
+              >
+              </button>
+            )}
           </div>
         </div>
       </div>
 
       {/* Testimonials */}
-      <div className="lg:px-8  lg:max-w-[1443px] lg:py-32 md:py-32 flex flex-col mx-auto gap-20">
-        <div className="flex justify-between items-center">
-          <a href="/">
-            <img src={Left} alt="Left" />
-          </a>
-          <div className="flex flex-col gap-5">
-            <h3 className="text-2xl text-primaryColor text-center">
-              Testimonials
-            </h3>
-            <h1 className="lg:text-6xl text-4xl font-bold text-center">
-              Our customers think we’re the best
-            </h1>
-          </div>
-          <a href="/">
-            <img src={Right} alt="Right" />
-          </a>
-        </div>
-        <main className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-10">
-          <div className="grid grid-cols-1 h-[400px]">
-            <div className="flex justify-between items-center">
-              <img src={Quote} alt="quote" />
-              <img src={Star} alt="star" />
-            </div>
-            <div>
-              <p>
-                I recently used the Yiieldy Fiidz app's feed calculator to
-                estimate my poultry production.
-              </p>
-              <p>
-                This app makes feed management easier by removing the guesswork,
-                which has helped me save significant money. Its simple and
-                accurate design makes it a must-have for every poultry farmer.
-              </p>
-            </div>
-            <div className="flex justify-between items-start">
-              <div className="flex flex-col">
-                <h1>Jacob Odiakosa</h1>
-                <p>Winners Farm Ltd</p>
-              </div>
-              <img src={Check} alt="Check" />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 h-[400px]">
-            <div className="flex justify-between items-center">
-              <img src={Quote} alt="quote" />
-              <img src={Star} alt="star" />
-            </div>
-            <div>
-              <p>
-                Previously, I relied on my intuition to discuss my poultry
-                production. However, since using Yiieldy Fiidz, I have gained
-                invaluable insights into how efficiently my flocks convert feed
-                into weight gain.
-              </p>
-              <p>
-                This has enabled me to make informed decisions about their
-                feeding strategies and boosted my confidence in my poultry
-                management. I am impressed with integrating such a data-driven
-                tool into the app. Fantastic job!
-              </p>
-            </div>
-            <div className="flex justify-between items-start">
-              <div className="flex flex-col">
-                <h1>Abu Warlord</h1>
-                <p>Azuri-Green Acres</p>
-              </div>
-              <img src={Check} alt="Check" />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 h-[400px]">
-            <div className="flex justify-between items-center">
-              <img src={Quote} alt="quote" />
-              <img src={Star} alt="star" />
-            </div>
-            <div>
-              <p>
-                I recently used the Yiieldy Fiidz app's feed calculator to
-                estimate my poultry production.
-              </p>
-              <p>
-                This app makes feed management easier by removing the guesswork,
-                which has helped me save significant money. Its simple and
-                accurate design makes it a must-have for every poultry farmer.
-              </p>
-            </div>
-            <div className="flex justify-between items-start">
-              <div className="flex flex-col">
-                <h1>Ekaidem Jeremiah</h1>
-                <p>Ecoregions Nigeria</p>
-              </div>
-              <img src={Check} alt="Check" />
-            </div>
-          </div>
-        </main>
+      <div className="lg:px-8 lg:max-w-[1443px] lg:py-20 flex flex-col lg:gap-0 gap-5">
+        <Testimonial />
       </div>
 
       {/* Yiieldy App */}

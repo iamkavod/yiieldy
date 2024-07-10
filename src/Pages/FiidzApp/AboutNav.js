@@ -1,43 +1,44 @@
-import React, { useState, useEffect } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+'use client'
+
+import { useState, useEffect } from 'react'
 import {
-  AbtHero,
-  AbtUnlock,
-  AppA,
-  AppB,
-  Logo,
-  Mission,
-  StepA,
-  StepB,
-  StepC,
-  Vision,
-} from "../../Assets";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import "../../App.css";
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from '@headlessui/react'
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  NewspaperIcon,
+  QuestionMarkCircleIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline'
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { FiidzAppLogo, Logo } from '../../Assets'
+import '../../fonts.css'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+const products = [
+  { name: 'FiidzApp', description: 'Revolutionizing poultry farming', href: '/fiidzapp' },
+]
 
-export default function AboutNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const resources = [
+  { name: 'News', href: '/news', icon: NewspaperIcon},
+  { name: 'Help and Support', href: '/helpandsupport', icon: QuestionMarkCircleIcon },
+]
+
+export default function Example() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
-  const [dropdownStates, setDropdownStates] = useState({
-    dropdown1Visible: false,
-    dropdown2Visible: false,
-  });
-
-  const toggleDropdown = (dropdownName, isVisible) => {
-    setDropdownStates((prevState) => ({
-      ...prevState,
-      [dropdownName]: isVisible,
-    }));
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,269 +54,191 @@ export default function AboutNav() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
-    <div>
-      <header
-        className={`bg-${
-          hasScrolled ? "white" : "transparent"
-        } fixed top-0 w-full z-50`}
-      >
-        <div class="px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8">
-          <div class="relative flex items-center justify-between">
+    <header className={`bg-${hasScrolled ? "white" : "transparent"
+      } fixed top-0 w-full z-50 font-sp-pro`}>
+      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between py-6 px-2 lg:px-8">
+        <div className="flex lg:flex-1">
+          <a
+            href="/"
+            aria-label="Yiieldy"
+            title="Yiieldy"
+            class="inline-flex items-center"
+          >
+            <img src={Logo} alt="Logo" className="lg:w-auto lg:h-auto w-20" />
+          </a>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(true)}
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+          </button>
+        </div>
+        <PopoverGroup className="hidden lg:flex items-center lg:gap-x-8">
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-bold leading-6 text-gray-900 focus:outline-none">
+              Product
+              <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
+            </PopoverButton>
+
+            <PopoverPanel
+              transition
+              className="absolute -left-20 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {products.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <img src={FiidzAppLogo} aria-hidden="true" className="h-auto w-auto text-gray-600 group-hover:text-indigo-600" />
+                    </div>
+                    <div className="flex-auto">
+                      <a href={item.href} className="block font-bold text-gray-900">
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </PopoverPanel>
+          </Popover>
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-bold leading-6 text-gray-900 focus:outline-none">
+              Resources
+              <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
+            </PopoverButton>
+
+            <PopoverPanel
+              transition
+              className="absolute -left-28 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {resources.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-primaryColor" />
+                    </div>
+                    <div className="flex-auto">
+                      <a href={item.href} className="block font-bold text-gray-900">
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </PopoverPanel>
+          </Popover>
+          <a href="/services" className="text-sm font-bold leading-6 text-gray-900">
+            Services
+          </a>
+          <a href="/about" className="text-sm font-bold leading-6 text-gray-900">
+            About Us
+          </a>
+          <a
+            href='/contact'
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-whiteShade transition duration-200 shadow-md bg-primaryColor hover:opacity-[.9] focus:shadow-outline focus:outline-none rounded-full"
+            aria-label="Contact Us"
+          >
+            Contact Us
+          </a>
+        </PopoverGroup>
+      </nav>
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+        <div className="fixed inset-0 z-10" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-[100] w-full overflow-y-auto bg-white px-2 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
             <a
               href="/"
               aria-label="Yiieldy"
               title="Yiieldy"
               class="inline-flex items-center"
             >
-              <img src={Logo} alt="Logo" className="lg:w-auto lg:h-auto w-20" />
+              <img src={Logo} alt="Logo" className="w-[75px]" />
             </a>
-            <ul class="flex items-center hidden space-x-8 lg:flex">
-              <li>
-                <Menu as="div" className="relative inline-block text-left">
-                  <div>
-                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 hover:text-primaryColor">
-                      Products
-                      <ChevronDownIcon
-                        className="-mr-3 h-5 w-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                    </MenuButton>
-                  </div>
-
-                  <MenuItems
-                    transition
-                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[hover]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                  >
-                    <div className="py-1">
-                      <MenuItem>
-                        {({ focus }) => (
-                          <Link
-                            to={"/fiidzapp"}
-                            className={classNames(
-                              focus
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-gray-700",
-                              "block px-4 py-2 text-sm"
-                            )}
-                          >
-                            FiidzApp
-                          </Link>
-                        )}
-                      </MenuItem>
-                    </div>
-                  </MenuItems>
-                </Menu>
-              </li>
-              <li>
-                <Menu as="div" className="relative inline-block text-left">
-                  <div>
-                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 hover:text-primaryColor">
-                      Resources
-                      <ChevronDownIcon
-                        className="-mr-3 h-5 w-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                    </MenuButton>
-                  </div>
-
-                  <MenuItems
-                    transition
-                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[hover]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                  >
-                    <div className="py-1">
-                      <MenuItem>
-                        {({ focus }) => (
-                          <Link
-                            to={"/news"}
-                            className={classNames(
-                              focus
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-gray-700",
-                              "block px-4 py-2 text-sm"
-                            )}
-                          >
-                            News
-                          </Link>
-                        )}
-                      </MenuItem>
-                      <MenuItem>
-                        {({ focus }) => (
-                          <Link
-                            to={"/helpandsupport"}
-                            className={classNames(
-                              focus
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-gray-700",
-                              "block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Help and Support
-                          </Link>
-                        )}
-                      </MenuItem>
-                    </div>
-                  </MenuItems>
-                </Menu>
-              </li>
-              {/* <li className={location.pathname === "/pricing" ? "active" : ""}>
-                <NavLink
-                  to={"/pricing"}
-                  aria-label="Pricing"
-                  class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root px-1">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50">
+                    Product
+                    <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
+                  </DisclosureButton>
+                  <DisclosurePanel className="mt-2 space-y-2">
+                    {[...products].map((item) => (
+                      <DisclosureButton
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
+                      </DisclosureButton>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure>
+                <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50">
+                    Resources
+                    <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
+                  </DisclosureButton>
+                  <DisclosurePanel className="mt-2 space-y-2">
+                    {[...resources].map((item) => (
+                      <DisclosureButton
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
+                      </DisclosureButton>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure>
+                <a
+                  href="/services"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Pricing
-                </NavLink>
-              </li> */}
-              {/* <li className={location.pathname === "/service" ? "active" : ""}>
-                <NavLink
-                  to={"/service"}
-                  aria-label="Service"
-                  class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
+                  Services
+                </a>
+                <a
+                  href="/about"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Service
-                </NavLink>
-              </li> */}
-              <li className={location.pathname === "/about" ? "active" : ""}>
-                <NavLink
-                  to={"/about"}
-                  aria-label="About us"
-                  class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                >
-                  About us
-                </NavLink>
-              </li>
-              <li>
-                <Link
-                  to={"/contact"}
-                  class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-whiteShade transition duration-200 shadow-md bg-primaryColor hover:bg-primaryColor focus:shadow-outline focus:outline-none rounded-full"
-                  aria-label="Contact Us"
+                  About Us
+                </a>
+                <a
+                  href="/contact"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact Us
-                </Link>
-              </li>
-            </ul>
-            <div class="lg:hidden">
-              <button
-                aria-label="Open Menu"
-                title="Open Menu"
-                class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
-                onClick={() => setIsMenuOpen(true)}
-              >
-                <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-                  />
-                </svg>
-              </button>
-              {isMenuOpen && (
-                <div class="absolute top-0 left-0 w-full">
-                  <div class="bg-white h-[100vh] z-50">
-                    <div class="flex items-center justify-between mb-4">
-                      <div>
-                        <a
-                          href="/"
-                          aria-label="Yiieldy"
-                          title="Yiieldy"
-                          class="inline-flex items-center"
-                        >
-                          <img
-                            src={Logo}
-                            alt="Logo"
-                            className="lg:w-auto lg:h-auto w-20"
-                          />
-                        </a>
-                      </div>
-                      <div>
-                        <button
-                          aria-label="Close Menu"
-                          title="Close Menu"
-                          class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                            <path
-                              fill="currentColor"
-                              d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <nav>
-                      <ul class="space-y-4 px-2">
-                        <li>
-                          <Link
-                            to={"/fiidzapp"}
-                            aria-label="Products"
-                            class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                          >
-                            Products
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={"/resources"}
-                            aria-label="Resources"
-                            class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                          >
-                            Resources
-                          </Link>
-                        </li>
-                        {/* <li>
-                          <Link
-                            to={"/pricing"}
-                            aria-label="Pricing"
-                            class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                          >
-                            Pricing
-                          </Link>
-                        </li> */}
-                        {/* <li>
-                          <Link
-                            to={"/service"}
-                            aria-label="Service"
-                            class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                          >
-                            Service
-                          </Link>
-                        </li> */}
-                        <li>
-                          <Link
-                            to={"/about"}
-                            aria-label="About us"
-                            class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                          >
-                            About us
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={"/contact"}
-                            aria-label="Contact Us"
-                            class="font-medium tracking-wide text-blackShadeD transition-colors duration-200 hover:text-primaryColor"
-                          >
-                            Contact Us
-                          </Link>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              )}
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
-    </div>
-  );
+        </DialogPanel>
+      </Dialog>
+    </header>
+  )
 }

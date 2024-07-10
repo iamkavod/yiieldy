@@ -37,8 +37,12 @@ export default function Footer() {
               </a>
               <div className="mt-4 lg:max-w-sm flex gap-2 items-center">
                 <p className="text-xl text-primaryColorLight">Follow us on:</p>
-                <img src={Instagram} alt="Instagram" className="w-10" />
-                <img src={Linkedin} alt="Linkedin" className="w-10" />
+                <a href="/" >
+                  <img src={Instagram} alt="Instagram" className="lg:w-8 w-5" />
+                </a>
+                <a href="/">
+                  <img src={Linkedin} alt="Linkedin" className="lg:w-8 w-5" />
+                </a>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3">
@@ -48,28 +52,28 @@ export default function Footer() {
                 </p>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <Link
-                      to={"/faqs"}
+                    <a
+                      href="/faqs"
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       FAQ'S
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      to={"/terms-of-service"}
+                    <a
+                      href="/terms-of-service"
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Terms and condition
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      to={"/privacy-policy"}
+                    <a
+                      href="/privacy-policy"
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Privacy Policy
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -79,28 +83,28 @@ export default function Footer() {
                 </p>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <Link
-                      to={"/about"}
+                    <a
+                      href="/about"
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       About Us
-                    </Link>
+                    </a>
                   </li>
                   {/* <li>
-                    <Link
+                    <a
                       to={"/service"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Service
-                    </Link>
+                    </a>
                   </li> */}
                   <li>
-                    <Link
-                      to={"/contact"}
+                    <a
+                      href="/contact"
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Contact Us
-                    </Link>
+                    </a>
                   </li>
                   {/* <li>
                     <a
@@ -119,10 +123,10 @@ export default function Footer() {
                 <ul className="mt-2 space-y-2">
                   <li>
                     <a
-                      href="telephone: +(234)9139218797"
+                      href="telephone: +(234)7000611157"
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
-                      Phone: +(234) 9139218797
+                      <span className="font-bold">Phone Number:</span> +(234) 7000611157
                     </a>
                   </li>
                   <li>
@@ -130,15 +134,15 @@ export default function Footer() {
                       href="mailto: contactus@yiieldy.com"
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
-                      Email Us: contactus@yiieldy.com
+                      <span className="font-bold">Email Us:</span> contactus@yiieldy.com
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
-                      className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
+                      href="https://www.google.com/maps/dir/6.3907434,2.4579868/10+Olasuru+St,+Eti-Osa,+Lekki+106104,+Lagos,+Nigeria/@6.5306426,2.3826102,9z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x103bf97970f4750d:0xc4d91e59f3992f04!2m2!1d3.626191!2d6.4729469?entry=ttu"
+                      className="transition-colors lg:text-[15px] text-xs duration-300 text-primaryColorLight"
                     >
-                      Office: #10 olasuru street, lekki Lagos
+                      <span className="font-bold">Office:</span> #10 olasuru street, lekki Lagos
                     </a>
                   </li>
                 </ul>
@@ -146,25 +150,25 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-            <p className="lg:text-lg text-sm lg:text-start text-center text-primaryColorLight lg:mb-0 mb-4">
+            <p className="lg:text-[15px] text-sm lg:text-start text-center text-primaryColorLight lg:mb-0 mb-4">
               Copyright © Yiieldy 2024. All Rights Reserved
             </p>
             <div className="flex justify-between items-center mt-4 space-x-20 sm:mt-0">
-              <Link
-                to={"/terms-of-service"}
-                className="transition-colors lg:text-lg text-xs duration-300 text-primaryColorLight"
+              <a
+                href="/terms-of-service"
+                className="transition-colors lg:text-[15px] text-[10px] duration-300 text-primaryColorLight"
               >
                 Terms and Condition
-              </Link>
-              <Link
-                to={"/privacy-policy"}
-                className="transition-colors lg:text-lg text-xs duration-300 text-primaryColorLight"
+              </a>
+              <a
+                href="/privacy-policy"
+                className="transition-colors lg:text-[15px] text-[10px] duration-300 text-primaryColorLight"
               >
                 Privacy Policy
-              </Link>
+              </a>
               <a
                 href="/"
-                className="transition-colors lg:text-lg text-xs duration-300 text-primaryColorLight"
+                className="transition-colors lg:text-[15px] text-xs duration-300 text-primaryColorLight"
                 onClick={handlePopup}
               >
                 Cookies

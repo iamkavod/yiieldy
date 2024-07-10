@@ -27,6 +27,7 @@ import AboutNav from "./FiidzApp/AboutNav";
 import Stats from "../Components/Stats";
 import Footer from "../UI/Footer";
 import '../fonts.css';
+import { Teams } from "../Components";
 
 export default function AboutUs() {
   return (
@@ -204,7 +205,7 @@ export default function AboutUs() {
       </div> */}
 
       {/* SDGS */}
-      <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-screen-[1443px] md:px-24 lg:px-8 lg:py-24">
+      <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-screen-[1443px] md:px-24 lg:px-8 lg:pt-24">
         <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
           <h2 className="max-w-[1443px] mb-6 lg:text-6xl text-4xl font-bold leading-none tracking-tight text-black md:mx-auto">
             Yiieldy Alignment with Sustainable Development Goals (SDGs)
@@ -289,6 +290,9 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+
+      {/* Teams */}
+      <Teams />
 
       {/* Footer */}
       <Footer />

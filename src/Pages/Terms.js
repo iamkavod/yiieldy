@@ -14,16 +14,16 @@ export default function Terms() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className="font-sp-pro">
       {/* Nav */}
       <Nav />
 
       {/* TERMS HERO SECTION */}
-      <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-[1443px] bg-white lg:pt-40 mt-auto">
-        <div className="max-w-xl sm:mx-auto lg:max-w-[700px]">
-          <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-[1443px] md:mb-12">
-              <h2 className="max-w-screen-[1443px] mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl md:mx-auto">
+      <div className="px-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-[1443px] bg-white lg:pt-40 pt-32 mt-auto">
+        <div className="max-w-xl sm:mx-auto lg:max-w-[1443px]">
+          <div className="flex flex-col mb-2 lg:text-center lg:mb-0">
+            <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
+              <h2 className="max-w-[1443px] mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl mx-auto">
                 Terms and Conditions
               </h2>
               <p className="text-base text-primaryColor md:text-lg">
@@ -35,10 +35,10 @@ export default function Terms() {
       </div>
 
       {/* TERMS AND CONDITIONS SECTION */}
-      <div className="px-10 py-6 flex flex-col gap-3 lg:max-w-screen-[1443px]" id="terms">
+      <div className="px-3 py-6 flex flex-col gap-3 lg:max-w-screen-[1443px] lg:px-14" id="terms">
         <section className="flex flex-col gap-3">
           {/* <h1 className="text-2xl">Terms and Conditions</h1> */}
-          <p className="text-gray-500">Last updated: (13/02/2024)</p>
+          <p className="text-black font-bold">Last updated: (13/02/2024)</p>
           <p className="text-[13px] text-justify">
             Please read these Terms and Conditions (these "Terms") carefully before using the Service (as defined below), either through our
             website at <a className="text-green font-bold" href="https://yiieldy.com">www.yiieldy.com</a> (the "Website"), the web-based platform
@@ -48,8 +48,8 @@ export default function Terms() {
         </section>
         <main className="flex flex-col gap-3">
           <ol className="list-decimal px-5 flex flex-col gap-10">
-            <li className="text-xl">
-              Conditions of Use &amp; Acceptance of Terms
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">Conditions of Use &amp; Acceptance of Terms</p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Yiieldy provides its Service, Website, Web App, and Mobile App
@@ -61,17 +61,21 @@ export default function Terms() {
                   agree with these Terms, you may not use the Website, Web App,
                   or Mobile App.
                 </p>
-                <p className="text-[13px] text-justify">
-                  If Yiieldy does not use or enforce any right or part of the
-                  Terms, that does not mean they are giving up that right or
-                  part of the Terms. These Terms are applicable from the date
-                  you or your Representatives first log into, access, or use the
-                  Service, which we call the &quot;Effective Date&quot;.
-                </p>
+                <ol className="list-decimal pl-5">
+                  <li className="text-[13px] text-justify">
+                    If Yiieldy does not use or enforce any right or part of the
+                    Terms, that does not mean they are giving up that right or
+                    part of the Terms. These Terms are applicable from the date
+                    you or your Representatives first log into, access, or use the
+                    Service, which we call the &quot;Effective Date&quot;.
+                  </li>
+                </ol>
               </div>
             </li>
-            <li className="text-xl">
-              Privacy Policy; Confidentiality
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Privacy Policy; Confidentiality
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Before using the Website, web app, or mobile app, we advise
@@ -131,7 +135,7 @@ export default function Terms() {
                   proprietary information Yiieldy provides to you in any form.
                   However, Confidential Information does not include information
                   that:
-                  <ol className="list-inside">
+                  <ol className="list-inside ml-5">
                     <li>
                       a. Is in your possession at the time of original
                       disclosure by Yiieldy;
@@ -157,8 +161,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Description of Service
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Description of Service
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Yiieldy provides users with access to a collection of online
@@ -175,8 +181,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              License and Site Access
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                License and Site Access
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   We grant you a limited non-exclusive, non-transferable,
@@ -220,8 +228,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              User Account; Compliance
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                User Account; Compliance
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   If you are an owner of an account on this Website, Web App,
@@ -250,8 +260,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Billing
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Billing
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <h1 className="text-[13px]">Monthly</h1>
                 <p className="text-[13px] text-justify">
@@ -322,8 +334,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Communications
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Communications
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   All communication with us will be done electronically.
@@ -340,8 +354,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Comments, Reviews and Emails
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Comments, Reviews and Emails
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   You are allowed to upload or save content on the Website, Web
@@ -356,8 +372,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Intellectual Property Rights; Improvements
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Intellectual Property Rights; Improvements
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Other than “Your Data” (as defined in Section 12 below), which
@@ -414,8 +432,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Trademarks
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Trademarks
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   The Yiieldy trademarks, service marks, logos, product names,
@@ -428,8 +448,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Intellectual Property Infringement
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Intellectual Property Infringement
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Yiieldy respects the intellectual property of others, and we
@@ -438,8 +460,8 @@ export default function Terms() {
                   been otherwise violated, please provide Yiieldy the following
                   information:
                 </p>
-                <p className="text-[13px] text-justify">
-                  <ol className="list-inside">
+                <p className="text-[13px] text-justify ml-5">
+                  <ol>
                     <li>
                       a. Identification of the person authorized to act on
                       behalf of the owner of the intellectual property.
@@ -464,26 +486,36 @@ export default function Terms() {
                     </li>
                   </ol>
                 </p>
-                <p className="text-[13px] text-justify">
-                  property owner&#39;s behalf; and an electronic or physical
-                  signature of the person authorized to act on behalf of the
-                  owner of the intellectual property.
-                </p>
-                <p className="text-[13px] text-justify">
-                  Notice of claims of intellectual property infringement should
-                  be sent via Certified Mail to:
-                </p>
-                <p className="text-[13px] text-justify">Yiieldy</p>
-                <p className="text-[13px] text-justify">
-                  The Waterside, 5 Admiralty Road,
-                </p>
-                <p className="text-[13px] text-justify">Off Admiralty Way,</p>
-                <p className="text-[13px] text-justify">Lekki Phase 1,</p>
-                <p className="text-[13px] text-justify">Lagos, Nigeria.</p>
+                <ol className="list-decimal text-xm ml-3">
+                  <li className="text-[13px] text-justify">
+
+                    Property owner&#39;s behalf; and an electronic or physical
+                    signature of the person authorized to act on behalf of the
+                    owner of the intellectual property.
+                  </li>
+                  <li className="text-[13px] text-justify">
+
+                    Notice of claims of intellectual property infringement should
+                    be sent via Certified Mail to:
+                  </li>
+                  <li className="text-[13px] text-justify">Yiieldy</li>
+                  <li className="text-[13px] text-justify">The Waterside, 5 Admiralty Road,</li>
+                  <li className="text-[13px] text-justify">
+                    Off Admiralty Way,
+                  </li>
+                  <li className="text-[13px] text-justify">
+                    Lekki Phase 1,
+                  </li>
+                  <li className="text-[13px] text-justify">
+                    Lagos, Nigeria.
+                  </li>
+                </ol>
               </div>
             </li>
-            <li className="text-xl">
-              Your Data; Aggregate Data; Feedback
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Your Data; Aggregate Data; Feedback
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   In these Terms, “Your Data” means any data, audio, video,
@@ -525,114 +557,120 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Restrictions
-              <div className="flex flex-col gap-3 mt-2">
-                <p className="text-[13px] text-justify">
-                  You agree not to reproduce, duplicate, copy, sell, resell, or
-                  exploit for any commercial purposes any portion of the
-                  Website, Web App, and/or the Mobile App, the Service, use of
-                  the Service, or access to the Website, Web App, and/or the
-                  Mobile App, or the Service unless you have obtained written
-                  permission to do so in advance from Yiieldy or unless the
-                  Website, Web App, and/or the Mobile App, or the Service has
-                  been expressly designed for such activity.
-                </p>
-                <p className="text-[13px] text-justify">
-                  You are expressly prohibited from taking any of the following
-                  actions unless you have obtained written permission to do so
-                  in advance from Yiieldy:
-                </p>
-                <p className="text-[13px] text-justify">
-                  <ol className="flex flex-col gap-2">
-                    <li>
-                      a. Downloading the Website, Web App, and/or the Mobile
-                      App, or any material or content therein not expressly
-                      designed for that purpose as part of the Service.
-                    </li>
-                    <li>
-                      b. Modifying the Website, Web App, and/or the Mobile App,
-                      or any content therein not expressly designed to be
-                      modified as part of the Service.
-                    </li>
-                    <li>
-                      c. Publishing any Website, Web App, and/or the Mobile App
-                      material in any media.
-                    </li>
-                    <li>
-                      d. Copy, duplicate or reproduce any portion of the
-                      Website, Web App, and/or Mobile app.
-                    </li>
-                    <li>
-                      e. Reverse engineer, disassemble or decompile the Website,
-                      Web App, and/or the Mobile App, or attempt to derive the
-                      source code or underlying ideas or algorithms of any part
-                      of the Website, Web App, and/or the Mobile App (except to
-                      the limited extent applicable laws specifically prohibit
-                      such restriction).
-                    </li>
-                    <li>
-                      f. Selling, sublicensing, and/or otherwise commercializing
-                      any Website. Web App, and/or Mobile App material not
-                      expressly designed to be sold, sublicensed, or
-                      commercialized as part of the Service.
-                    </li>
-                    <li>
-                      g. Publicly performing and/or displaying any Website, Web
-                      App, and/or the Mobile App material.
-                    </li>
-                    <li>
-                      h. Using the Website, Web App, and/or the Mobile App in
-                      any way that impacts other user access thereof.
-                    </li>
-                    <li>
-                      i. Engaging in any advertising or marketing either using
-                      the Website, Web App, and/or the Mobile App content not
-                      owned by you or using any portion thereof.
-                    </li>
-                    <li>
-                      j. Using the Website, Web App, and/or the Mobile App in
-                      any way that violates applicable laws and regulations.
-                    </li>
-                    <li>
-                      j. Using the Website, Web App, and/or the Mobile App in
-                      any way that is or may be damaging to the Website, Web
-                      App, and/or the Mobile App, and/or the contents of either;
-                      the Service and/or its contents; other users using the
-                      Website, Web App, and/or the Mobile App; or to any person
-                      or business entity.
-                    </li>
-                    <li>
-                      l. Use the Service, Website, Web App, and/or the Mobile
-                      App to share or store inappropriate materials, including
-                      but not limited to (i) materials containing viruses or
-                      other harmful or malicious code; (ii) unsolicited mail
-                      (spam); (iii) copyrighted materials to which you do not
-                      have sufficient rights; or (iv) harassing, tortious, or
-                      defamatory materials; and
-                    </li>
-                    <li>
-                      m. Engaging in any data mining, data harvesting, data
-                      extracting, or any other similar activity in relation to
-                      the Website, Web App, and/or the Mobile App unless such
-                      activity is expressly included as part of the Service.
-                    </li>
-                    <li>
-                      n. Perform any scanning, testing, auditing, security
-                      vulnerability analysis, penetration testing or other forms
-                      of vulnerability testing without prior written approval.
-                    </li>
-                  </ol>
-                </p>
-                <p className="text-[13px] text-justify">
-                  We require that Yiieldy users comply with all federal and
-                  state laws and regulations when using Yiieldy. Illegal,
-                  regulated or forbidden items are prohibited from sale.
-                </p>
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Restrictions
+              </p>
+              <div className="flex flex-col gap-3 mt-2 pl-2">
+                <ol className="list-decimal text-[17px]">
+                  <li className="text-[13px] text-justify">
+                    You agree not to reproduce, duplicate, copy, sell, resell, or
+                    exploit for any commercial purposes any portion of the
+                    Website, Web App, and/or the Mobile App, the Service, use of
+                    the Service, or access to the Website, Web App, and/or the
+                    Mobile App, or the Service unless you have obtained written
+                    permission to do so in advance from Yiieldy or unless the
+                    Website, Web App, and/or the Mobile App, or the Service has
+                    been expressly designed for such activity.
+                  </li>
+                  <li className="text-[13px] text-justify">
+                    You are expressly prohibited from taking any of the following
+                    actions unless you have obtained written permission to do so
+                    in advance from Yiieldy:
+                    <p className="text-[13px] text-justify">
+                      <ol className="flex flex-col gap-2">
+                        <li>
+                          a. Downloading the Website, Web App, and/or the Mobile
+                          App, or any material or content therein not expressly
+                          designed for that purpose as part of the Service.
+                        </li>
+                        <li>
+                          b. Modifying the Website, Web App, and/or the Mobile App,
+                          or any content therein not expressly designed to be
+                          modified as part of the Service.
+                        </li>
+                        <li>
+                          c. Publishing any Website, Web App, and/or the Mobile App
+                          material in any media.
+                        </li>
+                        <li>
+                          d. Copy, duplicate or reproduce any portion of the
+                          Website, Web App, and/or Mobile app.
+                        </li>
+                        <li>
+                          e. Reverse engineer, disassemble or decompile the Website,
+                          Web App, and/or the Mobile App, or attempt to derive the
+                          source code or underlying ideas or algorithms of any part
+                          of the Website, Web App, and/or the Mobile App (except to
+                          the limited extent applicable laws specifically prohibit
+                          such restriction).
+                        </li>
+                        <li>
+                          f. Selling, sublicensing, and/or otherwise commercializing
+                          any Website. Web App, and/or Mobile App material not
+                          expressly designed to be sold, sublicensed, or
+                          commercialized as part of the Service.
+                        </li>
+                        <li>
+                          g. Publicly performing and/or displaying any Website, Web
+                          App, and/or the Mobile App material.
+                        </li>
+                        <li>
+                          h. Using the Website, Web App, and/or the Mobile App in
+                          any way that impacts other user access thereof.
+                        </li>
+                        <li>
+                          i. Engaging in any advertising or marketing either using
+                          the Website, Web App, and/or the Mobile App content not
+                          owned by you or using any portion thereof.
+                        </li>
+                        <li>
+                          j. Using the Website, Web App, and/or the Mobile App in
+                          any way that violates applicable laws and regulations.
+                        </li>
+                        <li>
+                          j. Using the Website, Web App, and/or the Mobile App in
+                          any way that is or may be damaging to the Website, Web
+                          App, and/or the Mobile App, and/or the contents of either;
+                          the Service and/or its contents; other users using the
+                          Website, Web App, and/or the Mobile App; or to any person
+                          or business entity.
+                        </li>
+                        <li>
+                          l. Use the Service, Website, Web App, and/or the Mobile
+                          App to share or store inappropriate materials, including
+                          but not limited to (i) materials containing viruses or
+                          other harmful or malicious code; (ii) unsolicited mail
+                          (spam); (iii) copyrighted materials to which you do not
+                          have sufficient rights; or (iv) harassing, tortious, or
+                          defamatory materials; and
+                        </li>
+                        <li>
+                          m. Engaging in any data mining, data harvesting, data
+                          extracting, or any other similar activity in relation to
+                          the Website, Web App, and/or the Mobile App unless such
+                          activity is expressly included as part of the Service.
+                        </li>
+                        <li>
+                          n. Perform any scanning, testing, auditing, security
+                          vulnerability analysis, penetration testing or other forms
+                          of vulnerability testing without prior written approval.
+                        </li>
+                      </ol>
+                    </p>
+                  </li>
+                  <li className="text-[13px] text-justify">
+                    We require that Yiieldy users comply with all federal and
+                    state laws and regulations when using Yiieldy. Illegal,
+                    regulated or forbidden items are prohibited from sale.
+                  </li>
+                </ol>
               </div>
             </li>
-            <li className="text-xl">
-              Advertisers
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Advertisers
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Note that any interactions you have with advertisers on the
@@ -643,8 +681,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Links to Other Websites and Resources
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Links to Other Websites and Resources
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   The Website, Web App, and/or the Mobile App may contain links
@@ -675,14 +715,16 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              No Warranties
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                No Warranties
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   You explicitly comprehend and consent to the following terms:
                 </p>
-                <ol className="flex flex-col gap-2">
-                  <li>
+                <ol className="flex flex-col gap-2 pl-3">
+                  <li className="text-[13px] text-justify">
                     a. The website, web app, and mobile app are provided “as
                     is,” with all faults, and Yiieldy makes no express or
                     implied representations or warranties of any kind related to
@@ -690,7 +732,7 @@ export default function Terms() {
                     on the website, web app, or mobile app shall be construed as
                     providing advice to you.
                   </li>
-                  <li>
+                  <li className="text-[13px] text-justify">
                     b. Your use of the website, web app, or mobile app, and the
                     service is at your sole risk. Yiieldy expressly disclaims
                     all warranties of any kind, whether express or implied,
@@ -698,7 +740,7 @@ export default function Terms() {
                     merchantability, fitness for a particular purpose, and
                     non-infringement.
                   </li>
-                  <li>
+                  <li className="text-[13px] text-justify">
                     c. Yiieldy makes no warranty that (i) the website, web app,
                     or the mobile app, or the service will meet your
                     requirements; (ii) the website, web app, or the mobile app,
@@ -711,7 +753,7 @@ export default function Terms() {
                     or the mobile app, or the service will meet your
                     expectations.
                   </li>
-                  <li>
+                  <li className="text-[13px] text-justify">
                     No information, whether oral or written, obtained by you
                     from Yiieldy or through the website, web app, or the mobile
                     app, or the service shall create any warranty not expressly
@@ -720,8 +762,10 @@ export default function Terms() {
                 </ol>
               </div>
             </li>
-            <li className="text-xl">
-              Limitation of Liability
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Limitation of Liability
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Please understand and agree that Yiieldy, its officers,
@@ -741,8 +785,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Indemnification
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Indemnification
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   You agree to defend, indemnify, and hold Yiieldy, its
@@ -760,8 +806,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Exclusions and Limitations
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Exclusions and Limitations
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN
@@ -778,8 +826,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Term; Suspension; Termination
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Term; Suspension; Termination
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Subject to earlier termination as provided below, these Terms
@@ -817,8 +867,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Independent Contractor
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Independent Contractor
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   The relationship of the parties established under these Terms
@@ -829,8 +881,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Force Majeure
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Force Majeure
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Except for payment obligations, neither party will be liable
@@ -840,8 +894,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Severability
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Severability
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   If any provision of the Terms is found by a court of competent
@@ -858,8 +914,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Notice
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Notice
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Note that we may send you important messages through email.
@@ -870,8 +928,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Use of Name and Logos
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Use of Name and Logos
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Yiieldy may include your name and logo: (a) on the Website and
@@ -882,8 +942,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Assignment
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Assignment
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   Yiieldy may assign, transfer, and subcontract its rights or
@@ -894,8 +956,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Entire Agreement
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Entire Agreement
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   These Terms, including any legal notices and disclaimers on
@@ -906,8 +970,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Governing Law &amp; Disputes
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Governing Law &amp; Disputes
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   These Terms will be governed by and construed by the laws of
@@ -925,8 +991,10 @@ export default function Terms() {
                 </p>
               </div>
             </li>
-            <li className="text-xl">
-              Contact Us
+            <li className="text-xm">
+              <p className="text-[17px] font-bold">
+                Contact Us
+              </p>
               <div className="flex flex-col gap-3 mt-2">
                 <p className="text-[13px] text-justify">
                   If you have any queries or concerns regarding these Terms,

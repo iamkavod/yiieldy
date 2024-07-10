@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #aboutus {
-  background-image: url("./Assets/abtImg.png");
+  background-image: url("./Assets/abtImg.webp");
   background-color: rgba(0, 0, 0, 1);
   background-size: cover;
   background-repeat: no-repeat;
@@ -117,6 +117,14 @@ body::-webkit-scrollbar-thumb {
 /* #bgHelp {
   background: var(--Foundation-Green-Light, #e9f3e94b);
 } */
+
+#dropdwn {
+  width: 100vw;
+  position: absolute;
+  right: 0;
+  /* left: 0; */
+  margin-left: 20px !important;
+}
 
 @media (max-width: 765px) {
   .circleDivLeft {
