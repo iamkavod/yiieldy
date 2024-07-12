@@ -10,12 +10,12 @@ export default function Service() {
       <Nav />
 
       {/* Our Services */}
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24">
-        <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <div className="px-4 py-16 mx-auto max-w-[1443px] md:px-5 md:py-24 md:px-5 lg:px-8 lg:py-24">
+        <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-[60px] md:mx-auto">
             Our Services
           </h2>
-          <p className="text-base text-gray-700 md:text-sm">
+          <p className="text-base text-black md:text-sm">
             We specialize in delivering tailored training solutions to precisely
             meet your organization's needs. Our robust training options include
             interactive workshops, dynamic webinars, on-site training sessions
@@ -26,7 +26,7 @@ export default function Service() {
             discussing your requirements in detail.
           </p>
         </div>
-        <div className="grid lg:gap-20 gap-5 mb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:px-20">
+        <div className="grid lg:gap-20 gap-5 mb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:px-5 lg:px-8">
           <div className="p-8 duration-300 transform bg-primaryColorLightB border rounded shadow-sm hover:-translate-y-2">
             <div className="flex items-center justify-center w-16 h-16 mb-4">
               <img src={InteractiveWorkshop} alt="interractive workshop" className="w-20 h-20" />

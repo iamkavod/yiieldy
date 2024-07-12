@@ -4,7 +4,7 @@ import '../fonts.css'
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 px-2 lg:px-8 mx-auto max-w-2xl py-10 lg:py-20 font-sp-pro">
+    <div className="flex flex-col justify-center items-center gap-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-5 px-2 lg:px-8 mx-auto max-w-2xl py-10 lg:py-20 font-sp-pro">
       <h2 className="text-black lg:text-[25px] text-[15px] font-bold text-center">
         Trusted by world Best Companies and Agencies
       </h2>

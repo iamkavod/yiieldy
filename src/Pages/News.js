@@ -1,16 +1,47 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Footer, Nav } from "../UI";
 import { NewsA, NewsB, YiieldyUsersSec } from "../Assets";
 import "../fonts.css";
 
 export default function News() {
+  const iframeRef = useRef(null);
+  const [buttonVisible, setButtonVisible] = useState(true);
+
+  const playVideo = () => {
+    setButtonVisible(false);
+    iframeRef.current.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+  };
+
+  const onPlayerStateChange = (event) => {
+    if (event.data === 2) { // 2 indicates the video is paused
+      setButtonVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    const onMessage = (event) => {
+      if (event.origin !== 'https://www.youtube.com') {
+        return;
+      }
+      const data = JSON.parse(event.data);
+      if (data.event === 'onStateChange') {
+        onPlayerStateChange(data);
+      }
+    };
+
+    window.addEventListener('message', onMessage);
+
+    return () => {
+      window.removeEventListener('message', onMessage);
+    };
+  }, []);
   return (
     <main className="bg-primaryColorLightB font-sp-pro">
       {/* Header */}
       <Nav />
 
       {/* Our News */}
-      <div className="px-4 py-16 lg:pt-32 pt-32 mx-auto max-w-[1443px] md:px-24 lg:px-8 lg:py-32 bg-primaryColorLight">
+      <div className="px-4 py-16 lg:pt-32 pt-32 mx-auto max-w-[1443px] md:px-5 lg:px-8 lg:py-32 bg-primaryColorLight">
         <div className="max-w-[1443px] lg:px-8 mb-10 md:mx-auto text-center md:mb-12">
           <h2 className="max-w-lg mb-6 text-4xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
             Our News
@@ -20,33 +51,31 @@ export default function News() {
           </p>
         </div>
         <div className="mx-auto lg:max-w-full">
-          <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
-            <img
-              className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-[800px]"
-              src={YiieldyUsersSec}
-              alt="Yiieldy"
-            />
-            <a
-              href="/"
-              aria-label="Play Video"
-              className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
-            >
-              <div className="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
-                <svg
-                  className="w-10 text-gray-900"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+          <div className="flex justify-center">
+            <div className="relative w-full rounded-[20px] transition-shadow duration-300 hover:shadow-xl">
+              <iframe
+                ref={iframeRef}
+                src="https://www.youtube.com/embed/C4TC1MVKnqo?si=kEHw0Bx4yFFNL2Tx&rel=0"
+                className="object-center w-full h-56 rounded-[20px] shadow-lg md:h-80 lg:h-[600px]"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+              {buttonVisible && (
+                <button
+                  aria-label="Play Video"
+                  className="absolute inset-0 flex items-center justify-center w-full lg:h-[600px] transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25 rounded-[20px]"
+                  onClick={playVideo}
                 >
-                  <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z" />
-                </svg>
-              </div>
-            </a>
+                </button>
+              )}
+            </div>
           </div>
         </div>
         <div className="flex flex-col justify-start mt-4">
           <p className="font-bold text-2xl">
-            Collaboration to Develop Coffee and Beverage Industry Expertise in
-            Indonesia
+          improved feed efficiency, and enhance poultry performance.
           </p>
           <p className="text-[15px] text-gray-500 flex items-center gap-2">
             <span>4 Min</span>
@@ -58,7 +87,7 @@ export default function News() {
 
       {/* News Section */}
       <div className="h-auto py-0 mb-0">
-        <div className="px-2 py-16 mx-auto max-w-[1443px] md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="px-2 py-16 mx-auto max-w-[1443px] md:max-w-full lg:max-w-screen-xl md:px-5 lg:px-8 lg:py-20">
           <div className="grid grid-cols-1 lg:flex max-w-screen-[1443px] gap-8 mx-auto">
             <div className="flex flex-col justify-center">
               <hr className="w-full my-6 border-gray-300" />

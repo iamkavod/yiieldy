@@ -19,8 +19,8 @@ export default function Terms() {
       <Nav />
 
       {/* TERMS HERO SECTION */}
-      <div className="px-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-[1443px] bg-white lg:pt-40 pt-32 mt-auto">
-        <div className="max-w-xl sm:mx-auto lg:max-w-[1443px]">
+      <div className="px-3 mx-auto max-w-[1443px] bg-white lg:pt-40 pt-32 mt-auto">
+        <div className="mx-auto max-w-[1443px]">
           <div className="flex flex-col mb-2 lg:text-center lg:mb-0">
             <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
               <h2 className="max-w-[1443px] mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl mx-auto">
@@ -35,7 +35,7 @@ export default function Terms() {
       </div>
 
       {/* TERMS AND CONDITIONS SECTION */}
-      <div className="px-3 py-6 flex flex-col gap-3 lg:max-w-screen-[1443px] lg:px-14" id="terms">
+      <div className="px-2 py-6 flex flex-col justify-center items-center gap-3 mx-auto max-w-[1443px] lg:px-10 md:px-5" id="terms">
         <section className="flex flex-col gap-3">
           {/* <h1 className="text-2xl">Terms and Conditions</h1> */}
           <p className="text-black font-bold">Last updated: (13/02/2024)</p>

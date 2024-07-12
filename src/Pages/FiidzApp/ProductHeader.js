@@ -36,7 +36,7 @@ const resources = [
   { name: 'Help and Support', href: '/helpandsupport', icon: QuestionMarkCircleIcon },
 ]
 
-export default function Example() {
+export default function ProductHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -57,8 +57,8 @@ export default function Example() {
 
   return (
     <header className={`bg-${hasScrolled ? "white" : "white"
-      } fixed top-0 w-full z-50 font-sp-pro`}>
-      <nav aria-label="Global" className="mx-auto flex max-w-[1443px] items-center justify-between py-6 px-2 lg:px-8">
+      } fixed top-0 w-full z-[500] font-sp-pro`}>
+      <nav aria-label="Global" className="mx-auto flex max-w-[1443px] items-center justify-between py-6 px-2 md:px-5 lg:px-4">
         <div className="flex lg:flex-1">
           <a
             href="/"
@@ -73,7 +73,7 @@ export default function Example() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -147,13 +147,14 @@ export default function Example() {
           <a href="/about" className="text-sm font-bold leading-6 text-gray-900">
             About Us
           </a>
-          <a href="https://fiidz.yiieldy.com/" className="text-sm font-bold leading-6 text-gray-900">
+          <a href="https://fiidz.yiieldy.com/" className="text-sm font-bold leading-6 text-gray-900" target='_blank'>
             Sign In
           </a>
           <a
             href='https://fiidz.yiieldy.com/Home/Account01'
             class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-whiteShade transition duration-200 shadow-md bg-primaryColor hover:opacity-[.9] focus:shadow-outline focus:outline-none rounded-full"
             aria-label="Contact Us"
+            target='_blank'
           >
             Sign Up
           </a>
@@ -174,7 +175,7 @@ export default function Example() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-black"
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="h-6 w-6" />
@@ -234,12 +235,14 @@ export default function Example() {
                 <a
                   href="https://fiidz.yiieldy.com/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                  target='_blank'
                 >
                   Sign In
                 </a>
                 <a
                   href="https://fiidz.yiieldy.com/Home/Account01"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                  target='_blank'
                 >
                   Sign Up
                 </a>

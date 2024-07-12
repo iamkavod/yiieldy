@@ -24,7 +24,7 @@ export default function Footer() {
           alt="footer"
           className="absolute top-0 w-full h-20 -mt-5 lg:-mt-10 lg:h-40 -z-[10]"
         />
-        <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 z-[100]">
+        <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-5 lg:px-8 z-[100]">
           <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
             <div className="md:max-w-md lg:col-span-2">
               <a

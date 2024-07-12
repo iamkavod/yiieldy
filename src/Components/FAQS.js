@@ -48,8 +48,8 @@ const FAQS = () => {
   }, []);
 
   return (
-    <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:py-20 font-sp-pro">
-      <div className="max-w-[1443px] mx-auto lg:max-w-[1443px] lg:px-40">
+    <div className="px-2 py-16 mx-auto max-w-[1443px] md:px-5 lg:px-8 lg:py-20 font-sp-pro">
+      <div className="max-w-[1443px] mx-auto">
         <div className="max-w-[1443px] mb-10 md:mx-auto text-center md:mb-12">
           <h2 className="max-w-[1443px] mb-6 lg:text-6xl text-4xl font-bold leading-none tracking-tight md:mx-auto text-center">
             Answers to Frequently Asked Questions

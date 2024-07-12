@@ -58,7 +58,7 @@ export default function Example() {
   return (
     <header className={`bg-${hasScrolled ? "white" : "transparent"
       } fixed top-0 w-full z-50 font-sp-pro`}>
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between py-6 px-2 lg:px-8">
+      <nav aria-label="Global" className="mx-auto flex max-w-[1443px] items-center justify-between py-6 px-2 md:px-5 lg:px-8">
         <div className="flex lg:flex-1">
           <a
             href="/"

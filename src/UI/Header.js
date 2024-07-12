@@ -49,7 +49,7 @@ export default function Header() {
     <div className="bg-white overflow-hidden font-sp-pro">
       <Nav />
 
-      <div className="relative px-0 pt-14 lg:px-8">
+      <div className="relative px-0 pt-14 md:px-5 lg:px-8">
         <div className="circleDivLeft">
           <div className="circleLeft"></div>
         </div>

@@ -38,8 +38,8 @@ export default function AboutUs() {
       {/* About Us Section */}
       <div className="h-auto" id="aboutus">
         {/* About Hero */}
-        <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 pt-[100px]">
-          <div className="max-w-xl mx-auto lg:max-w-2xl">
+        <div className="px-4 mx-auto max-w-[1443px] md:px-5 lg:px-8 pt-[150px] lg:py-32">
+          <div className="max-w-[1443px] mx-auto ">
             <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
               <div className="max-w-[1443px] lg:mb-10 md:mx-auto sm:text-center md:mb-12">
                 <h2 className="max-w-[1443px] mb-6  text-4xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
@@ -54,8 +54,8 @@ export default function AboutUs() {
         </div>
 
         {/* About Hero-B */}
-        <div className="px-4 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:pb-0">
-          <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
+        <div className="px-4 mx-auto max-w-[1443px] md:px-5 lg:px-8 lg:pb-0">
+          <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row md:flex-row md:gap-5">
             <div className="mb-2 lg:mb-0 lg:max-w-lg lg:pr-5">
               <div className="max-w-xl mb-6">
                 <h2 className=" text-3xl font-bold tracking-tight text-primaryColor lg:text-4xl sm:leading-none max-w-lg mb-6 text-start">
@@ -81,8 +81,8 @@ export default function AboutUs() {
 
       {/* About US Body */}
       <main className="-z-50">
-        <div className="px-4 py-16 mx-auto max-w-xl md:max-w-7xl lg:max-w-[1443px] md:px-0 lg:px-8 lg:py-0 md:py-20">
-          <div className="lg:flex-row md:flex lg:gap-20 flex flex-col-reverse justify-between items-center">
+        <div className="px-4 py-16 mx-auto max-w-[1443px] md:px-5 lg:px-8 lg:py-0 md:py-20">
+          <div className="lg:flex-row md:flex-row lg:gap-20 flex flex-col-reverse justify-between items-center">
             <div className="">
               <img
                 className="inset-0 w-full md:h-auto lg:h-auto lg:w-[90%] w-[100%]"
@@ -139,23 +139,23 @@ export default function AboutUs() {
       </main>
 
       {/* Achievment in Numbers */}
-      <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row px-2 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:pb-0">
-        <div className="flex items-center justify-center">
+      <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row md:flex-row md:gap-5 px-2 max-w-[1443px] md:px-5 lg:px-8 lg:pb-0 mx-auto">
+        <div className="flex items-center justify-between mx-auto">
           <div>
             <img
-              className="object-cover w-auto h-auto lg:mb-0 mb-5 lg:mt-0 mt-10"
+              className="object-cover w-auto h-auto md:w-[150vw] lg:w-[100vw] lg:mb-0 mb-5 lg:mt-0 mt-10"
               src={AchievementInNumbers}
               alt="AI STaff"
             />
           </div>
         </div>
 
-        <div className="mb-2 lg:mb-0 lg:max-w-lg lg:pr-5 flex flex-col justify-between">
-          <div className="max-w-xl mb-6">
-            <h2 className="lg:text-4xl font-bold lg:block hidden tracking-tight text-black text-3xl sm:leading-none max-w-lg mb-6">
+        <div className="mb-2 lg:mb-0 max-w-[1443px] md:px-5 flex flex-col justify-between mx-auto lg:pl-80">
+          <div className="max-w-[1443px] mb-6">
+            <h2 className="lg:text-4xl font-bold lg:block hidden tracking-tight text-black text-3xl sm:leading-none max-w-[1443px] mb-10">
               Achievement in  Numbers
             </h2>
-            <h2 className="text-3xl font-bold lg:hidden lg:text-start text-center tracking-tight text-primaryColor sm:text-4xl sm:leading-none max-w-lg mb-6">
+            <h2 className="text-3xl font-bold lg:hidden md:block md:text-start lg:text-start text-center tracking-tight text-primaryColor sm:text-4xl sm:leading-none max-w-lg mb-6">
               Achievement in Numbers
             </h2>
             <p className="text-black lg:text-xl">
@@ -165,7 +165,7 @@ export default function AboutUs() {
               other busy schedule
             </p>
           </div>
-          <div>
+          <div className="mt-10">
             <Stats />
           </div>
         </div>
@@ -205,13 +205,13 @@ export default function AboutUs() {
       </div> */}
 
       {/* SDGS */}
-      <div className="px-4 py-16 mx-auto md:max-w-full lg:max-w-screen-[1443px] md:px-24 lg:px-8 lg:pt-24">
+      <div className="px-4 py-16 mx-auto max-w-[1443px] md:px-5 lg:px-8 lg:pt-24">
         <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
           <h2 className="max-w-[1443px] mb-6 lg:text-6xl text-4xl font-bold leading-none tracking-tight text-black md:mx-auto">
             Yiieldy Alignment with Sustainable Development Goals (SDGs)
           </h2>
         </div>
-        <div className="grid lg:gap-3 gap-2 mb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid lg:gap-3 md:gap-10 gap-2 mb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           <div className="lg:p-8 p-0 lg:mb-0 mb-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4">
               <img

@@ -18,11 +18,11 @@ export default function Privacy() {
     <div className="bg-white">
       <Nav />
       {/* PRIVACY HERO SECTION */}
-      <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-[1443px] bg-white lg:pt-40 mt-auto">
-        <div className="max-w-xl sm:mx-auto lg:max-w-[700px]">
+      <div className="px-4 mx-auto max-w-[1443px] bg-white lg:pt-40 md:pt-32 mt-auto">
+        <div className="mx-auto max-w-[700px]">
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-[1443px] md:mb-12">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl md:mx-auto">
+            <div className="mb-10 md:mx-auto text-center max-w-[1443px] md:mb-12">
+              <h2 className="max-w-[1443px] mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl md:mx-auto">
                 Privacy Policy
               </h2>
               <p className="text-base text-primaryColor md:text-lg">
@@ -35,11 +35,11 @@ export default function Privacy() {
 
       {/* PRIVACY POLICY SECTION */}
       <div
-        className="px-4 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8"
+        className="px-4 mx-auto max-w-[1443px] md:px-5 lg:px-8"
         id="privacy"
       >
         <div className="max-w-[1443px] mx-auto">
-          <div className="flex flex-col items-start py-4 transform rounded sm:px-4 lg:flex-row">
+          <div className="flex flex-col items-start py-4 transform rounded px-4 lg:flex-row">
             <div className="mb-4 lg:mb-0">
               <div className="relative">
                 <p className="text-base text-gray-700 md:text-lg text-center">

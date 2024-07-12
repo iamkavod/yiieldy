@@ -49,7 +49,7 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="mx-auto grid gap-6 max-w-[1443px] lg:grid-cols-3 w-full lg:px-30 px-2 max-w-[1443px] grid-cols-1">
+        <div className="mx-auto grid gap-6 max-w-[1443px] lg:grid-cols-3 w-full lg:px-8 md:px-5 px-2 grid-cols-1">
           {/* Basic */}
           <div className="h-auto">
             <div className="relative flex flex-col h-full p-6 rounded-2xl bg-primaryColorLightB border border-slate-200 dark:border-gray-100 shadow-lg shadow-slate-950/5">

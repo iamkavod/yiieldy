@@ -60,8 +60,8 @@ export default function FiidzApp() {
       {/* PRODUCT BODY SECTION */}
 
       {/* Hero - Product  */}
-      <div className="px-2 py-16 lg:mt-0 mt-5 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 pt-20 lg:pt-10 lg:pb-0">
-        <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
+      <div className="px-2 py-16 lg:mt-0 mt-5 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-5 lg:px-8 pt-20 lg:pt-10 lg:pb-0">
+        <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row md:flex-row md:gap-5">
           <div className="mb-2 lg:mb-0 max-w-[1443px] lg:pr-5">
             <div className="max-w-[1443px] mb-6">
               <h2 className="font-bold lg:mt-0 mt-5 text-black text-4xl lg:text-6xl leading-none max-w-[1443px] lg:pr-24 mb-6">
@@ -73,7 +73,7 @@ export default function FiidzApp() {
                 Efficiency and Boost Profits
               </p>
             </div>
-            <div className="lg:flex hidden items-start space-x-3">
+            <div className="lg:flex md:flex hidden items-start space-x-3">
               <a
                 href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
                 className="transition duration-300 hover:shadow-lg bg-primaryColor p-3 lg:w-60 text-center text-white font-bold lg:h-auto w-auto rounded-[20px]"
@@ -84,10 +84,10 @@ export default function FiidzApp() {
           </div>
           <div className="flex items-center justify-center">
             <div>
-              <img className="object-center lg:w-[60vw] w-auto" src={YiieldyFiidzA} alt="" />
+              <img className="object-center md:w-[150vw] lg:w-[60vw] w-auto" src={YiieldyFiidzA} alt="" />
             </div>
           </div>
-          <div className="flex lg:hidden justify-center items-center space-x-3">
+          <div className="flex md:hidden lg:hidden justify-center items-center space-x-3">
             <a
               href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
               className="transition duration-300 hover:shadow-lg bg-primaryColor p-3 lg:w-96 w-80 text-center text-white font-bold lg:h-auto rounded-[20px]"
@@ -100,7 +100,7 @@ export default function FiidzApp() {
 
       {/* Body - Product  */}
       {/* Fiidz App Introduction */}
-      <div className="px-2 py-16 lg:mt-0 mt-5 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8 lg:py-0 relative">
+      <div className="px-2 py-16 lg:mt-0 mt-5 mx-auto max-w-xl md:max-w-full lg:max-w-[1443px] md:px-5 lg:px-8 lg:py-0 relative">
         <div className="circleDivLeft mt-5">
           <div className="circleLeft"></div>
         </div>
@@ -115,7 +115,7 @@ export default function FiidzApp() {
               <iframe
                 ref={iframeRef}
                 src="https://www.youtube.com/embed/QcMSfO2MVmc?si=h41IT0qchoh669la&rel=0"
-                className="object-center w-full h-56 rounded-[20px] shadow-lg lg:h-[600px]"
+                className="object-center w-full h-56 rounded-[20px] shadow-lg md:h-[500px] lg:h-[600px]"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -124,7 +124,7 @@ export default function FiidzApp() {
               {buttonVisible && (
                 <button
                   aria-label="Play Video"
-                  className="absolute inset-0 flex items-center justify-center w-full h-56 lg:h-[600px] transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25 rounded-[20px]"
+                  className="absolute inset-0 flex items-center justify-center w-full h-56 md:h-[500px] lg:h-[600px] transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25 rounded-[20px]"
                   onClick={playVideo}
                 >
                 </button>
@@ -143,18 +143,18 @@ export default function FiidzApp() {
       </div>
 
       {/* Features*/}
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-8 lg:px-8">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-5 lg:px-8">
         <div className="max-w-xl md:mx-auto text-center lg:max-w-[1443px]">
           <h2 className="max-w-[1443px] mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-black lg:text-5xl md:mx-auto">
             Our Unique Features
           </h2>
-          <p className="text-base text-gray-500 md:text-lg">
+          <p className="text-base text-black md:text-lg">
             Explain anything clearly and effortlessly – and skip the meeting.
           </p>
         </div>
 
         {/* Fiidz Optimization */}
-        <div className="flex flex-col items-center justify-between w-full lg:flex-row lg:mt-0 mt-5">
+        <div className="flex flex-col items-center justify-between w-full lg:flex-row md:flex-row md:gap-5 lg:mt-0 mt-5">
           <div className="mb-2 lg:mb-0 lg:max-w-lg lg:pr-5">
             <div className="max-w-xl mb-6 lg:mt-0 mt-10">
               <div className="flex items-center justify-start lg:mb-8">
@@ -166,10 +166,10 @@ export default function FiidzApp() {
                   />
                 </div>
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-black lg:text-4xl sm:leading-none max-w-lg mb-6">
+              <h2 className="text-3xl font-bold tracking-tight text-black lg:text-4xl sm:leading-none max-w-[1443px] mb-6">
                 Feed quality and usage optimization.
               </h2>
-              <p className="text-black text-base text-justify md:text-lg">
+              <p className="text-black text-base lg:text-justify md:text-lg">
                 Optimize your feed usage and maximize your yields, all while
                 reducing costs and minimizing waste. Know how efficiently your
                 birds convert feed into gains like meat or eggs. You can compare
@@ -180,17 +180,17 @@ export default function FiidzApp() {
           </div>
           <div className="flex items-center justify-center">
             <div>
-              <img className="object-cover w-auto" src={YiieldyFiidzA} alt="" />
+              <img className="object-cover w-auto lg:w-auto md:w-[100vw]" src={YiieldyFiidzA} alt="" />
             </div>
           </div>
         </div>
 
         {/* AI STaff */}
-        <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row">
+        <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row md:flex-row md:gap-5">
           <div className="flex items-center justify-center">
             <div>
               <img
-                className="object-cover w-auto"
+                className="object-center w-auto lg:w-auto md:w-[100vw]"
                 src={MobileB}
                 alt="AI STaff"
               />
@@ -219,7 +219,7 @@ export default function FiidzApp() {
         </div>
 
         {/* Herds Management */}
-        <div className="flex flex-col items-center justify-between w-full lg:flex-row">
+        <div className="flex flex-col items-center justify-between w-full lg:flex-row md:flex-row md:gap-5">
           <div className="mb-2 lg:mb-0 lg:max-w-lg lg:pr-5">
             <div className="max-w-xl mb-6">
               <div className="flex items-center justify-start lg:mb-8">
@@ -245,17 +245,17 @@ export default function FiidzApp() {
           </div>
           <div className="flex items-center justify-center">
             <div>
-              <img className="object-cover w-auto" src={MobileC} alt="" />
+              <img className="object-cover w-auto lg:w-auto md:w-[100vw]" src={MobileC} alt="" />
             </div>
           </div>
         </div>
 
         {/* Feed Formulation*/}
-        <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row">
+        <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row md:flex-row md:gap-5">
           <div className="flex items-center justify-center">
             <div>
               <img
-                className="object-cover w-auto"
+                className="object-cover w-auto lg:w-auto md:w-[100vw]"
                 src={MobileD}
                 alt="Feed Formulation"
               />
@@ -309,7 +309,7 @@ export default function FiidzApp() {
                 <h3 className="text-blackShadeB font-bold">Easy and Fast</h3>
                 <h1 className="lg:text-5xl text-3xl font-bold text-black mb-8">Quick Overview</h1>
               </div>
-              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify mb-5">
+              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[5rem] text-justify mb-5">
                 <div className="flex flex-col items-center mr-4">
                   <div>
                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
@@ -324,7 +324,7 @@ export default function FiidzApp() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify mb-5">
+              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[5rem] text-justify mb-5">
                 <div className="flex flex-col items-center mr-4">
                   <div>
                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
@@ -340,7 +340,7 @@ export default function FiidzApp() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[10rem] text-justify mb-5">
+              <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[5rem] text-justify mb-5">
                 <div className="flex flex-col items-center mr-4">
                   <div>
                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">

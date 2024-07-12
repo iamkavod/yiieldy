@@ -38,10 +38,10 @@ export default function PricingPage() {
       <FAQS />
 
       {/* Question */}
-      <div className="px-4 mx-auto max-w-[1443px] md:px-24 lg:px-8 mb-20">
+      <div className="px-4 mx-auto max-w-[1443px] md:px-5 lg:px-8 mb-20">
         <div className="mx-auto max-w-[1443px]">
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
-            <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
               <h2 className="max-w-[1443px] mb-6 font-bold leading-none tracking-tight text-black lg:text-6xl text-4xl font-bold text-center md:mx-auto text-center">
                 Still have a question?
               </h2>
@@ -62,7 +62,7 @@ export default function PricingPage() {
       </div>
 
       {/* Get App */}
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-24 lg:px-8  lg:py-20">
+      <div className="px-4 py-16 mx-auto max-w-[1443px] md:px-5 lg:px-8  lg:py-20">
         <div className="grid gap-10 lg:gap-32 lg:grid-cols-2">
           <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
             <img
