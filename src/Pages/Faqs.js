@@ -141,7 +141,7 @@ export default function Faqs() {
             </div>
             <div>
               <a
-                href="/"
+                href="/contact"
                 className="inline-flex items-center justify-center h-16 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-primaryColor hover:opacity-[.9] focus:shadow-outline focus:outline-none w-[60%]"
               >
                 Contact Us

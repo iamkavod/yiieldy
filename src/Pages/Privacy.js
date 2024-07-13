@@ -27,7 +27,7 @@ export default function Privacy() {
                 Privacy Policy
               </h2>
               <p className="text-base text-primaryColor md:text-lg">
-              This policy details clear and concise instructions for users to opt out of specific data collection, marketing communications, or other activities outlined in the privacy policy.
+                This policy details clear and concise instructions for users to opt out of specific data collection, marketing communications, or other activities outlined in the privacy policy.
               </p>
             </div>
           </div>
@@ -209,13 +209,13 @@ export default function Privacy() {
                 <ul className="list-disc px-5" id="priv-ul">
                   <li>
                     <a
-                      href="https://wa.me/message/HN4LGKGKTJCKH1"
+                      href="tel: +(234) 7000611157"
                       className="transition-colors duration-300 text-gray-800 hover:text-gray-500 hover:text-teal-accent-400 lg:text-xl sm:text-sm"
                     >
                       <span className="text-gray-800 font-bold lg:text-xl sm:text-sm">
-                        Chat Us:{" "}
+                        Call Us:{" "}
                         <span className="lg:text-xl sm:text-sm font-normal text-gray-700">
-                          +(234)9139218797
+                          +(234) 7000611157
                         </span>
                       </span>
                     </a>

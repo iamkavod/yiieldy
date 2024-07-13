@@ -51,7 +51,7 @@ export default function PricingPage() {
             </div>
             <div className="flex justify-center">
               <a
-                href="/"
+                href="/contact"
                 className="inline-flex items-center justify-center h-16 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-primaryColor focus:shadow-outline focus:outline-none lg:w-96 w-80"
               >
                 Contact Us
