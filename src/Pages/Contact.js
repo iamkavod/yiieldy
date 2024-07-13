@@ -32,8 +32,8 @@ export default function Contact() {
           method="POST"
           className="mx-auto mt-16 max-w-[1443px] lg:mt-20 mt-5 bg-white p-10 rounded-[20px]"
         >
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
-            <div className="md:w-full">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-2">
+            <div className="">
               <label
                 htmlFor="first-name"
                 className="block text-sm font-semibold leading-6 text-black"
@@ -46,47 +46,26 @@ export default function Contact() {
                   name="first-name"
                   id="first-name"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter First Name"
                 />
               </div>
             </div>
-            <div className="md:w-[40vw]">
+            <div className="">
               <label
                 htmlFor="phone-number"
                 className="block text-sm font-bold leading-6 text-black"
               >
                 Phone number
               </label>
-              <div className="relative mt-2.5">
-                <div className="absolute inset-y-0 left-0 flex items-center">
-                  <label htmlFor="country" className="sr-only">
-                    Country
-                  </label>
-                  {/* <input
-                    value={"+234"}
-                    readOnly
-                    className="h-full w-10 rounded-md border-0 bg-transparent bg-none py-0 pl-2 text-gray-400 sm:text-sm outline-none"
-                    placeholder="+234"
-                  /> */}
-                  {/* <select
-                    id="country"
-                    name="country"
-                    className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 sm:text-sm"
-                  >
-                    
-                    <option>+234</option>
-                    <option>CA</option>
-                    <option>EU</option>
-                  </select> */}
-                </div>
+              <div className="mt-2.5">
                 <input
                   type="tel"
                   name="phone-number"
                   id="phone-number"
                   autoComplete="tel"
-                  className="block w-full h-10 rounded-md border-0 px-2 py-2 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
-                  placeholder="+234"
+                  className="block w-full h-10 rounded-md border-0 px-2 py-2 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  placeholder="Enter Phone Number With Country Code"
                 />
               </div>
             </div>
@@ -103,7 +82,7 @@ export default function Contact() {
                   name="email"
                   id="email"
                   autoComplete="family-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter Your Email"
                 />
               </div>
@@ -121,7 +100,7 @@ export default function Contact() {
                   name="subject"
                   id="subject"
                   autoComplete="family-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter Subject"
                 />
               </div>
@@ -138,7 +117,7 @@ export default function Contact() {
                   name="message"
                   id="message"
                   rows={4}
-                  className="block w-full rounded-md border-0 px-3.5 h-40 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 h-40 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter your messasage here"
                   defaultValue={""}
                 />

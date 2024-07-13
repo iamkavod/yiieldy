@@ -3,6 +3,7 @@ import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Logo } from "../Assets";
 import { Footer, Nav } from "../UI";
+import '../fonts.css';
 
 const navigation = [
   { name: "Product", href: "#product-section" },
@@ -15,7 +16,7 @@ export default function Privacy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white font-sp-pro">
       <Nav />
       {/* PRIVACY HERO SECTION */}
       <div className="px-4 mx-auto max-w-[1443px] bg-white lg:pt-40 md:pt-32 mt-auto">

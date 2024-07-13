@@ -14,6 +14,7 @@ import {
   YiieldyUsersSec,
 } from "../Assets";
 import { Testimonial } from "../Components";
+import '../fonts.css'
 
 export default function Body() {
   const iframeRef = useRef(null);
@@ -49,7 +50,7 @@ export default function Body() {
   }, []);
 
   return (
-    <main className="lg:p-6 p-3">
+    <main className="lg:p-6 p-3 font-sp-pro">
       {/* Yiieldy Ai Staff Section */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[1443px] md:px-5 lg:px-8  lg:py-20">
         <div className="grid gap-10 lg:gap-32 lg:grid-cols-2">

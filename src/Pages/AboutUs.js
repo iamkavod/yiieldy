@@ -115,7 +115,7 @@ export default function AboutUs() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center lg:max-w-[1000px] md:pr-[1rem] text-justify">
+              <div className="flex items-center max-w-[1000px] md:pr-[1rem] text-justify">
                 <div className="flex justify-center items-center mr-4">
                   <div className="h-auto">
                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
@@ -139,24 +139,21 @@ export default function AboutUs() {
       </main>
 
       {/* Achievment in Numbers */}
-      <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row md:flex-row md:gap-5 px-2 max-w-[1443px] md:px-5 lg:px-8 lg:pb-0 mx-auto">
+      <div className="flex flex-col-reverse items-center justify-between w-full lg:flex-row-reverse md:flex-row-reverse lg:gap-20 md:gap-5 px-2 max-w-[1443px] md:px-5 lg:px-8 lg:pb-0 mx-auto">
         <div className="flex items-center justify-between mx-auto">
           <div>
             <img
-              className="object-cover w-auto h-auto md:w-[150vw] lg:w-[100vw] lg:mb-0 mb-5 lg:mt-0 mt-10"
+              className="object-cover w-auto h-auto md:w-[200vw] lg:w-[80vw] lg:mb-0 mb-5 lg:mt-0 mt-10"
               src={AchievementInNumbers}
               alt="AI STaff"
             />
           </div>
         </div>
 
-        <div className="mb-2 lg:mb-0 max-w-[1443px] md:px-5 flex flex-col justify-between mx-auto lg:pl-80">
+        <div className="mb-2 lg:mb-0 max-w-[1443px] md:px-5 flex flex-col justify-between mx-auto lg:pl-0">
           <div className="max-w-[1443px] mb-6">
-            <h2 className="lg:text-4xl font-bold lg:block hidden tracking-tight text-black text-3xl sm:leading-none max-w-[1443px] mb-10">
+            <h2 className="lg:text-4xl font-bold lg:block tracking-tight text-black text-3xl sm:leading-none max-w-[1443px] mb-10">
               Achievement in  Numbers
-            </h2>
-            <h2 className="text-3xl font-bold lg:hidden md:block md:text-start lg:text-start text-center tracking-tight text-primaryColor sm:text-4xl sm:leading-none max-w-lg mb-6">
-              Achievement in Numbers
             </h2>
             <p className="text-black lg:text-xl">
               Save time to create more time on other busy schedule. Save time to
@@ -221,7 +218,7 @@ export default function AboutUs() {
               />
             </div>
             <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl">
-              SDG 2: Zero Hunger:
+              SDG 2: Zero Hunger
             </h6>
             <p className="lg:text-[15px] text-black text-justify">
               Yiieldy unwavering focus on agriculture and AI technology is not
@@ -240,7 +237,7 @@ export default function AboutUs() {
               />
             </div>
             <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl">
-              SDG 9: Industry, Innovation, and Infrastructure:
+              SDG 9: Industry, Innovation, and Infrastructure
             </h6>
             <p className="lg:text-[15px] text-black text-justify">
               Yiieldy unwavering focus on agriculture and AI technology is not
@@ -259,7 +256,7 @@ export default function AboutUs() {
               />
             </div>
             <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl">
-              SDG 12: Responsible Consumption and Production:
+              SDG 12: Responsible Consumption and Production
             </h6>
             <p className="lg:text-[15px] text-black text-justify">
               Our role in the agricultural industry is not just about helping
@@ -277,7 +274,7 @@ export default function AboutUs() {
               />
             </div>
             <h6 className="mb-2 font-semibold leading-10 text-black lg:text-4xl text-2xl capitalize">
-              SDG 13:
+              SDG 13: Climate Change
             </h6>
             <p className="lg:text-[15px] text-black text-justify">
               Yiieldy is dedicated to enhancing livestock farming efficiency and

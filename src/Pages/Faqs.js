@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CloseMinusBtn, OpenPlusBtn } from "../Assets";
 import { Footer, Nav } from '../UI';
+import '../fonts.css';
 
 const Item = React.forwardRef(({ title, children, isOpen, onClick }, ref) => (
   <div className="border-b" ref={ref}>
@@ -48,13 +49,13 @@ export default function Faqs() {
   }, []);
 
   return (
-    <main>
+    <main className="font-sp-pro">
       <Nav />
-      <div className="px-4 py-16 mx-auto max-w-[1443px] bg-primaryColorLightB lg:py-20 md:pt-40 lg:pt-40 mt-auto">
-        <div className="max-w-[1443px] sm:mx-auto">
+      <div className="py-16 mx-auto max-w-[1443px] bg-primaryColorLightB lg:py-20 md:pt-40 lg:pt-40 mt-auto lg:px-8 md:px-5 px-2">
+        <div className="max-w-[1443px] mx-auto">
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
             <div className="mb-10 md:mx-auto sm:text-center max-w-[1443px] md:mb-12">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl md:mx-auto">
+              <h2 className="max-w-[1443px] mb-6 text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl md:mx-auto">
                 FAQ'S
               </h2>
               <p className="text-base text-primaryColor md:text-lg">
@@ -64,10 +65,10 @@ export default function Faqs() {
           </div>
         </div>
       </div>
-      <div className="px-4 py-16 mx-auto max-w-[1443px] md:px-5 lg:py-20 ">
-        <div className="mx-auto max-w-[1443px] lg:px-40">
-          <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-[50px] md:mx-auto text-center">
+      <div className="py-16 mx-auto max-w-[1443px] lg:px-8 md:px-5 lg:py-20 ">
+        <div className="mx-auto max-w-[1443px] md:px-5 px-2">
+          <div className="max-w-[1443px] mb-10 md:mx-auto text-center md:mb-12">
+            <h2 className="max-w-[1443px] mb-6 text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-[50px] md:mx-auto text-center">
               Answers to Frequently Asked Questions
             </h2>
             <p className="text-[20px] text-gray-700">
@@ -131,7 +132,7 @@ export default function Faqs() {
         <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
             <div className="max-w-xl mb-5 md:mx-auto sm:text-center lg:max-w-2xl">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 text-2xl md:mx-auto">
+              <h2 className="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight text-gray-900 text-2xl md:mx-auto">
                 Still have a question?
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
