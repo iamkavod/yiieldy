@@ -40,7 +40,7 @@ export default function Terms() {
         <section className="flex flex-col gap-3">
           {/* <h1 className="text-2xl">Terms and Conditions</h1> */}
           <p className="text-black font-bold">Last updated: (13/02/2024)</p>
-          <p className="text-[13px] text-justify">
+          <p className="text-[13px] text-justify text-gray-700">
             Please read these Terms and Conditions (these "Terms") carefully before using the Service (as defined below), either through our
             website at <a className="text-green font-bold" href="https://yiieldy.com">www.yiieldy.com</a> (the "Website"), the web-based platform
             at <a className="text-green font-bold" href="https://app.yiieldy.com">app.yiieldy.com</a> (the "Web App"), or the Yiieldy mobile
@@ -52,7 +52,7 @@ export default function Terms() {
             <li className="text-xm">
               <p className="text-[17px] font-bold">Conditions of Use &amp; Acceptance of Terms</p>
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify font-regular text-gray-700">
                   Yiieldy provides its Service, Website, Web App, and Mobile App
                   to you, your employees, agents, or other representatives
                   (collectively referred to as &quot;Representatives&quot;),
@@ -62,7 +62,7 @@ export default function Terms() {
                   agree with these Terms, you may not use the Website, Web App,
                   or Mobile App.
                 </p>
-                <ol className="list-decimal pl-5">
+                <ol className="list-decimal pl-5 text-gray-700">
                   <li className="text-[13px] text-justify">
                     If Yiieldy does not use or enforce any right or part of the
                     Terms, that does not mean they are giving up that right or
@@ -77,7 +77,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Privacy Policy; Confidentiality
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Before using the Website, web app, or mobile app, we advise
                   you to read our privacy policy. Our privacy policy governs our
@@ -166,7 +166,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Description of Service
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Yiieldy provides users with access to a collection of online
                   and mobile tools designed to support farm management and
@@ -187,7 +187,7 @@ export default function Terms() {
                 License and Site Access
               </p>
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify text-gray-700">
                   We grant you a limited non-exclusive, non-transferable,
                   non-sublicensable, revocable right to access and make internal
                   business use of this Website, Web App, and the Mobile App in
@@ -234,7 +234,7 @@ export default function Terms() {
                 User Account; Compliance
               </p>
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify text-gray-700">
                   If you are an owner of an account on this Website, Web App,
                   and/or the Mobile App, you are solely responsible for
                   maintaining the confidentiality of your private user details
@@ -267,7 +267,7 @@ export default function Terms() {
               </p>
               <div className="flex flex-col gap-3 mt-2">
                 <h1 className="text-[13px]">Monthly</h1>
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify text-gray-700">
                   As a Yiieldy customer, you expressly agree that we are
                   authorized to charge you a monthly fee at the rate set when
                   you registered for the Service and that we are allowed to
@@ -300,7 +300,7 @@ export default function Terms() {
               </div>
               <div className="flex flex-col gap-3 mt-2">
                 <h1 className="text-[13px]">Yearly</h1>
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify text-gray-700">
                   As a Yiieldy customer, you expressly agree that we are
                   authorized to charge you an annual fee at the rate set when
                   you registered for the Service and that we are allowed to
@@ -340,7 +340,7 @@ export default function Terms() {
                 Communications
               </p>
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify text-gray-700">
                   All communication with us will be done electronically.
                   Whenever you send us an email or visit our Website, Web App,
                   or Mobile App, you will be communicating with us. By doing so,
@@ -360,7 +360,7 @@ export default function Terms() {
                 Comments, Reviews and Emails
               </p>
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify text-gray-700">
                   You are allowed to upload or save content on the Website, Web
                   App, or Mobile App through the Service. However, the content
                   should not be obscene, illegal, defamatory, threatening,
@@ -377,7 +377,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Intellectual Property Rights; Improvements
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Other than “Your Data” (as defined in Section 12 below), which
                   you may have opted to include on, submit to, or store on the
@@ -438,7 +438,7 @@ export default function Terms() {
                 Trademarks
               </p>
               <div className="flex flex-col gap-3 mt-2">
-                <p className="text-[13px] text-justify">
+                <p className="text-[13px] text-justify text-gray-700">
                   The Yiieldy trademarks, service marks, logos, product names,
                   and service names, collectively referred to as &quot;Yiieldy
                   Marks,&quot; are the intellectual property of Yiieldy. You
@@ -453,7 +453,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Intellectual Property Infringement
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Yiieldy respects the intellectual property of others, and we
                   expect our users to do the same. If you believe that your work
@@ -517,7 +517,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Your Data; Aggregate Data; Feedback
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   In these Terms, “Your Data” means any data, audio, video,
                   text, images, or other material provided by you or otherwise
@@ -562,7 +562,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Restrictions
               </p>
-              <div className="flex flex-col gap-3 mt-2 pl-2">
+              <div className="flex flex-col gap-3 mt-2 pl-2 text-gray-700">
                 <ol className="list-decimal text-[17px]">
                   <li className="text-[13px] text-justify">
                     You agree not to reproduce, duplicate, copy, sell, resell, or
@@ -672,7 +672,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Advertisers
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Note that any interactions you have with advertisers on the
                   Website, or the Service are solely between you and the
@@ -686,7 +686,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Links to Other Websites and Resources
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   The Website, Web App, and/or the Mobile App may contain links
                   to third-party websites or services that are not owned or
@@ -720,7 +720,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 No Warranties
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   You explicitly comprehend and consent to the following terms:
                 </p>
@@ -767,7 +767,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Limitation of Liability
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Please understand and agree that Yiieldy, its officers,
                   directors, or employees are not liable for any damages,
@@ -790,7 +790,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Indemnification
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   You agree to defend, indemnify, and hold Yiieldy, its
                   subsidiaries, affiliates, officers, agents, co- branders,
@@ -811,7 +811,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Exclusions and Limitations
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN
                   WARRANTIES OR THE LIMITATION OR EXCLUSION OF LIABILITY OR
@@ -831,7 +831,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Term; Suspension; Termination
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Subject to earlier termination as provided below, these Terms
                   will commence on the Effective Date and extend for the
@@ -872,7 +872,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Independent Contractor
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   The relationship of the parties established under these Terms
                   is that of independent contractors and neither party is a
@@ -886,7 +886,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Force Majeure
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Except for payment obligations, neither party will be liable
                   for any breach of these Terms, or for any delay or failure of
@@ -899,7 +899,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Severability
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   If any provision of the Terms is found by a court of competent
                   jurisdiction to be invalid, the parties nevertheless agree
@@ -919,7 +919,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Notice
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Note that we may send you important messages through email.
                   Additionally, we may inform you about any changes made to our
@@ -933,7 +933,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Use of Name and Logos
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Yiieldy may include your name and logo: (a) on the Website and
                   in its marketing materials, identifying you as a user of the
@@ -947,7 +947,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Assignment
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   Yiieldy may assign, transfer, and subcontract its rights or
                   obligations under these Terms without notifying you or
@@ -961,7 +961,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Entire Agreement
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   These Terms, including any legal notices and disclaimers on
                   the website, constitute the entire agreement between you and
@@ -975,7 +975,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Governing Law &amp; Disputes
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   These Terms will be governed by and construed by the laws of
                   Nigeria without regard to principles of conflict of laws. Any
@@ -996,7 +996,7 @@ export default function Terms() {
               <p className="text-[17px] font-bold">
                 Contact Us
               </p>
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-3 mt-2 text-gray-700">
                 <p className="text-[13px] text-justify">
                   If you have any queries or concerns regarding these Terms,
                   please do not hesitate to contact us. Additionally, we will be

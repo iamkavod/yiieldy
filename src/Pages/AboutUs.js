@@ -152,14 +152,13 @@ export default function AboutUs() {
 
         <div className="mb-2 lg:mb-0 max-w-[1443px] md:px-5 flex flex-col justify-between mx-auto lg:pl-0">
           <div className="max-w-[1443px] mb-6">
-            <h2 className="lg:text-4xl font-bold lg:block tracking-tight text-black text-3xl sm:leading-none max-w-[1443px] mb-10">
+            <h2 className="lg:text-4xl font-bold lg:block tracking-tight text-black text-3xl leading-none max-w-[1443px] mb-10 lg:text-start md:text-start text-center">
               Achievement in  Numbers
             </h2>
-            <p className="text-black lg:text-xl">
-              Save time to create more time on other busy schedule. Save time to
-              create more time on other busy schedule. Save time to create more
-              time on other busy schedule. Save time to create more time on
-              other busy schedule
+            <p className="text-black lg:text-xl lg:text-start md:text-start text-center">
+              Quantifying Success: A Deep Dive into Key Performance Indicators
+              Our achievements are reflected in 'Key Performance Indicators', which demonstrate our effective attainment of key objectives.
+
             </p>
           </div>
           <div className="mt-10">

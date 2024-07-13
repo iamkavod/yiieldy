@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import '@mdi/font/css/materialdesignicons.min.css';
 import Tiktok from '../Assets/tiktok.webp';
-import '../fonts.css'
+import '../fonts.css';
 import { Pic1, Pic2, Pic3, Pic4, Pic5 } from '../Assets';
 
 export default function Teams() {
@@ -9,7 +9,7 @@ export default function Teams() {
         {
             name: 'Mfon Uwa',
             title: 'Founder & CTO ',
-            description: "There are many variations of passages of Lorem Ipsum available",
+            description: "",
             imgSrc: Pic1,
             social: {
                 twitter: '#',
@@ -21,7 +21,7 @@ export default function Teams() {
         {
             name: 'Sharon Idahosa',
             title: 'Vice President ',
-            description: "There are many variations of passages of Lorem Ipsum available",
+            description: "",
             imgSrc: Pic4,
             social: {
                 twitter: '#',
@@ -33,7 +33,7 @@ export default function Teams() {
         {
             name: 'Dominica Una',
             title: 'Project Manager',
-            description: "There are many variations of passages of Lorem Ipsum available",
+            description: "",
             imgSrc: Pic3,
             social: {
                 twitter: '#',
@@ -45,7 +45,7 @@ export default function Teams() {
         {
             name: 'Olandro Marcus',
             title: 'Agronomist',
-            description: "There are many variations of passages of Lorem Ipsum available",
+            description: "",
             imgSrc: Pic5,
             social: {
                 twitter: '#',
@@ -57,7 +57,7 @@ export default function Teams() {
         {
             name: 'Uko Akpabio',
             title: 'Web Developer',
-            description: "There are many variations of passages of Lorem Ipsum available",
+            description: "",
             imgSrc: Pic2,
             social: {
                 twitter: '#',
@@ -70,36 +70,36 @@ export default function Teams() {
 
     return (
         <div className="flex items-center justify-center max-w-[1443px] mx-auto bg-white pb-20 font-sp-pro">
-            <div className="flex flex-col">
+            <div className="w-full">
                 <div className="flex flex-col mt-2">
-                    <div className="container max-w-[1443px] px-2 md:px-5 lg:px-8">
+                    <div className="container mx-auto px-4 md:px-8">
                         <div className="flex flex-wrap justify-center text-center mb-24">
                             <div className="w-full lg:w-6/12 px-4 flex flex-col gap-3">
-                                <h1 className="text-black text-xl font-bold">WHO WE ARE</h1>
-                                <h1 className="text-black text-4xl font-bold ">Meet our team</h1>
+                                <h1 className="text-black text-4xl font-bold">Meet our team</h1>
                                 <p className="text-gray-700 text-lg font-light">
-                                    Just take a look - each member of the team is watching your every gesture and will hear your every whisper.
+                                    Introducing the Dedicated Professionals Behind Our Success
                                 </p>
                             </div>
                         </div>
 
                         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                             {teamMembers.map((member, index) => (
-                                <div key={index} className="max-w-[1443px] mb-6 px-6 sm:px-6 lg:px-0 shadow-xl py-3 rounded-2xl">
-                                    <div className="grid grid-cols-1 justify-between items-center gap-5">
-
+                                <div key={index} className="w-full mb-6 px-6 sm:px-6 lg:px-0 shadow-xl py-3 rounded-2xl">
+                                    <div className="grid grid-cols-1 justify-center items-center gap-5">
                                         <img className="rounded-2xl drop-shadow-md transition-all duration-200 delay-100 mx-auto h-60"
                                             src={member.imgSrc} alt={member.name} />
 
-                                        <div className="text-center mt-6 px-5">
+                                        <div className="text-center mt-6 px-5 w-full">
                                             <h1 className="text-black text-xl font-bold mb-1">{member.name}</h1>
                                             <div className="text-gray-700 font-light mb-2">{member.title}</div>
                                             <div className="text-gray-500 font-light mb-2">{member.description}</div>
 
                                             <div className="flex items-center justify-center gap-2 transition-opacity duration-300">
-                                                <a href={member.social.linkedin} className="flex rounded-full bg-black h-10 w-10">
-                                                    <i className="mdi mdi-linkedin text-white mx-auto mt-2"></i>
-                                                </a>
+                                                {member.imgSrc !== Pic5 && (
+                                                    <a href={member.social.linkedin} className="flex rounded-full bg-black h-10 w-10" target='_blank' rel="noopener noreferrer">
+                                                        <i className="mdi mdi-linkedin text-white mx-auto mt-2"></i>
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -110,5 +110,5 @@ export default function Teams() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

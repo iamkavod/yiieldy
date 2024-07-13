@@ -29,19 +29,19 @@ export default function Stats() {
     <div className="font-sp-pro">
       <div className="relative w-full p-px mx-auto mb-4 duration-300 rounded lg:mb-8 lg:max-w-4xl group">
         <div className="relative flex justify-between items-center h-full duration-300 bg-white rounded-sm transition-color sm:items-stretch">
-          <div className="lg:text-start text-center flex flex-col gap-1">
+          <div className="lg:text-start md:text-start text-center flex flex-col gap-1">
             <CountingNumbers targetNumber={92} />
-            <p className="text-center lg:text-sm text-xs text-black">
-            User Growth
+            <p className="text-center md:text-start lg:text-sm text-xs text-black">
+            Customer Satisfaction Score (CSAT) 
             </p>
           </div>
-          <div className="lg:text-start text-center flex flex-col gap-1">
+          <div className="lg:text-start md:text-start text-center flex flex-col gap-1">
             <CountingNumbers targetNumber={86} />
-            <p className="text-center lg:text-sm text-xs text-black">Increased Productivity</p>
+            <p className="text-center md:text-start lg:text-sm text-xs text-black">Increased Productivity</p>
           </div>
-          <div className="lg:text-start text-center flex flex-col gap-1">
+          <div className="lg:text-start md:text-start text-center flex flex-col gap-1">
             <CountingNumbers targetNumber={96} />
-            <p className="text-center lg:text-sm text-xs text-black">Increased Care</p>
+            <p className="text-center md:text-start lg:text-sm text-xs text-black">Reduction in Production Costs</p>
           </div>
         </div>
       </div>
