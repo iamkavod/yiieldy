@@ -15,9 +15,9 @@ export default function News() {
           <h2 className="max-w-lg mb-6 text-4xl font-bold leading-none tracking-tight text-black lg:text-6xl md:mx-auto">
             Our News
           </h2>
-          <p className="text-base text-gray-800 md:text-lg lg:text-[20px]">
+          {/* <p className="text-base text-gray-800 md:text-lg lg:text-[20px]">
             Get the latest updates and deeper coffee experience from Yiieldy
-          </p>
+          </p> */}
         </div>
         <a href="https://www.legit.ng/business-economy/technology/1596484-from-software-soil-mfon-uwas-journey-revolutionize-poultry-farming-nigeria-yiieldy/" >
           <div className="mx-auto lg:max-w-full">
@@ -35,9 +35,11 @@ export default function News() {
               Revolutionise Poultry Farming in Nigeria with Yiieldy
             </p>
             <p className="text-[15px] text-gray-500 flex items-center gap-2">
-              <span>4 Min</span>
+              <span>Sunday, June 09, 2024</span>
+              <span className="text-[15px]">at</span>
+              <span>11:39 AM</span>
               <span className="bg-gray-500 w-2 h-2 rounded-full"></span>
-              <span>August 19, 2022</span>
+              <span>4 Min Read</span>
             </p>
           </div>
         </a>
@@ -59,9 +61,11 @@ export default function News() {
                     Revolutionise Poultry Farming in Nigeria with Yiieldy
                   </a>
                   <p className="text-[15px] text-gray-500 flex items-center gap-2">
-                    <span>4 Min</span>
+                    <span>Sunday, June 09, 2024</span>
+                    <span className="text-[15px]">at</span>
+                    <span>11:39 AM</span>
                     <span className="bg-gray-500 w-2 h-2 rounded-full"></span>
-                    <span>August 19, 2022</span>
+                    <span>4 Min Read</span>
                   </p>
                 </div>
               </div>
@@ -77,9 +81,9 @@ export default function News() {
                   </a>
                   <div>
                     <p className="text-[15px] text-gray-500 flex items-center gap-2">
-                      <span>4 Min</span>
+                      <span>June 10, 2024</span>
                       <span className="bg-gray-500 w-2 h-2 rounded-full"></span>
-                      <span>August 19, 2022</span>
+                      <span>4 Min Read</span>
                     </p>
                   </div>
                 </div>

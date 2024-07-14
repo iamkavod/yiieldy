@@ -92,7 +92,7 @@ export default function AboutUs() {
             </div>
             <div className="lg:py-6 max-w-xl">
               <div className="flex flex-col gap-2 mb-5">
-                <h3 className="text-blackShadeB font-bold">Easy and Fast</h3>
+                {/* <h3 className="text-blackShadeB font-bold">Easy and Fast</h3> */}
                 <h1 className="lg:text-4xl text-3xl font-bold text-black mb-5">
                   Unlock the power of AI with Yiieldy
                 </h1>
@@ -156,7 +156,7 @@ export default function AboutUs() {
               Achievement in  Numbers
             </h2>
             <p className="text-black lg:text-xl lg:text-start md:text-start text-center">
-              Quantifying Success: A Deep Dive into Key Performance Indicators
+              Quantifying Success: A Deep Dive into Key Performance Indicators.
               Our achievements are reflected in 'Key Performance Indicators', which demonstrate our effective attainment of key objectives.
 
             </p>

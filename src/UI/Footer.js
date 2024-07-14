@@ -5,16 +5,12 @@ import { Cookies } from "../Components";
 import '../fonts.css';
 
 export default function Footer() {
-  const [showPopup, setShowPopup] = useState(false);
+  const [triggerPopup, setTriggerPopup] = useState(false);
 
   const handlePopup = (e) => {
-    e.preventDefault();
-    setShowPopup(true);
+      e.preventDefault();
+      setTriggerPopup(true);
   };
-
-  // const closePopup = () => {
-  //   setShowPopup(false);
-  // };
 
   return (
     <footer className="font-sp-pro">
@@ -37,10 +33,10 @@ export default function Footer() {
               </a>
               <div className="mt-4 lg:max-w-sm flex gap-2 items-center">
                 <p className="text-xl text-primaryColorLight">Follow us on:</p>
-                <a href="/" >
+                <a href="https://www.instagram.com/yiieldy_marketing" target="_blank">
                   <img src={Instagram} alt="Instagram" className="lg:w-8 w-5" />
                 </a>
-                <a href="/">
+                <a href="https://www.linkedin.com/company/yiieldy/" target="_blank">
                   <img src={Linkedin} alt="Linkedin" className="lg:w-8 w-5" />
                 </a>
               </div>
@@ -177,7 +173,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <Cookies show={showPopup} />
+      <Cookies triggerPopup={triggerPopup} />
     </footer>
   );
 }

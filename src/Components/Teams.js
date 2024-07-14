@@ -43,7 +43,7 @@ export default function Teams() {
             },
         },
         {
-            name: 'Olandro Marcus',
+            name: 'Olayemi Oladeji',
             title: 'Agronomist',
             description: "",
             imgSrc: Pic5,

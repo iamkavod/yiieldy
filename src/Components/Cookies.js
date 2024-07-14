@@ -3,15 +3,21 @@ import { CSSTransition } from 'react-transition-group';
 import { Cookie, Cookiez } from '../Assets';
 import '../App.css';
 
-export default function Cookies({ show }) {
-    const [showBanner, setShowBanner] = useState(true);
+export default function Cookies({ triggerPopup }) {
+    const [showBanner, setShowBanner] = useState(false);
 
     useEffect(() => {
         const isCookieAccepted = localStorage.getItem('cookieAccepted');
-        if (isCookieAccepted === 'true' || isCookieAccepted === 'false') {
-            setShowBanner(false);
+        if (!isCookieAccepted) {
+            setShowBanner(true);
         }
     }, []);
+
+    useEffect(() => {
+        if (triggerPopup) {
+            setShowBanner(true);
+        }
+    }, [triggerPopup]);
 
     const handleAllow = () => {
         localStorage.setItem('cookieAccepted', 'true');
@@ -27,7 +33,7 @@ export default function Cookies({ show }) {
         const handleClickOutside = (event) => {
             const popupContent = document.getElementById("popup-content");
             if (popupContent && !popupContent.contains(event.target)) {
-                setShowBanner(true);
+                setShowBanner(false);
             }
         };
 
@@ -36,10 +42,6 @@ export default function Cookies({ show }) {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
-
-    if (!show) {
-        return null;
-    }
 
     return (
         <CSSTransition

@@ -85,6 +85,7 @@ export default function Header() {
                       <a
                         href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
                         className="bg-primaryColor w-32 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
+                        target="_blank"
                       >
                         Fiidz App
                       </a>
@@ -111,6 +112,7 @@ export default function Header() {
                       <a
                         href="#"
                         className="bg-primaryColor w-32 py-4 my-auto lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold text-white shadow-sm hover:opacity-[.9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColor rounded-full"
+                        target="_blank"
                       >
                         Weather App
                       </a>

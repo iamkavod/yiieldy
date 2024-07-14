@@ -38,6 +38,7 @@ export default function Hero() {
         <a
           href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
           className="rounded-full bg-primaryColorLight w-40 py-4 lg:w-60 lg:py-4 text-xs lg:text-sm font-semibold border border-primaryColor text-primaryColor shadow-sm hover:bg-primaryColorLight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryColorLight text-center hover:opacity-[.9]"
+          target="_blank"
         >
           Try for free
         </a>

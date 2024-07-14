@@ -28,7 +28,7 @@ import { FiidzAppLogo, Logo, XMark } from '../Assets'
 import '../fonts.css'
 
 const products = [
-  { name: 'FiidzApp', description: 'Revolutionizing poultry farming', href: '/fiidzapp' },
+  { name: 'Fiidz App', description: 'Revolutionizing poultry farming', href: '/fiidzapp' },
 ]
 
 const resources = [

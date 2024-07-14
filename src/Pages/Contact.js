@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Field, Label, Switch } from "@headlessui/react";
@@ -12,6 +11,31 @@ function classNames(...classes) {
 
 export default function Contact() {
   const [agreed, setAgreed] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, phone, subject, message } = formData;
+    const destinationEmail = "contactus@yiieldy.com";
+    const mailtoLink = `mailto:${destinationEmail}?subject=${encodeURIComponent(
+      subject
+    )}&body=Name: ${name} %0AEmail: ${email}%0APhone: ${phone} %0ASubject: ${subject} %0AMessage: ${message}`;
+
+    // Open the user's email client with the pre-populated data
+    window.location.href = mailtoLink;
+  };
+
   return (
     <main className="font-sp-pro bg-primaryColorLightB">
       {/* Header */}
@@ -21,15 +45,14 @@ export default function Contact() {
       <div className="isolate px-6 py-24 py-32 md:5 lg:px-8">
         <div className="mx-auto max-w-[1443px] text-center">
           <h2 className="lg:text-6xl font-bold text-black text-4xl">
-          Drop us a message for any query
+            Drop us a message for any query
           </h2>
           <p className="mt-2 text-lg leading-8 text-black">
-          Feel free to reach out with any questions or concerns by sending us a message. We're here to assist you!
+            Feel free to reach out with any questions or concerns by sending us a message. We're here to assist you!
           </p>
         </div>
         <form
-          action="#"
-          method="POST"
+          onSubmit={handleSubmit}
           className="mx-auto mt-16 max-w-[1443px] lg:mt-20 mt-5 bg-white p-10 rounded-[20px]"
         >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-2">
@@ -48,6 +71,8 @@ export default function Contact() {
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter First Name"
+                  required
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -66,6 +91,8 @@ export default function Contact() {
                   autoComplete="tel"
                   className="block w-full h-10 rounded-md border-0 px-2 py-2 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter Phone Number With Country Code"
+                  required
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -84,6 +111,8 @@ export default function Contact() {
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter Your Email"
+                  required
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -102,6 +131,8 @@ export default function Contact() {
                   autoComplete="family-name"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter Subject"
+                  required
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -120,10 +151,12 @@ export default function Contact() {
                   className="block w-full rounded-md border-0 px-3.5 h-40 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-300 focus:ring-2 focus:ring-inset focus:ring-primaryColor sm:text-sm sm:leading-6"
                   placeholder="Enter your messasage here"
                   defaultValue={""}
+                  required
+                  onChange={handleChange}
                 />
               </div>
             </div>
-            
+
           </div>
           <div className="mt-10">
             <button
