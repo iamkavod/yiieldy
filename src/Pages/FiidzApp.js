@@ -149,9 +149,9 @@ export default function FiidzApp() {
           <h2 className="max-w-[1443px] mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-black lg:text-5xl md:mx-auto">
             Our Unique Features
           </h2>
-          <p className="text-base text-black md:text-lg">
+          {/* <p className="text-base text-black md:text-lg">
             Explain anything clearly and effortlessly – and skip the meeting.
-          </p>
+          </p> */}
         </div>
 
         {/* Fiidz Optimization */}
@@ -307,7 +307,7 @@ export default function FiidzApp() {
           <div className="lg:flex md:flex grid grid-cols-1 justify-items-between items-center">
             <div className="lg:py-6 lg:pr-16 lg:w-[70%] w-full">
               <div className="flex flex-col gap-2 mb-5">
-                <h3 className="text-blackShadeB font-bold">Easy and Fast</h3>
+                {/* <h3 className="text-blackShadeB font-bold">Easy and Fast</h3> */}
                 <h1 className="lg:text-5xl text-3xl font-bold text-black mb-8">Quick Overview</h1>
               </div>
               <div className="flex items-center justify-start lg:max-w-[1443px] lg:pr-[10rem] md:pr-[5rem] text-justify mb-5">

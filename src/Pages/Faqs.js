@@ -188,12 +188,14 @@ export default function Faqs() {
               <a
                 href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
                 className="text-sm font-bold leading-6 text-white bg-primaryColor px-10 py-4 rounded-full lg:w-40 hover:opacity-[.9]"
+                target="_blank"
               >
                 Try for Free
               </a>
               <a
-                href="#"
+                href="/fiidzapp"
                 className="text-sm font-bold leading-6 bg-primaryColorLight border border-primaryColor text-primaryColor px-10 py-4 rounded-full lg:w-40 hover:opacity-[.9]"
+                target="_blank"
               >
                 Learn More
               </a>

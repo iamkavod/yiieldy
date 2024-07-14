@@ -88,7 +88,7 @@ export default function PricingPage() {
           </div>
           <div className="flex flex-col justify-center gap-5 items-start">
             <h5 className="mb-4 lg:text-6xl text-4xl font-bold leading-none lg:text-start text-center w-full">
-              Get Started With Fiidz App
+            Get Started With Fiidz App
             </h5>
             <p className="mb-6 text-black text-[15px] lg:text-2xl lg:text-start text-center">
               This video shows its capabilities and how essential <br /> it is to
@@ -98,12 +98,14 @@ export default function PricingPage() {
               <a
                 href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
                 className="text-sm font-bold leading-6 text-white bg-primaryColor px-10 py-4 rounded-full lg:w-40 hover:opacity-[.9]"
+                target="_blank"
               >
                 Try for Free
               </a>
               <a
-                href="#"
+                href="/fiidzapp"
                 className="text-sm font-bold leading-6 bg-primaryColorLight border border-primaryColor text-primaryColor px-10 py-4 rounded-full lg:w-40 hover:opacity-[.9]"
+                target="_blank"
               >
                 Learn More
               </a>

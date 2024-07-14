@@ -93,9 +93,9 @@ export default function Pricing() {
                 Either Livestock farmer or Crop Growers
                 </div> */}
               </div>
-              <div className="text-black dark:black font-medium mb-5">
+              {/* <div className="text-black dark:black font-medium mb-5">
                 Per member, per Month
-              </div>
+              </div> */}
               <ul className="text-black dark:text-black text-sm space-y-3 grow">
                 <li className="flex items-center">
                   <img
@@ -158,6 +158,7 @@ export default function Pricing() {
               <a
                 className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-green px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-greenShade focus-visible:outline-none focus-visible:ring  bg-primaryColor focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
                 href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
+                target="_blank"
               >
                 Try For Free
               </a>
@@ -201,9 +202,9 @@ export default function Pricing() {
                   </div>
                 </div>
               </div>
-              <div className="text-black dark:black font-medium mb-5">
+              {/* <div className="text-black dark:black font-medium mb-5">
                 Per member, per Month
-              </div>
+              </div> */}
               <ul className="text-black dark:text-black text-sm space-y-3 grow">
                 <li className="flex items-center">
                   <img
@@ -280,6 +281,7 @@ export default function Pricing() {
               <a
                 className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-green px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-greenShade focus-visible:outline-none focus-visible:ring bg-primaryColor focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
                 href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
+                target="_blank"
               >
                 Try For Free
               </a>
@@ -323,9 +325,9 @@ export default function Pricing() {
                   </div>
                 </div>
               </div>
-              <div className="text-black dark:black font-medium mb-5">
+              {/* <div className="text-black dark:black font-medium mb-5">
                 Per member, per Month
-              </div>
+              </div> */}
               <ul className="text-black dark:text-black text-sm space-y-3 grow mb-2">
                 <li className="flex items-center">
                   <img
@@ -421,6 +423,7 @@ export default function Pricing() {
               <a
                 className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-green px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-greenShade focus-visible:outline-none focus-visible:ring bg-primaryColor focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
                 href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
+                target="_blank"
               >
                 Try For Free
               </a>
