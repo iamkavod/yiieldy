@@ -29,20 +29,6 @@ export default function Cookies({ triggerPopup }) {
         setShowBanner(false);
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            const popupContent = document.getElementById("popup-content");
-            if (popupContent && !popupContent.contains(event.target)) {
-                setShowBanner(false);
-            }
-        };
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
-
     return (
         <CSSTransition
             in={showBanner}
