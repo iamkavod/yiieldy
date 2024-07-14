@@ -77,6 +77,7 @@ export default function FiidzApp() {
               <a
                 href="https://play.google.com/store/apps/details?id=com.yiieldy.fiidz.twa&pli=1"
                 className="transition duration-300 hover:shadow-lg bg-primaryColor p-3 lg:w-60 text-center text-white font-bold lg:h-auto w-auto rounded-[20px]"
+                target="_blank"
               >
                 Try for Free
               </a>
