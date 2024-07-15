@@ -1,6 +1,7 @@
 {
   "name": "yiieldy",
   "version": "0.1.0",
+  "homepage": "https://yiieldy.com/",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^2.0.4",
