@@ -145,7 +145,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
+          <div className="flex flex-col justify-between pt-5 pb-10 sm:flex-row">
             <p className="lg:text-[15px] text-sm lg:text-start text-center text-primaryColorLight lg:mb-0 mb-4">
               Copyright © Yiieldy 2024. All Rights Reserved
             </p>
