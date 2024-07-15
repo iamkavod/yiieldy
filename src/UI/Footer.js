@@ -48,28 +48,28 @@ export default function Footer() {
                 </p>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <a
-                      href="/faqs"
+                    <Link
+                      to={"/faqs"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       FAQ'S
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/terms-of-service"
+                    <Link
+                      to={"/terms-of-service"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Terms and condition
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/privacy-policy"
+                    <Link
+                      to={"/privacy-policy"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -79,28 +79,28 @@ export default function Footer() {
                 </p>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <a
-                      href="/about"
+                    <Link
+                      to={"/about"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
-                  {/* <li>
-                    <a
-                      to={"/service"}
+                  <li>
+                    <Link
+                      to={"/services"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Service
-                    </a>
-                  </li> */}
+                    </Link>
+                  </li>
                   <li>
-                    <a
-                      href="/contact"
+                    <Link
+                      to={"/contact"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                   {/* <li>
                     <a
@@ -150,18 +150,18 @@ export default function Footer() {
               Copyright © Yiieldy 2024. All Rights Reserved
             </p>
             <div className="flex justify-between items-center mt-4 space-x-20 sm:mt-0">
-              <a
-                href="/terms-of-service"
+              <Link
+                to={"/terms-of-service"}
                 className="transition-colors lg:text-[15px] text-[10px] duration-300 text-primaryColorLight"
               >
                 Terms and Condition
-              </a>
-              <a
-                href="/privacy-policy"
+              </Link>
+              <Link
+                to={"/privacy-policy"}
                 className="transition-colors lg:text-[15px] text-[10px] duration-300 text-primaryColorLight"
               >
                 Privacy Policy
-              </a>
+              </Link>
               <a
                 href="/"
                 className="transition-colors lg:text-[15px] text-xs duration-300 text-primaryColorLight"

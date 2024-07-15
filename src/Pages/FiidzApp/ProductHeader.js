@@ -26,13 +26,14 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { FiidzAppLogo, Logo } from '../../Assets'
 import '../../fonts.css'
+import { Link } from 'react-router-dom'
 
 const products = [
   { name: 'Fiidz App', description: 'Revolutionizing poultry farming', href: '/fiidzapp' },
 ]
 
 const resources = [
-  { name: 'News', href: '/news', icon: NewspaperIcon},
+  { name: 'News', href: '/news', icon: NewspaperIcon },
   { name: 'Help and Support', href: '/helpandsupport', icon: QuestionMarkCircleIcon },
 ]
 
@@ -100,10 +101,10 @@ export default function ProductHeader() {
                       <img src={FiidzAppLogo} aria-hidden="true" className="h-auto w-auto text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-bold text-gray-900">
+                      <Link to={item.href} className="block font-bold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
@@ -131,22 +132,22 @@ export default function ProductHeader() {
                       <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-primaryColor" />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-bold text-gray-900">
+                      <Link to={item.href} className="block font-bold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="/pricing" className="text-sm font-bold leading-6 text-gray-900">
+          <Link to={"/pricing"} className="text-sm font-bold leading-6 text-gray-900">
             Pricing
-          </a>
-          <a href="/about" className="text-sm font-bold leading-6 text-gray-900">
+          </Link>
+          <Link to={"/about"} className="text-sm font-bold leading-6 text-gray-900">
             About Us
-          </a>
+          </Link>
           <a href="https://fiidz.yiieldy.com/" className="text-sm font-bold leading-6 text-gray-900" target='_blank'>
             Sign In
           </a>
@@ -193,11 +194,16 @@ export default function ProductHeader() {
                     {[...products].map((item) => (
                       <DisclosureButton
                         key={item.name}
-                        as="a"
-                        href={item.href}
+                        // as="a"
+                        // href={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-bold leading-7 text-gray-900 hover:bg-gray-50"
                       >
-                        {item.name}
+                        <Link
+                          to={item.href}
+                          className="block w-full h-full"
+                        >
+                          {item.name}
+                        </Link>
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
@@ -211,27 +217,32 @@ export default function ProductHeader() {
                     {[...resources].map((item) => (
                       <DisclosureButton
                         key={item.name}
-                        as="a"
-                        href={item.href}
+                        // as="a"
+                        // href={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-bold leading-7 text-gray-900 hover:bg-gray-50"
                       >
-                        {item.name}
+                        <Link
+                          to={item.href}
+                          className="block w-full h-full"
+                        >
+                          {item.name}
+                        </Link>
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="pricing"
+                <Link
+                  to={"pricing"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Pricing
-                </a>
-                <a
-                  href="/about"
+                </Link>
+                <Link
+                  to={"/about"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About Us
-                </a>
+                </Link>
                 <a
                   href="https://fiidz.yiieldy.com/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"

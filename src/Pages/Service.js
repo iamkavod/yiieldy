@@ -10,7 +10,7 @@ export default function Service() {
       <Nav />
 
       {/* Our Services */}
-      <div className="px-4 py-16 mx-auto max-w-[1443px] md:px-5 md:py-24 md:px-5 lg:px-8 lg:py-24">
+      <div className="px-4 py-20 mx-auto max-w-[1443px] md:px-5 md:py-24 md:px-5 lg:px-8 lg:py-24">
         <div className="max-w-[1443px] mb-10 md:mx-auto sm:text-center md:mb-12">
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-[60px] md:mx-auto">
             Our Services
