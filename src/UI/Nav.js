@@ -26,7 +26,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { FiidzAppLogo, Logo, XMark } from '../Assets'
 import '../fonts.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const products = [
   { name: 'Fiidz App', description: 'Revolutionizing poultry farming', href: '/fiidzapp' },
@@ -101,10 +101,10 @@ export default function Example() {
                       <img src={FiidzAppLogo} aria-hidden="true" className="h-auto w-auto text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
-                      <Link to={item.href} className="block font-bold text-gray-900">
+                      <a href={item.href} className="block font-bold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </Link>
+                      </a>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
@@ -132,29 +132,29 @@ export default function Example() {
                       <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-primaryColor" />
                     </div>
                     <div className="flex-auto">
-                      <Link to={item.href} className="block font-bold text-gray-900">
+                      <a href={item.href} className="block font-bold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 ))}
               </div>
             </PopoverPanel>
           </Popover>
-          <Link to={"/services"} className="text-sm font-bold leading-6 text-gray-900">
+          <a href={"/services"} className="text-sm font-bold leading-6 text-gray-900">
             Services
-          </Link>
-          <Link to={"/about"} className="text-sm font-bold leading-6 text-gray-900">
+          </a>
+          <a href={"/about"} className="text-sm font-bold leading-6 text-gray-900">
             About Us
-          </Link>
-          <Link
-            to={'/contact'}
+          </a>
+          <a
+            href={'/contact'}
             class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-whiteShade transition duration-200 shadow-md bg-primaryColor hover:opacity-[.9] focus:shadow-outline focus:outline-none rounded-full"
             aria-label="Contact Us"
           >
             Contact Us
-          </Link>
+          </a>
         </PopoverGroup>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -191,16 +191,17 @@ export default function Example() {
                     {[...products].map((item) => (
                       <DisclosureButton
                         key={item.name}
-                        // as="Link"
-                        // to={item.href}
+                        as="a"
+                        href={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-bold leading-7 text-gray-900 hover:bg-gray-50"
                       >
-                        <Link
-                          to={item.href}
+                        {/* <Link
+                          href={item.href}
                           className="block w-full h-full"
                         >
                           {item.name}
-                        </Link>
+                        </Link> */}
+                        {item.name}
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
@@ -214,38 +215,39 @@ export default function Example() {
                     {[...resources].map((item) => (
                       <DisclosureButton
                         key={item.name}
-                        // as="Link"
-                        // to={item.href}
+                        as="a"
+                        href={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-bold leading-7 text-gray-900 hover:bg-gray-50"
                       >
-                        <Link
-                          to={item.href}
+                        {/* <Link
+                          href={item.href}
                           className="block w-full h-full"
                         >
                           {item.name}
-                        </Link>
+                        </Link> */}
+                        {item.name}
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <Link
-                  to={"/services"}
+                <a
+                  href={"/services"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Services
-                </Link>
-                <Link
-                  to={"/about"}
+                </a>
+                <a
+                  href={"/about"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About Us
-                </Link>
-                <Link
-                  to={"/contact"}
+                </a>
+                <a
+                  href={"/contact"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact Us
-                </Link>
+                </a>
               </div>
             </div>
           </div>
