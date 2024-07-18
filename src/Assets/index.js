@@ -71,3 +71,7 @@ export { default as Pic4 } from './Pic4.webp';
 export { default as Pic5 } from './Pic5.webp';
 export { default as NewImage } from './newsPic.webp';
 export { default as NewImage2 } from './newshead2.webp';
+export { default as ServiceImgA } from './serv1.webp';
+export { default as ServiceImgB } from './serv2.webp';
+export { default as ServiceImgC } from './serv3.webp';
+export { default as ServiceImgD } from './serv4.webp';

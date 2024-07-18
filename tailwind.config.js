@@ -17,6 +17,7 @@ module.exports = {
         blackShadeC: "rgba(139, 146, 152, 0.50)",
         blackShadeD: "#212121",
         whiteShade: "#D1E2FF",
+        whiteShadeB: "#F5FCF5",
       },
       fontFamily: {
         'sp-pro': ['"SP Pro"', 'sans-serif'],

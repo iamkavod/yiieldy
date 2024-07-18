@@ -37,7 +37,7 @@ const resources = [
   { name: 'Help and Support', href: '/helpandsupport', icon: QuestionMarkCircleIcon },
 ]
 
-export default function AboutNav() {
+export default function ServiceNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false);
 
