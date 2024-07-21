@@ -58,6 +58,26 @@ body::-webkit-scrollbar-thumb {
   background-color: #218225;
 } */
 
+#servicesHero {
+  background-image: url('./Assets/servicesHero.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 1443px;
+}
+
+#servicesCon {
+  background-image: url('./Assets/servicesCon.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 1390px;
+  padding: 200px;
+}
+
+
 #helpinput {
   box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.2);
 }
@@ -140,5 +160,10 @@ body::-webkit-scrollbar-thumb {
   #helpbg {
     top:  2300px;
     max-height: 1200px;
+  }
+  
+  #servicesCon {
+    padding: 10px;
+    background-size: center;
   }
 }
