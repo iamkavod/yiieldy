@@ -134,9 +134,9 @@ export default function Service() {
           <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
             <div className="text-start">
               <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Basic</div>
-              <div className="flex lg;items-center justify-between mt-2 gap-x-5 lg:flex-row flex-col ">
+              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
                 <div className="text-3xl font-bold text-primaryColor">N8,036.40/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">$5.0/mo</div>
+                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$5.0/mo</div>
               </div>
               <div className="mt-2 space-y-3 text-start">
                 <div className="text-gray-700 flex items-center"><img
@@ -174,9 +174,9 @@ export default function Service() {
           <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border-2 border-primaryColor rounded shadow-sm items-start hover:shadow">
             <div className="text-start">
               <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Standard</div>
-              <div className="flex items-center justify-between mt-2 gap-x-5">
+              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
                 <div className="text-3xl font-bold text-primaryColor">N16,072.60/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl">$10.0/mo</div>
+                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$10.0/mo</div>
               </div>
               <div className="mt-2 space-y-3 text-start">
                 <div className="text-gray-700 flex items-center"><img
@@ -214,9 +214,9 @@ export default function Service() {
           <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
             <div className="text-start">
               <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Premium</div>
-              <div className="flex items-center justify-between mt-2 gap-x-5">
+              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
                 <div className="text-3xl font-bold text-primaryColor">N40,181.50/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl">$25.0/mo</div>
+                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$25.0/mo</div>
               </div>
               <div className="mt-2 space-y-3 text-start">
                 <div className="text-gray-700 flex items-center"><img
@@ -260,14 +260,14 @@ export default function Service() {
             Subscription Packages
           </h2>
         </div>
-        <div className="grid gap-10 row-gap-5 lg:max-w-[1443px] max-w-xl sm:row-gap-10 lg:grid-cols-3 lg:mx-auto">
+        <div className="grid gap-10 row-gap-5 row-gap-4 lg:grid-cols-3 grid-cols-1 lg:mx-auto">
           {/* Basic */}
-          <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
+          <div className="flex flex-col justify-between py-8 px-2 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
             <div className="text-start">
               <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Basic</div>
-              <div className="flex items-center justify-between mt-2 gap-x-5">
+              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
                 <div className="text-3xl font-bold text-primaryColor">N8,036.30/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl">$5.0/mo</div>
+                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$5.0/mo</div>
               </div>
               <div className="mt-2 space-y-3 text-start">
                 <div className="text-gray-700 flex items-center"><img
@@ -305,9 +305,9 @@ export default function Service() {
           <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border-2 border-primaryColor rounded shadow-sm items-start hover:shadow">
             <div className="text-start">
               <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Standard</div>
-              <div className="flex items-center justify-between mt-2 gap-x-5">
+              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
                 <div className="text-3xl font-bold text-primaryColor">N24,129.24/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl">$15.0/mo</div>
+                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$15.0/mo</div>
               </div>
               <div className="mt-2 space-y-3 text-start">
                 <div className="text-gray-700 flex items-center"><img
@@ -345,9 +345,9 @@ export default function Service() {
           <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
             <div className="text-start">
               <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Premium</div>
-              <div className="flex items-center justify-between mt-2 gap-x-5">
+              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
                 <div className="text-3xl font-bold text-primaryColor">N80,430.80/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl">$50.0/mo</div>
+                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$50.0/mo</div>
               </div>
               <div className="mt-2 space-y-3 text-start">
                 <div className="text-gray-700 flex items-center"><img
@@ -386,15 +386,15 @@ export default function Service() {
       {/* Contact */}
       <div className="mx-auto max-w-[1443px] mb-60 mt-20 lg:px-8 md:px-5 px-2">
       <div className="rounded">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row md:flex-row flex-col-reverse items-center">
           <div className="lg:w-1/2">
-            <p className="mb-4 lg:text-6xl md:text-4xl text-xl text-gray-700">
+            <p className="mb-4 lg:text-6xl md:text-4xl text-xl text-gray-700 lg:text-start md:text-start text-center">
               Speak to a consultant.
             </p>
             <a
               href="/contact"
               aria-label=""
-              className="inline-flex items-center font-bold transition-colors duration-200 text-white bg-primaryColor p-5 rounde-xl"
+              className="inline-flex justify-center items-center font-bold transition-colors duration-200 text-white bg-primaryColor p-5 rounded-xl lg:w-96 w-full"
             >
               Contact Us
             </a>
