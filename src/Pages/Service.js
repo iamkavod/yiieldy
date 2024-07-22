@@ -12,26 +12,28 @@ export default function Service() {
       <ServiceNav />
 
       {/* Our Services */}
-      <div className="px-4 py-20 mx-auto max-w-[1443px] md:px-24 lg:px-8 lg:py-40">
-        <div className="max-w-[1443px] mb-6 sm:mx-auto sm:text-center md:mb-10">
-          <p className="text-base text-gray-700 lg:text-4xl md:text-2xl text-xl text-center">
+      <div className="px-2 py-32 mx-auto max-w-[1443px] md:px-5 lg:px-8 lg:py-44">
+        <div className="max-w-[1443px] mb-6 sm:mx-auto lg:text-center md:mb-10">
+          <p className="text-gray-700 lg:text-4xl md:text-2xl text-xl text-center">
             Access our impartial advice and exceptional services
           </p>
-          <p className="mb-1 lg:text-6xl md:text-4xl text-xl text-center font-bold tracking-wide capitalize mt-5 md:mb-2">
+          <p className="mb-1 lg:text-5xl md:text-4xl text-xl text-center font-bold tracking-wide capitalize mt-5 md:mb-2">
             We are confident that our team is the perfect fit for your agribusiness and are dedicated to delivering the highest-quality service available.
           </p>
         </div>
 
         {/* Services Hero Section */}
         <div className="px-2 py-16 mx-auto max-w-[1443px]" id="servicesHero">
-          <div className="grid max-w-[1443px] gap-8 row-gap-5 md:row-gap-8 sm:mx-auto lg:grid-cols-2">
+          <div className="grid max-w-[1443px] gap-8 row-gap-5 md:row-gap-8 mx-auto lg:grid-cols-2 justify-center">
             <div className="transition duration-300 transform rounded md:text-center">
-              <div className="relative lg:p-5 md:p-3 p-0">
-                <img
-                  className="object-cover w-full h-64 rounded-xl lg:h-80 xl:h-96"
-                  src={ServiceImgA}
-                  alt=""
-                />
+              <div className="lg:p-5 md:p-3 p-0 grid grid-row">
+                <div className="w-full flex justify-center">
+                  <img
+                    className="object-cover rounded-xl h-[100%] w-[90%]"
+                    src={ServiceImgA}
+                    alt=""
+                  />
+                </div>
                 <div className="px-2 py-8 rounded-b lg:px-8 text-start flex flex-col gap-y-3">
                   <h1 className="text-primaryColor lg:text-4xl md:text-2xl text-xl font-bold">Training</h1>
                   <p className="text-primaryColor lg:text-2xl md:text-xl text-sm">We offer online and on-site training sessions to equip livestock farmers across Africa.</p>
@@ -51,18 +53,21 @@ export default function Service() {
                     <li className="text-xl">✅  Youths</li>
                     <li className="text-xl">✅  Women</li>
                   </ul>
-                  <a href="/contact" className="bg-primaryColor w-full text-center p-4 rounded-full text-white font-bold">Contact Us</a>
+
                 </div>
+                <a href="/contact" className="bg-primaryColor w-full text-center p-4 rounded-full text-white font-bold lg:hidden md:block block">Contact Us</a>
               </div>
             </div>
             <div className="transition duration-300 transform rounded md:text-center">
-              <div className="relative lg:p-5 md:p-3 p-0">
-                <img
-                  className="object-cover w-full h-64 rounded-xl lg:h-80 xl:h-96"
-                  src={ServiceImgB}
-                  alt=""
-                />
-                <div className="px-2 py-8 rounded-b lg:px-8 text-start flex justify-between flex-col gap-y-3">
+              <div className="relative lg:p-5 md:p-3 p-0 flex flex-col justify-between">
+                <div className="w-full flex justify-center">
+                  <img
+                    className="object-cover rounded-xl h-[100%] w-[90%]"
+                    src={ServiceImgB}
+                    alt=""
+                  />
+                </div>
+                <div className="px-2 py-8 rounded-b lg:px-8 text-start flex justify-between flex-col gap-y-3 h-full">
                   <h1 className="text-primaryColor lg:text-4xl md:text-2xl text-xl font-bold">Data analysis and insights:</h1>
                   <p className="text-black lg:text-2xl md:text-xl text-sm">We can leverage the data and insights collected from Yiieldy fiidz app and other sources to provide farmers with valuable insights on their farm performance, feed consumption patterns, health trends, and productivity metrics</p>
                   <ul>
@@ -73,10 +78,15 @@ export default function Service() {
                     <li className="text-xl">✅  Non-profit organizations</li>
                     <li className="text-xl">✅  Governments</li>
                   </ul>
-                  <a href="/contact" className="bg-primaryColor w-full text-center p-4 rounded-full text-white font-bold">Contact Us</a>
+
                 </div>
+                <a href="/contact" className="bg-primaryColor w-full text-center p-4 rounded-full text-white font-bold lg:hidden md:block block">Contact Us</a>
               </div>
             </div>
+          </div>
+          <div className="w-full lg:flex md:hidden hidden justify-between gap-20 px-10">
+            <a href="/contact" className="bg-primaryColor w-full text-center p-4 rounded-full text-white font-bold">Contact Us</a>
+            <a href="/contact" className="bg-primaryColor w-full text-center p-4 rounded-full text-white font-bold">Contact Us</a>
           </div>
         </div>
       </div>
@@ -85,7 +95,7 @@ export default function Service() {
       <div className="mx-auto max-w-[1443px] md:px-5 lg:px-0" id="servicesCon">
         <div>
           <div className="max-w-[1443px] mb-6 lg:mx-auto sm:text-center md:mb-10">
-            <p className="text-gray-700 lg:text-6xl md:text-2xl text-xl text-center text-primaryColor font-bold">
+            <p className="text-gray-700 lg:text-5xl md:text-2xl text-xl text-center text-primaryColorDarkB font-bold">
               Consultancy service:
             </p>
             <p className="mb-1 lg:text-3xl md:text-2xl text-xl text-center tracking-wide capitalize mt-5 md:mb-2">
@@ -125,45 +135,69 @@ export default function Service() {
               Price Packages
             </p>
           </div>
-          <h2 className="max-w-2xl mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl md:mx-auto">
+          <h2 className="max-w-2xl mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColorDarkB lg:text-5xl md:mx-auto">
             Nutritional Consultancy Subscription Packages
           </h2>
         </div>
-        <div className="grid gap-10 row-gap-5 lg:max-w-[1443px] max-w-xl sm:row-gap-10 lg:grid-cols-3 lg:mx-auto">
+        <div className="grid gap-2 lg:max-w-[1443px] max-w-xl sm:row-gap-10 lg:grid-cols-3 lg:mx-auto">
           {/* Basic */}
-          <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
-            <div className="text-start">
-              <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Basic</div>
-              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
-                <div className="text-3xl font-bold text-primaryColor">N8,036.40/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$5.0/mo</div>
+          <div className="h-auto">
+            <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white border border-slate-200 dark:border-gray-100 shadow-lg shadow-slate-950/5">
+              <div className="mb-2">
+                <div className="text-black dark:black font-semibold mb-1">
+                  <div className="bg-primaryColorDark w-40 px-2 py-3 rounded-[10px] mb-2">
+                    <h1 className="text-xl text-center text-white">
+                      Basic
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center py-2 lg:gap-2 gap-2">
+                  <div className="inline-flex items-baseline">
+                    <span className="text-primaryColor dark:black font-bold text-2xl">
+                      N 8,036.30/mo
+                    </span>
+                  </div>
+                  <div className="inline-flex justify-center bg-primaryColorDark p-4 w-28 rounded-[10px]">
+                    <span className="text-white dark:black font-bold text-xl text-center">
+                      $5.0/mo
+                    </span>
+                  </div>
+                </div>
+
+
               </div>
-              <div className="mt-2 space-y-3 text-start">
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Monthly custom feed recipe formulation.</span></div>
-                <div className="text-gray-700 flex items-center">
+              <ul className="text-black dark:text-black text-sm space-y-3 grow">
+                <li className="flex items-center">
                   <img
                     src={Checkbtn}
                     alt="check"
                     className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
                   />
-                  <span>Feed quality analysis report</span></div>
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Feed efficiency improvement recommendations</span></div>
-              </div>
-            </div>
-            <div className="w-full">
+                  <span>
+                    Monthly custom feed recipe formulation.
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Feed quality analysis report</span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Feed efficiency improvement recommendations</span>
+                </li>
+              </ul>
               <a
-                href="/"
-                className="inline-flex items-center justify-center w-[100%] h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-primaryColor rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                className="w-full inline-flex justify-center p-4 rounded-lg mt-10 text-sm font-medium text-white shadow-sm bg-primaryColor"
+                href="#"
+                target="_blank"
               >
                 Book Now
               </a>
@@ -171,130 +205,204 @@ export default function Service() {
           </div>
 
           {/* Standard */}
-          <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border-2 border-primaryColor rounded shadow-sm items-start hover:shadow">
-            <div className="text-start">
-              <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Standard</div>
-              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
-                <div className="text-3xl font-bold text-primaryColor">N16,072.60/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$10.0/mo</div>
+          <div className="h-auto">
+            <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white border-2 border-primaryColor shadow-lg">
+              <div className="mb-2">
+                <div className="text-black dark:black font-semibold mb-1">
+                  <div className="bg-primaryColorDark w-40 px-2 py-3 rounded-[10px] mb-2">
+                    <h1 className="text-xl text-center text-white">
+                      Standard
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center py-2 lg:gap-2 gap-2">
+                  <div className="inline-flex items-baseline">
+                    <span className="text-primaryColor dark:black font-bold text-2xl">
+                      N 16,072.60/mo
+                    </span>
+                  </div>
+                  <div className="inline-flex justify-center bg-primaryColorDark p-4 w-28 rounded-[10px]">
+                    <span className="text-white dark:black font-bold text-xl text-center">
+                      $10.0/mo
+                    </span>
+                  </div>
+                </div>
+
+
               </div>
-              <div className="mt-2 space-y-3 text-start">
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Bi-weekly custom feed recipe formulation</span></div>
-                <div className="text-gray-700 flex items-center">
+              <ul className="text-black dark:text-black text-sm space-y-3 grow">
+                <li className="flex items-center">
                   <img
                     src={Checkbtn}
                     alt="check"
                     className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
                   />
-                  <span>Detailed feed quality analysis report</span></div>
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Feed efficiency improvement strategies and ongoing support.</span></div>
-              </div>
-            </div>
-            <div className="w-full">
+                  <span>
+                    Bi-weekly custom feed recipe formulation
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span>Detailed feed quality analysis report</span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Feed efficiency improvement strategies and ongoing support.</span>
+                </li>
+              </ul>
               <a
-                href="/"
-                className="inline-flex items-center justify-center w-[100%] h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-primaryColor rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                className="w-full inline-flex justify-center p-4 rounded-lg mt-10 text-sm font-medium text-white shadow-sm bg-primaryColor"
+                href="#"
+                target="_blank"
               >
                 Book Now
               </a>
             </div>
           </div>
 
+
           {/* Premium */}
-          <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
-            <div className="text-start">
-              <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Premium</div>
-              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
-                <div className="text-3xl font-bold text-primaryColor">N40,181.50/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$25.0/mo</div>
+          <div className="h-auto">
+            <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white border border-slate-200 dark:border-gray-100 shadow-lg shadow-slate-950/5">
+              <div className="mb-2">
+                <div className="text-black dark:black font-semibold mb-1">
+                  <div className="bg-primaryColorDark w-40 px-2 py-3 rounded-[10px] mb-2">
+                    <h1 className="text-xl text-center text-white">
+                      Premium
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center py-2 lg:gap-2 gap-2">
+                  <div className="inline-flex items-baseline">
+                    <span className="text-primaryColor dark:black font-bold text-2xl">
+                      N 40,181.50/mo
+                    </span>
+                  </div>
+                  <div className="inline-flex justify-center bg-primaryColorDark p-4 w-28 rounded-[10px]">
+                    <span className="text-white dark:black font-bold text-xl text-center">
+                      $25.0/mo
+                    </span>
+                  </div>
+                </div>
+
+
               </div>
-              <div className="mt-2 space-y-3 text-start">
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Weekly custom feed recipe formulation.</span></div>
-                <div className="text-gray-700 flex items-center">
+              <ul className="text-black dark:text-black text-sm space-y-3 grow">
+                <li className="flex items-center">
                   <img
                     src={Checkbtn}
                     alt="check"
                     className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
                   />
-                  <span>Monthly disease resistance monitoring and adjustment</span></div>
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Feed efficiency improvement recommendations</span></div>
-              </div>
-            </div>
-            <div className="w-full">
+                  <span>
+                    Weekly custom feed recipe formulation.
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Monthly disease resistance monitoring and adjustment</span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Feed efficiency improvement recommendations</span>
+                </li>
+              </ul>
               <a
-                href="/"
-                className="inline-flex items-center justify-center w-[100%] h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-primaryColor rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                className="w-full inline-flex justify-center p-4 rounded-lg mt-10 text-sm font-medium text-white shadow-sm bg-primaryColor"
+                href="#"
+                target="_blank"
               >
                 Book Now
               </a>
             </div>
           </div>
+
         </div>
       </div>
 
       {/* Consultancy */}
       <div className="px-4 py-16 mx-auto lg:max-w-[1443px] max-w-xl md:px-5 lg:px-8 lg:py-20">
         <div className="lg:max-w-[1443px] max-w-xl mb-10 md:mx-auto sm:text-center md:mb-12">
-          <h2 className="max-w-5xl mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColor lg:text-6xl md:mx-auto">
-            Disease Prevention Consultancy
+          <h2 className="max-w-5xl mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primaryColorDarkB lg:text-5xl md:mx-auto">
+            Disease Prevention Consultancy <br />
             Subscription Packages
           </h2>
         </div>
-        <div className="grid gap-10 row-gap-5 row-gap-4 lg:grid-cols-3 grid-cols-1 lg:mx-auto">
+        <div className="grid gap-2 lg:max-w-[1443px] max-w-xl sm:row-gap-10 lg:grid-cols-3 lg:mx-auto">
           {/* Basic */}
-          <div className="flex flex-col justify-between py-8 px-2 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
-            <div className="text-start">
-              <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Basic</div>
-              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
-                <div className="text-3xl font-bold text-primaryColor">N8,036.30/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$5.0/mo</div>
+          <div className="h-auto">
+            <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white border border-slate-200 dark:border-gray-100 shadow-lg shadow-slate-950/5">
+              <div className="mb-2">
+                <div className="text-black dark:black font-semibold mb-1">
+                  <div className="bg-primaryColorDark w-40 px-2 py-3 rounded-[10px] mb-2">
+                    <h1 className="text-xl text-center text-white">
+                      Basic
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center py-2 lg:gap-2 gap-2">
+                  <div className="inline-flex items-baseline">
+                    <span className="text-primaryColor dark:black font-bold text-2xl">
+                      N 8,036.30/mo
+                    </span>
+                  </div>
+                  <div className="inline-flex justify-center bg-primaryColorDark p-3 w-28 rounded-[10px]">
+                    <span className="text-white dark:black font-bold text-xl text-center">
+                      $5.0/mo
+                    </span>
+                  </div>
+                </div>
+
+
               </div>
-              <div className="mt-2 space-y-3 text-start">
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Disease prevention strategies tailored to your farm.</span></div>
-                <div className="text-gray-700 flex items-center">
+              <ul className="text-black dark:text-black text-sm space-y-3 grow">
+                <li className="flex items-center">
                   <img
                     src={Checkbtn}
                     alt="check"
                     className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
                   />
-                  <span>Vaccination protocol development.</span></div>
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Monthly disease risk assessment.</span></div>
-              </div>
-            </div>
-            <div className="w-full">
+                  <span>
+                    Disease prevention strategies tailored to your farm.
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Vaccination protocol development.</span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span>Monthly disease risk assessment.</span>
+                </li>
+              </ul>
               <a
-                href="/"
-                className="inline-flex items-center justify-center w-[100%] h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-primaryColor rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                className="w-full inline-flex justify-center p-4 rounded-lg mt-10 text-sm font-medium text-white shadow-sm bg-primaryColor"
+                href="#"
+                target="_blank"
               >
                 Book Now
               </a>
@@ -302,109 +410,159 @@ export default function Service() {
           </div>
 
           {/* Standard */}
-          <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border-2 border-primaryColor rounded shadow-sm items-start hover:shadow">
-            <div className="text-start">
-              <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Standard</div>
-              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
-                <div className="text-3xl font-bold text-primaryColor">N24,129.24/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$15.0/mo</div>
+          <div className="h-auto">
+            <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white border-2 border-primaryColor shadow-lg">
+              <div className="mb-2">
+                <div className="text-black dark:black font-semibold mb-1">
+                  <div className="bg-primaryColorDark w-40 px-2 py-3 rounded-[10px] mb-2">
+                    <h1 className="text-xl text-center text-white">
+                      Standard
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center py-2 lg:gap-2 gap-2">
+                  <div className="inline-flex items-baseline">
+                    <span className="text-primaryColor dark:black font-bold text-2xl">
+                      N 24,129.24/mo
+                    </span>
+                  </div>
+                  <div className="inline-flex justify-center bg-primaryColorDark p-4 w-28 rounded-[10px]">
+                    <span className="text-white dark:black font-bold text-xl text-center">
+                      $15.0/mo
+                    </span>
+                  </div>
+                </div>
+
+
               </div>
-              <div className="mt-2 space-y-3 text-start">
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Bi-weekly disease prevention strategies review.</span></div>
-                <div className="text-gray-700 flex items-center">
+              <ul className="text-black dark:text-black text-sm space-y-3 grow">
+                <li className="flex items-center">
                   <img
                     src={Checkbtn}
                     alt="check"
                     className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
                   />
-                  <span>Advanced vaccination protocols</span></div>
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Quarterly disease outbreak simulations</span></div>
-              </div>
-            </div>
-            <div className="w-full">
+                  <span>
+                    Bi-weekly disease prevention strategies review.
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span>Advanced vaccination protocols</span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span>Quarterly disease outbreak simulations</span>
+                </li>
+              </ul>
               <a
-                href="/"
-                className="inline-flex items-center justify-center w-[100%] h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-primaryColor rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                className="w-full inline-flex justify-center p-4 rounded-lg mt-10 text-sm font-medium text-white shadow-sm bg-primaryColor"
+                href="#"
+                target="_blank"
               >
                 Book Now
               </a>
             </div>
           </div>
 
+
           {/* Premium */}
-          <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm items-start hover:shadow">
-            <div className="text-start">
-              <div className="text-lg font-bold bg-primaryColorDark text-white p-3 rounded-xl w-40 text-center">Premium</div>
-              <div className="flex lg:items-center justify-between mt-2 gap-x-5 gap-y-2 lg:flex-row flex-col">
-                <div className="text-3xl font-bold text-primaryColor">N80,430.80/mo</div>
-                <div className="text-2xl font-bold bg-primaryColorDark text-white p-3 rounded-xl lg:w-full w-40 text-center">$50.0/mo</div>
+          <div className="h-auto">
+            <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white border border-slate-200 dark:border-gray-100 shadow-lg shadow-slate-950/5">
+              <div className="mb-2">
+                <div className="text-black dark:black font-semibold mb-1">
+                  <div className="bg-primaryColorDark w-40 px-2 py-3 rounded-[10px] mb-2">
+                    <h1 className="text-xl text-center text-white">
+                      Premium
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center py-2 lg:gap-2 gap-2">
+                  <div className="inline-flex items-baseline">
+                    <span className="text-primaryColor dark:black font-bold text-2xl">
+                      N 80,430.80/mo
+                    </span>
+                  </div>
+                  <div className="inline-flex justify-center bg-primaryColorDark p-4 w-28 rounded-[10px]">
+                    <span className="text-white dark:black font-bold text-xl text-center">
+                      $50.0/mo
+                    </span>
+                  </div>
+                </div>
+
+
               </div>
-              <div className="mt-2 space-y-3 text-start">
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Weekly personalized disease prevention strategies.</span></div>
-                <div className="text-gray-700 flex items-center">
+              <ul className="text-black dark:text-black text-sm space-y-3 grow">
+                <li className="flex items-center">
                   <img
                     src={Checkbtn}
                     alt="check"
                     className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
                   />
-                  <span>Cutting-edge vaccination protocols and updates.</span></div>
-                <div className="text-gray-700 flex items-center"><img
-                  src={Checkbtn}
-                  alt="check"
-                  className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
-                />
-                  <span>Monthly disease resistance monitoring and adjustment</span></div>
-              </div>
-            </div>
-            <div className="w-full">
+                  <span>
+                    Weekly personalized disease prevention strategies.
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Cutting-edge vaccination protocols and updates.</span>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src={Checkbtn}
+                    alt="check"
+                    className="lg:w-6 lg:h-6 w-3 h-3 mr-3"
+                  />
+                  <span> Monthly disease resistance monitoring and adjustment</span>
+                </li>
+              </ul>
               <a
-                href="/"
-                className="inline-flex items-center justify-center w-[100%] h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-primaryColor rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                className="w-full inline-flex justify-center p-4 rounded-lg mt-10 text-sm font-medium text-white shadow-sm bg-primaryColor"
+                href="#"
+                target="_blank"
               >
                 Book Now
               </a>
             </div>
           </div>
+
         </div>
       </div>
 
       {/* Contact */}
       <div className="mx-auto max-w-[1443px] mb-60 mt-20 lg:px-8 md:px-5 px-2">
-      <div className="rounded">
-        <div className="flex flex-col lg:flex-row md:flex-row flex-col-reverse items-center">
-          <div className="lg:w-1/2">
-            <p className="mb-4 lg:text-6xl md:text-4xl text-xl text-gray-700 lg:text-start md:text-start text-center">
-              Speak to a consultant.
-            </p>
-            <a
-              href="/contact"
-              aria-label=""
-              className="inline-flex justify-center items-center font-bold transition-colors duration-200 text-white bg-primaryColor p-5 rounded-xl lg:w-96 w-full"
-            >
-              Contact Us
-            </a>
-          </div>
-          <div className="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
-            <img src={ServiceImgC} />
+        <div className="rounded">
+          <div className="flex flex-col lg:flex-row md:flex-row flex-col-reverse items-center">
+            <div className="lg:w-1/2">
+              <p className="mb-4 lg:text-6xl md:text-4xl text-xl text-gray-700 lg:text-start md:text-start text-center">
+                Speak to a consultant.
+              </p>
+              <a
+                href="/contact"
+                aria-label=""
+                className="inline-flex justify-center items-center font-bold transition-colors duration-200 text-white bg-primaryColor p-5 rounded-xl lg:w-96 w-full"
+              >
+                Contact Us
+              </a>
+            </div>
+            <div className="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
+              <img src={ServiceImgC} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
       {/* Footer */}
       <Footer />
