@@ -14,5 +14,5 @@ jobs:
         server: ftp.yiieldy.com
         username: yiieldy_ftps@yiieldy.com
         password: ${{ secrets.password }}
-        protocol: ftps
+        protocol: ftp
         port: 21
