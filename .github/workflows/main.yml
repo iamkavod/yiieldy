@@ -12,7 +12,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: 92.205.170.254
-        username: yiieldy_ftps@yiieldy.com
+        username: yiieldy@yiieldy.com
         password: ${{ secrets.PASSWORD }}
         protocol: ftps
         port: 21
