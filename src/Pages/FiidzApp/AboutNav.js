@@ -81,7 +81,7 @@ export default function AboutNav() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex items-center lg:gap-x-8">
-          <Popover className="relative">
+          {/* <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm font-bold leading-6 text-gray-900 focus:outline-none">
               Product
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
@@ -111,8 +111,8 @@ export default function AboutNav() {
                 ))}
               </div>
             </PopoverPanel>
-          </Popover>
-          <Popover className="relative">
+          </Popover> */}
+          {/* <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm font-bold leading-6 text-gray-900 focus:outline-none">
               Resources
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
@@ -141,9 +141,9 @@ export default function AboutNav() {
                 ))}
               </div>
             </PopoverPanel>
-          </Popover>
-          <a href={"/services"} className="text-sm font-bold leading-6 text-gray-900">
-            Services
+          </Popover> */}
+          <a href={"/helpandsupport"} className="text-sm font-bold leading-6 text-gray-900">
+            Help and Support
           </a>
           <a href={"/about"} className="text-sm font-bold leading-6 text-gray-900">
             About Us
@@ -181,7 +181,7 @@ export default function AboutNav() {
           <div className="mt-6 flow-root px-1">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
+                {/* <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50">
                     Product
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
@@ -203,8 +203,8 @@ export default function AboutNav() {
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
-                </Disclosure>
-                <Disclosure as="div" className="-mx-3">
+                </Disclosure> */}
+                {/* <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50">
                     Resources
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
@@ -226,12 +226,9 @@ export default function AboutNav() {
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
-                </Disclosure>
-                <a
-                  href={"/services"}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Services
+                </Disclosure> */}
+                <a href={"/helpandsupport"} className="text-sm font-bold leading-6 text-gray-900">
+                  Help and Support
                 </a>
                 <a
                   href={"/about"}

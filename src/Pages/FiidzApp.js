@@ -16,7 +16,7 @@ import {
   YiieldyFiidzA,
   YiieldyIntroVid,
 } from "../Assets";
-import { Pricing } from "../Components";
+import { Pricing, Testimonial } from "../Components";
 import "../App.css";
 import '../fonts.css';
 
@@ -283,6 +283,11 @@ export default function FiidzApp() {
             </div>
           </div>
         </div>
+      </div>
+
+       {/* Testimonials */}
+       <div>
+        <Testimonial />
       </div>
 
       {/* Pricing */}

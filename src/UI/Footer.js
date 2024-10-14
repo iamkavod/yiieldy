@@ -87,12 +87,12 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a
+                    {/* <a
                       href={"/services"}
                       className="transition-colors lg:text-sm text-xs duration-300 text-primaryColorLight"
                     >
                       Service
-                    </a>
+                    </a> */}
                   </li>
                   <li>
                     <a
